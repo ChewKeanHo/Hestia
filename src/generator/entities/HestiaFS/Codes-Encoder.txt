@@ -1,0 +1,33 @@
+# Copyright 2025 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
+# Copyright 2024 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
+# Copyright 2023 (Holloway) Chew, Kean Ho <hollowaykeanho@gmail.com>
+#
+#
+# Licensed under (Holloway) Chew, Kean Ho's Liberal License (the 'License').
+# You must comply with the license to use the content. Get the License at:
+#
+# https://doi.org/10.5281/zenodo.13770769
+#
+# You MUST ensure any interaction with the content STRICTLY COMPLIES with
+# the permissions and limitations set forth in the license.
+#
+#
+# Available data types (keep the field in commented mode):
+#  * 'uint8' = unsigned integer 8-bits
+#  * 'uint16' = unsigned integer 16-bits
+#  * 'uint32' = unsigned integer 32-bits
+#  * 'uint64' = unsigned integer 32-bits
+#  * 'int8' = signed integer 8-bits
+#  * 'int16' = signed integer 16-bits
+#  * 'int32' = signed integer 32-bits
+#  * 'int64' = signed integer 64-bits
+#  * 'string' = string
+#  * '...' = copy over as it is (no conversion for Rust syntax)
+# DATA TYPE = Encoder
+
+
+
+# Encoder type
+ENCODER_UNKNOWN
+ENCODER_BYTE
+ENCODER_TEXT

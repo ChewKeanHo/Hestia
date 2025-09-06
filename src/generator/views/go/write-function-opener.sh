@@ -1,0 +1,115 @@
+#!/bin/sh
+# Copyright 2025 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
+# Copyright 2024 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
+# Copyright 2023 (Holloway) Chew, Kean Ho <hollowaykeanho@gmail.com>
+#
+#
+# Licensed under (Holloway) Chew, Kean Ho's Liberal License (the 'License').
+# You must comply with the license to use the content. Get the License at:
+#
+# https://doi.org/10.5281/zenodo.13770769
+#
+# You MUST ensure any interaction with the content STRICTLY COMPLIES with
+# the permissions and limitations set forth in the license.
+
+
+
+
+views_write_function_opener_go() {
+        #____path_dest="$1"
+        #____name="$2"
+        #____params="$3"
+        #____return_type="$4"
+        #____exposure="$5"
+
+
+        # execute
+        ____exposure="$2"
+        if [ "$5" = "public" ]; then
+                ____exposure="$( \
+                        printf -- "%s" "${2%%"${2#?}"*}" \
+                        | tr '[:lower:]' '[:upper:]' \
+                )"
+
+                ____exposure="${____exposure}${2#?}"
+        fi
+
+
+        ## generate actual function parameters
+        ____params=""
+        if [ ! "$3" = "" ]; then
+                ____old_IFS="$IFS"
+                while IFS="" read -r ____line || [ -n "$____line" ]; do
+                        if [ "$____line" = "" ]; then
+                                continue
+                        fi
+
+                        if [ ! "$____params" = "" ]; then
+                                ____params="${____params},
+	"
+                        fi
+
+                        ____params="${____params}${____line}"
+                done<<EOF
+${3}
+EOF
+                IFS="$____old_IFS"
+                unset ____line ____old_IFS
+        fi
+
+
+        ## generate return lists
+        ____returns=""
+        ____more_than_one=false
+        if [ ! "$4" = "" ]; then
+                ____old_IFS="$IFS"
+                while IFS="" read -r ____line || [ -n "$____line" ]; do
+                        if [ "$____line" = "" ]; then
+                                continue
+                        fi
+
+                        if [ ! "$____returns" = "" ]; then
+                                ____returns="${____returns}, "
+                                ____more_than_one=true
+                        fi
+
+                        ____returns="${____returns}${____line}"
+                done<<EOF
+${4}
+EOF
+                IFS="$____old_IFS"
+                unset ____line ____old_IFS
+        fi
+
+        if [ "$____more_than_one" = "true" ]; then
+                ____returns="(${____returns})"
+        fi
+        unset ____more_than_one
+
+
+        # all good - write now
+        if [ ! "$____returns" = "" ]; then
+                printf -- "%s" "\
+func ${____exposure}(${____params}) ${____returns} {
+" >> "${1}.tmp"
+        else
+                printf -- "%s" "\
+func ${____exposure}(${____params}) {
+" >> "${1}.tmp"
+        fi
+        if [ $? -ne 0 ]; then
+                unset ____exposure ____returns ____params
+                return 1
+        fi
+        unset ____exposure ____returns ____params
+
+
+        # report status
+        return 0
+}
+
+
+
+
+# report import status
+return 0
