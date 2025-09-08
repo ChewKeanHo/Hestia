@@ -75,43 +75,66 @@ fi
 
 
 # generate Signals/Codes.*
-. "${PROJECT_PATH_ROOT}/routers/HestiaSIGNALS/Codes.sh"
-if [ $? -ne 0 ]; then
-        return 1
-fi
+(. "${PROJECT_PATH_ROOT}/routers/HestiaSIGNALS/Codes.sh") &
+____pid_hestiasignals_codes=$!
 
 
 
 
 # generate Tests/Codes.*
-. "${PROJECT_PATH_ROOT}/routers/HestiaTESTS/Codes.sh"
-if [ $? -ne 0 ]; then
-        return 1
-fi
+(. "${PROJECT_PATH_ROOT}/routers/HestiaTESTS/Codes.sh") &
+____pid_hestiatests_codes=$!
 
 
 
 
 # generate OS/Codes-Endian.*
-. "${PROJECT_PATH_ROOT}/routers/HestiaOS/Codes-Endian.sh"
-if [ $? -ne 0 ]; then
-        return 1
-fi
+(. "${PROJECT_PATH_ROOT}/routers/HestiaOS/Codes-Endian.sh") &
+____pid_hestiaos_codes_endians=$!
 
 
 
 
 # generate FS/Codes-Encoders.*
-. "${PROJECT_PATH_ROOT}/routers/HestiaFS/Codes-Encoders.sh"
-if [ $? -ne 0 ]; then
-        return 1
-fi
+(. "${PROJECT_PATH_ROOT}/routers/HestiaFS/Codes-Encoders.sh") &
+____pid_hestiafs_codes_encoders=$!
 
 
 
 
 # generate Unicodes/runes-to-.*
-. "${PROJECT_PATH_ROOT}/routers/HestiaUNICODES/runes-to-casing.sh"
+(. "${PROJECT_PATH_ROOT}/routers/HestiaUNICODES/runes-to-casing.sh") &
+____pid_hestiaunicodes_runes_to_casing=$!
+
+
+
+
+# wait for all completions
+wait $____pid_hestiasignals_codes
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+
+wait $____pid_hestiatests_codes
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+
+wait $____pid_hestiaos_codes_endians
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+
+wait $____pid_hestiafs_codes_encoders
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+
+wait $____pid_hestiaunicodes_runes_to_casing
 if [ $? -ne 0 ]; then
         return 1
 fi
