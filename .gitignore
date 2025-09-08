@@ -1,13 +1,6 @@
 #####################
 # User defined
 #####################
-C/
-Go/
-Nim/
-Rust/
-PowerShell/
-Python/
-Shell/
 
 #####################
 # Standard FHS
