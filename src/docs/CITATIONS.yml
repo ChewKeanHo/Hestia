@@ -68,7 +68,9 @@ identifiers:
 keywords:
   - "Hestia"
   - "libraries"
-  - "[WHAT]"
+  - "internal components"
+  - "libraries generators"
+  - "standards & definitions"
   - "software libraries"
   - "continuous integration"
   - "native and locally available"

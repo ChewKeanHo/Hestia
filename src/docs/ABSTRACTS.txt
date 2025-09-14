@@ -26,7 +26,6 @@ the cloud, with peace in mind.
 
 Hestia:  Develop with confidence.
 
-This specific library facilitates [WHAT]. It depends on the
-following for its operations:
-
-* **[PACKAGE A]** - [WHY]
+This specific repository **IS NOT A LIBRARY** but a standards and
+definitions libraries generator including level-0's HestiaKERNEL**
+library's data. It's an internal component so please avoid it.

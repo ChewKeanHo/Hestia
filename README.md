@@ -12,14 +12,16 @@ to the cloud, with peace in mind.
 
 ***Hestia - Develop with Confidence***
 
-This specific library facilitates standards and definitions generator. It is
-not a library but a tool to support all libraries
-**including level-0's HestiaKERNEL** library's data.
+This specific repository **IS NOT A LIBRARY** but a standards and definitions
+libraries generator including level-0's HestiaKERNEL** library's data. It's an
+internal component so please avoid it.
 
 
 
 
 ## Why It Matters
+
+[![Hestia Libraries](src/icons/animated-banner_1200x100.svg)](#)
 
 This project was initiated primarily because of:
 
@@ -37,6 +39,17 @@ This project was initiated primarily because of:
    languages.
 6. **Keeping input simple to use** - ensures the input data is at a single
    maintainable location rather than scattered across multiple Hestia projects.
+
+
+
+
+## Generator's Location
+
+[![Hestia Libraries](src/icons/animated-banner_1200x100.svg)](#)
+
+The generator's location is inside `src/generators` directory. Its
+documentations are packed therein. Head over there to start operating this
+repository.
 
 
 
