@@ -1,4 +1,5 @@
 #!/bin/sh
+# Copyright 2025 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
 # Copyright 2024 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
 # Copyright 2023 (Holloway) Chew, Kean Ho <hollowaykeanho@gmail.com>
 #
@@ -74,37 +75,83 @@ fi
 
 
 
-# generate Signals/Codes.*
+# clean up all project housing source codes
+rm -rf "../../C"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+rm -rf "../../Go"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+rm -rf "../../Nim"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+rm -rf "../../PowerShell"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+rm -rf "../../Python"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+rm -rf "../../Rust"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+rm -rf "../../Shell"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+
+
+
+# generate HestiaSIGNALS/Codes.*
 (. "${PROJECT_PATH_ROOT}/routers/HestiaSIGNALS/Codes.sh") &
 ____pid_hestiasignals_codes=$!
 
 
 
 
-# generate Tests/Codes.*
+# generate HestiaTESTS/Codes.*
 (. "${PROJECT_PATH_ROOT}/routers/HestiaTESTS/Codes.sh") &
 ____pid_hestiatests_codes=$!
 
 
 
 
-# generate OS/Codes-Endian.*
+# generate HestiaOS/Codes-Endian.*
 (. "${PROJECT_PATH_ROOT}/routers/HestiaOS/Codes-Endian.sh") &
 ____pid_hestiaos_codes_endians=$!
 
 
 
 
-# generate FS/Codes-Encoders.*
+# generate HestiaFS/Codes-Encoders.*
 (. "${PROJECT_PATH_ROOT}/routers/HestiaFS/Codes-Encoders.sh") &
 ____pid_hestiafs_codes_encoders=$!
 
 
 
 
-# generate Unicodes/runes-to-.*
+# generate HestiaUNICODES/runes-to-.*
 (. "${PROJECT_PATH_ROOT}/routers/HestiaUNICODES/runes-to-casing.sh") &
 ____pid_hestiaunicodes_runes_to_casing=$!
+
+
+
+
+# generate HestiaLOCALES/Lang*
+(. "${PROJECT_PATH_ROOT}/routers/HestiaLOCALES/Lang.sh") &
+____pid_hestialocales_lang=$!
 
 
 
@@ -135,6 +182,12 @@ fi
 
 
 wait $____pid_hestiaunicodes_runes_to_casing
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+
+wait $____pid_hestialocales_lang
 if [ $? -ne 0 ]; then
         return 1
 fi

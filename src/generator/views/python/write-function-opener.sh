@@ -40,11 +40,11 @@ views_write_function_opener_python() {
                         fi
 
                         if [ ! "$____params" = "" ]; then
-                                ____params="${____params},"
+                                ____params="${____params},
+    "
                         fi
 
-                        ____params="${____params}
-    ${____line}"
+                        ____params="${____params}${____line}"
                 done<<EOF
 ${3}
 EOF
@@ -53,7 +53,7 @@ EOF
         fi
 
         ____returns=""
-        if [ ! "$3" = "" ]; then
+        if [ ! "$4" = "" ]; then
                 ____multiple=false
                 ____old_IFS="$IFS"
                 while IFS="" read -r ____line || [ -n "$____line" ]; do

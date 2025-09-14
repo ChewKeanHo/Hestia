@@ -23,8 +23,7 @@ from HestiaKERNEL.HestiaUNICODES.Data import Rune
 
 
 
-def _hestiaUNICODES_Rune_To_Uppercase(
-    ____codepoint1: Rune,
+def _hestiaUNICODES_Rune_To_Uppercase(____codepoint1: Rune,
     ____codepoint2: Rune,
     ____codepoint3: Rune,
     ____lang: str) -> tuple[int, list[Rune]]:

@@ -26,7 +26,7 @@
 
 
 
-extern int rune_to_uppercase(uint8 *cut_count,
+int rune_to_uppercase(uint8 *cut_count,
 	Rune **output_char,
 	Rune ____codepoint1,
 	Rune ____codepoint2,

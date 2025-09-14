@@ -1,0 +1,559 @@
+# Copyright 2025 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
+#
+#
+# Licensed under (Holloway) Chew, Kean Ho's Liberal License (the 'License').
+# You must comply with the license to use the content. Get the License at:
+#
+# https://doi.org/10.5281/zenodo.13770769
+#
+# You MUST ensure any interaction with the content STRICTLY COMPLIES with
+# the permissions and limitations set forth in the license.
+
+
+# AI PROMPT BEGIN
+# I have a locale identifier data file here where each value is the native
+# language name without the 'language' text for consise representation.
+# These are TOML fields so please only translate based on existing human
+# translated languages and fill in the empty string ones without modifying
+# any TOML syntax. DO NOT leave any field empty; DO NOT remove the existing
+# ones or misplace any upon your reply. Translate with what you have without
+# calling an external API translation service. You already made a number of
+# successful translations in the past so DO NOT try to fill in
+# "unavailable", repeated values from existing ones, leave it empty, or
+# produce translation that uses placeholder characters like '�', '𑅌',
+# or '?'.
+#
+# For your translations, suffix it with " [AI]" in the comment so that
+# future human translators know where and what to continue working easily.
+# The suffix indicator is already sufficient so do not add any additional
+# notes into the content or the comment. Since the values are the native
+# name of the language for seamless identification, the value MUST BE in
+# Titlecase whenever applicable.
+#
+# This prompt is called via API. You DO NOT need to explain anything. Your
+# output MUST BE strictly only the updated [TEXT] section including the
+# existing ones in HTML preformatting quotes format readily available for
+# copy-paste back into the data file.
+# AI PROMPT END
+
+
+
+
+# Text.[LANG]{-[SCRIPT]}{-[COUNTRY]} = \"[VALUE]\"
+# The actual text-based language identifier for all known written languages
+# across the globe. It is compatible with a lot of existing functions like
+# search engine optimization (SEO), UNIX OSes locales, app locales, and etc.
+# The structure is formulated by 3 international standard segments
+# connected with a dash (-) prefix except the first one of course:
+#   * [LANG]    - ISO639. Set-1 s prioritized, then Set-2, and lastly
+#                 Set-3. To avoid repetition across all permutations, only
+#                 1 set is used. Value MUST always be in 'lowercase'.
+#                 This field is compulsory.
+#   * [SCRIPT]  - ISO15924. Use the 4 letter Codes. Value MUST always be
+#                 'Titlecase'. This field is optional.
+#   * [COUNTRY] - ISO3166. Set-1 Alpha-2 is prioritized. In Worst case is
+#                 ISO3166-1 Alpha-3. Value MUST always be 'UPPERCASE'.
+#                 This field is optional.
+#
+# Examples:
+#   * English (Universal) = 'en'
+#   * Chinese (Universal - Simplified) = 'zh-Hans'
+#   * Chinese (Universal - Traditional) = 'zh-Hant'
+#   * English (United States) = 'en-US'
+#   * Chinese (United States - Simplified) = 'zh-Hans-US'
+#   * Chinese (United States - Traditional) = 'zh-Hant-US'
+#   * English (Malaysia) = 'en-MY'
+#   * Chinese (Malaysia - Simplified) = 'zh-Hans-MY'
+#   * Chinese (Malaysia - Traditional) = 'zh-Hant-MY'
+#
+# For this sheet, in any case, the '[COUNTRY]' field is completely omitted
+# for simplification purposes. This is done by eliminating all geo-political
+# omplications against any universal natural language. Localized users can
+# append the country in their application level for geo-fencing and other
+# geo-political related businesses. Here are some case studies:
+#   1. English (en) Vocabulary: 'color'(en-US), 'colour'(en-GB)
+#   2. English (en) Math: 'metric tons'(en-US), 'tons'(en-GB)
+#   3. English (en) Local: 'obviously'(en-GB), 'duh'(en-MY), 'abuden'(en-SG)
+#   4. English (en) Vocal 'tomato': 'to-may-to'(en-US), 'to-ma-to'(en-GB)
+#   5. Chinese (zh-Han{s,t}): '华语'(zh-Hans-CN), '華語'(zh-Hant-CN|zh-HK|zh-TW)
+#   6. Chinese (nan-Han{s,t}): '闽南语'(nan-Hans-TW), '閩南語'(nan-Hant-TW)
+#   ...
+#
+# For maintenance sake, the list **MUST** be alphabetically sorted with
+# respect to [LANG]-[SCRIPT]-[COUNTRY], top to bottom. It is ok for some
+# languages distancing themselves from one another due to multiple ISO639-1
+# entries like 'Norwegian'.
+#
+# This list excludes 'Braille' (blind tactile) and 'Sign Language'
+# (deaf visual). They are not completely develop yet (e.g. only focus on Latin,
+# conflicting codepoints, etc). Also, some of them makes no sense
+# (e.g. deaf people can read; most display screen are not tactile touchable).
+#
+# For font display, it is recommended to download and install the entire
+# suite of Noto Project (https://github.com/notofonts) totalling ~200+Mb in
+# size and growing. Noto project is by far can display most of the characters
+# without problems. Should there be any tofu square or question mark, it means
+# the required font is missing. Some exotic fonts like Klingon and Quenya
+# require additional compatible font downloads. Be careful with avoiding
+# copyright infrignement during procurement.
+#
+# For language value, **ONLY USE THE NATIVE NAME (in that language)** without
+# the 'Language' wording inside. This is an important consideration for user
+# with single language where they can only recognize the text they know.
+# Otherwise, you're looking at maintaining a very big amount of naming
+# databases following this math equation:
+#            TOTAL LIST = TOTAL_LANGUAGES ^ TOTAL_LANGUAGES
+#
+# For best performance, the following work process is recommended:
+#   1. Human translators fill in as many fields as possible. Look into
+#      Wikipedia since all past contributors already translated most of the
+#      languages name in their native form.
+#   2. Should any language has multiple scripts (e.g. 'Avaric'), create the
+#      all discovered entries and study the historical section for
+#      current official one and label it as 'Official'. Some languages has
+#      multiple official scripts (notably 'Bosnian') so look for majority
+#      preferences and label it as 'Common' instead. Languages in single
+#      writing script excluding 'Braille' and 'Sign Language'
+#      (e.g. 'Latin' for 'English') can operate without its [SCRIPT] segment.
+#      The general rules are:
+#          1. simple and concise; AND
+#          2. less is good; AND
+#          3. seamless and intuitive user experience.
+#      Here's some case studies:
+#          ...
+#          "av-Arab" = "آوَار" # Avaric (Arabic)
+#          "av-Cyrl" = "авар" # Avaric (Cyrillic) - Official
+#          "av-Latn" = "avar" # Avaric (Latin)
+#          "ay" = "Aymar aru" # Aymara
+#          ...
+#          "br" = "brezhoneg" # Breton
+#          "brx-Beng" = "বড়ো" # Boro | Bodo (Bengali)
+#          "brx-Deva" = "बड़ो" # Boro | Bodo (Devanagari) - Official
+#          "brx-Latn" = "Bodo" # Boro | Bodo (Latin)
+#          "bs-Cyrl" = "босански" # Bosnian
+#          "bs-Latn" = "bosanski" # Bosnian - Common
+#          ...
+#          "en" = "English" # English
+#          ...
+#   3. Remove all duplicated root definitions when the language has multiple
+#      scripts defined (e.g. 'av' for 'av-Arab', 'av-Cyrl', 'av-Latn').
+#      Instead, mark the corresponding script as "Official" or "Common".
+#      The data parser will smartly parse and automatically backfill in.
+#   4. For each language, you MUST maintain the English name in the comment
+#      for maintainers to perform unified data search and indexing (observe
+#      '# Avaric'). This dataset complies to international language of science
+#      so English is the only one.
+#   5. If there is any unresovable field, submit the TOML file for large
+#      language model (LLM) AI translation. Just copy this entire file content
+#      and paste straight into LLM AI without additional prompt. The AI can
+#      read the prompt above and process accordingly. Update the file with the
+#      answers. For A.I with deep thinking capability, please enable it before
+#      sending the prompt.
+#   6. Check with your parser and make sure the A.I did not accidentally
+#      modify/remove any existing fields. They do mishaps with big prompts
+#      like this dataset file.
+#   7. The A.I will append its signature '[AI]' in the last element of the
+#      comment. From time to time, any human contributor can replace the
+#      human-translation replacing the A.I ones and then remove that signature.
+#      Any field without '[AI]' is indeed human effort.
+[Text]
+"aa" = "Qafar" # Afar
+"ab" = "аҧсшәа" # Abkhazian
+"ae" = "Avesta" # Avestan
+"af" = "Afrikaans" # Afrikaans
+"afh" = "Ɛl-Afrihili" # Afrihili
+"ak" = "Ákán" # Akan
+"akk" = "𒀝𒅗𒁺𒌑" # Akkadian
+"am" = "አማርኛ" # Amharic
+"an" = "Aragonés" # Aragonese
+"ang" = "Ænglisc" # Old English
+"ar" = "اَلْعَرَبِيَّةُ" # Arabic
+"arc" = "ארמית, ܐܪܡܐܝܬ" # Aramaic
+"as" = "অসমীয়া" # Assamese
+"av-Arab" = "آوَار" # Avaric (Arabic)
+"av-Cyrl" = "авар" # Avaric (Cyrillic) - Official
+"av-Latn" = "avar" # Avaric (Latin)
+"avk" = "Kotava" # Kotava
+"ay" = "Aymar aru" # Aymara
+"az-Arab" = "آذربایجان" # Azerbaijani (Arabic)
+"az-Cyrl" = "Азәрбајҹан" # Azerbaijani (Cyrillic)
+"az-Latn" = "Azərbaycan" # Azerbaijani (Latin) - Official
+"ba-Arab" = "باشقورت" # Bashkir (Arabic)
+"ba-Cyrl" = "башҡорт" # Bashkir (Cyrillic) - Official
+"ba-Latn" = "başqort" # Bashkir (Latin)
+"be" = "беларуская" # Belarusian
+"bg" = "български" # Bulgarian
+"bgc" = "हरियाणवी" # Haryanvi
+"bho-Deva" = "भोजपुरी" # Bhojpuri (Devanagari) - Official
+"bho-Kthi" = "𑂦𑂷𑂔𑂣𑂳𑂩𑂲" # Bhojpuri (Kaithi)
+"bi" = "Bichelamar" # Bislama
+"bm-Arab" = "بَمَنَنكَن" # Bambara (Arabic)
+"bm-Latn" = "Bamanankan" # Bambara (Latin) - Official
+"bm-Nkoo" = "ߓߡߊߣߊ߲ߞߊ߲" # Bambara (NKo)
+"bn" = "বাংলা" # Bengali | Bangla
+"bo" = "བོད་སྐད་" # Tibetan
+"br" = "brezhoneg" # Breton
+"brx-Beng" = "বড়ো" # Boro | Bodo (Bengali)
+"brx-Deva" = "बड़ो" # Boro | Bodo (Devanagari) - Official
+"brx-Latn" = "Bodo" # Boro | Bodo (Latin)
+"bs-Cyrl" = "босански" # Bosnian
+"bs-Latn" = "bosanski" # Bosnian - Common
+"bzt" = "Comroig" # Brithenig
+"ca" = "Català | Valencià" # Catalan | Valencian
+"ce-Arab" = "نوخچیین" # Chechen (Arabic)
+"ce-Cyrl" = "Нохчийн" # Chechen (Cyrillic) - Official
+"ce-Geor" = "Noxçiyn" # Chechen (Georgian)
+"ce-Latn" = "Noxçiyn" # Chechen (Latin)
+"ceb" = "Bisayâ" # Cebuano
+"ch" = "Chamoru" # Chamorro
+"cho" = "Chahta anumpa" # Choctaw
+"chr-Cher" = "ᏣᎳᎩ" # Cherokee (Cherokee) - Official
+"chr-Latn" = "Tsalagi" # Cherokee (Latin)
+"co" = "corsu" # Corsican
+"cop" = "ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ" # Coptic
+"cr-Cans" = "ᓀᐦᐃᔭᐍᐏᐣ" # Cree (Canadian Aboriginal)
+"cr-Latn" = "Nēhiyawēwin" # Cree (Latin)
+"cs" = "Čeština" # Czech
+"csb" = "Kaszëbsczi" # Kashubian
+"cu-Cyrl" = "словѣньскъ" # Old Church Slavonic (Cyrillic)
+"cu-Glag" = "ⱄⰾⱁⰲⱑⱀⱐⱄⰽⱏ" # Old Church Slavonic (Glagolitic)
+"cv" = "Чӑвашла Çăvaşla" # Chuvash
+"cy" = "Cymraeg" # Welsh
+"da" = "Dansk" # Danish
+"de" = "Deutsch" # German
+"dmf" = "𖹝𖹰𖹯𖹼𖹫 𖹚𖹬𖹾𖹠𖹯‎ / Obɛri Ɔkaimɛ" # Medefaidrin
+"doi-Aran" = "ڈوگری" # Dogri (Arabic/Aran)
+"doi-Deva" = "डोगरी" # Dogri (Devanagari) - Official
+"doi-Dogr" = "𑠖𑠵𑠌𑠤𑠮" # Dogri (Dogra)
+"doi-Mahj" = "𑅥𑅗𑅮𑅒𑅢" # Dogri (Mahajani)
+"dsb" = "dolnoserbšćina" # Lower Sorbian
+"dv-Latn" = "Dhivehi" # Maldivian | Dhivehi (Latin)
+"dv-Thaa" = "ދިވެހި" # Maldivian | Dhivehi (Thaana) - Official
+"dws" = "Dutton Speedwords" # Dutton Speedwords (Latin)
+"dz" = "རྫོང་ཁ་" # Dzongkha
+"ee" = "Eʋegbe" # Ewe
+"el" = "Ελληνικά" # Greek
+"elx" = "𒉏𒋾" # Elamite (Linear Elamite)
+"emy" = "Chʼoltiʼ" # Classical Maya
+"en" = "English" # English
+"eo" = "Esperanto" # Esperanto
+"es" = "Español" # Spanish
+"esy" = "Eskayano" # Eskayan
+"et" = "Eesti" # Estonian
+"ett" = "𐌄𐌓𐌔𐌍𐌀𐌂" # Etruscan
+"eu" = "Euskara" # Basque
+"fa" = "فارسی" # Persian
+"ff-Adlm" = "𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫" # Fula | Fulani | Fulah (Adlam Pular) - Official
+"ff-Arab" = "ࢻُلْࢻُلْدٜ‎" # Fula | Fulani | Fulah (Arabic)
+"ff-Latn" = "Fulfulde" # Fula | Fulani | Fulah (Latin)
+"fi" = "Suomi" # Finnish
+"fj" = "Vosa Vaka-Viti" # Fijian
+"fo" = "føroyskt" # Faroese
+"fr" = "Français" # French
+"fro" = "Franceis" # Old French
+"fy" = "Frysk" # Western Frisian
+"ga-Latn" = "Gaeilge" # Irish (Latin) - Official
+"ga-Ogam" = "ᚌᚐᚓᚔᚂᚌᚓ" # Irish (Ogham)
+"gd-Latn" = "Gàidhlig" # Scottish Gaelic (Latin) - Official
+"gd-Ogam" = "ᚌᚐᚔᚇᚆᚂᚔᚌ" # Scottish Gaelic (Ogham)
+"gl" = "Galego" # Galician (Latin)
+"gmy" = "𐀕𐀏𐀚𐀐𐀊" # Mycenaean Greek (Linear B)
+"gn" = "Avañe'ẽ" # Guarani
+"goh" = "Diutisk" # Old High German
+"grc" = "Ἑλληνική" # Ancient Greek
+"gu" = "ગુજરાતી" # Gujarati
+"guz" = "Ekegusii" # Gusii
+"gv" = "Gaelg" # Manx
+"ha-Arab" = "هَرْشَن هَوْسَ" # Hausa (Arabic)
+"ha-Latn" = "Halshen Hausa" # Hausa (Latin)
+"haw" = "ʻōlelo Hawaiʻi" # Hawaiian
+"he" = "עִבְרִית‎" # Hebrew
+"hi-Deva" = "हिन्दी" # Hindi (Devanagari) - Official
+"hi-Kthi" = "𑂯𑂱𑂢𑂹𑂠𑂲" # Hindi (Kaithī)
+"hi-Mahj" = "𑅱𑅛𑅒" # Hindi (Mahajanī)
+"hit" = "𒌷𒉌𒅆𒇷" # Hittite
+"ho" = "Hiri Motu" # Hiri Motu
+"hr-Glag" = "ⱌⱃⱏⰲⱌⰽⱜ" # Croatian (Glagolitic)
+"hr-Latn" = "Hrvatski" # Croatian (Latin) - Official
+"hsb" = "Hornjoserbšćina" # Upper Sorbian
+"ht" = "Kreyòl Ayisyen" # Haitian Creole
+"hu" = "Magyar Nyelv" # Hungarian
+"hy" = "Հայերեն" # Armenian
+"hz" = "Otjiherero" # Herero
+"ia" = "Interlingua" # Interlingua
+"id" = "Bahasa Indonesia" # Indonesian
+"ie" = "Interlingue" # Interlingue
+"ig" = "Ásụ̀sụ́ Ìgbò" # Igbo
+"igs" = "Interglossa" # Interglossa
+"ii-Yiii" = "ꆈꌠꉙ" # Sichuan Yi
+"ik" = "Iñupiaq" # Inupiaq
+"io" = "Ido" # Ido
+"is" = "Íslenska" # Icelandic
+"isv-Cyrl" = "Меджусловјанскы" # Interslavic (Cyrillic) - Common
+"isv-Latn" = "Medžuslovjansky" # Interslavic (Latin)
+"isv-Glag" = "Ⰿⰵⰴⰶⱆⱄⰾⱁⰲⱜⰰⱀⱄⰽⱏⰺ" # Interslavic (Glagolitic)
+"it" = "Italiano" # Italian
+"iu-Cans" = "ᐃᓄᒃᑎᑐᑦ" # Inuktitut (Inuktitut) - Official
+"iu-Latn" = "Inuktitut" # Inuktitut (Latin)
+"ja" = "日本語" # Japanese
+"jbo" = "La .lojban." # Lojban
+"jv-Arab" = "باسا جاوا" # Javanese (Pegon)
+"jv-Java" = "ꦧꦱꦗꦮ" # Javanese (Javanese)
+"jv-Latn" = "Basa Jawa" # Javanese (Latin) - Official
+"ka" = "ქართული ენა" # Georgian
+"kbd-Cyrl" = "адыгэбзэ" # Kabardian (Cyrillic) - Official
+"kbd-Latn" = "Adıǵebze" # Kabardian (Latin)
+"kbd-Arab" = "آد‍ہگەبزە" # Kabardian (Perso Arabic)
+"kam" = "Kikamba" # Kamba
+"kek" = "Q'eqchi'" # Q'eqchi'
+"kg-Latn" = "Kikongo" # Kongo
+"kg" = "Kikongo" # Kongo
+"kha-Beng" = "ক ক্তিয়েন খাসি" # Khasi (Bengali)
+"kha-Latn" = "Ka Ktien Khasi" # Khasi (Latin) - Official
+"ki" = "Gĩgĩkũyũ" # Kikuyu
+"kj" = "Kunama" # Kuanyama
+"kk-Arab" = "قازاقشا" # Kazakh (Arabic)
+"kk-Cyrl" = "қазақша" # Kazakh (Cyrillic)
+"kk-Latn" = "qazaqşa" # Kazakh (Latin) - Official
+"kl" = "Kalaallisut" # Kalaallisut
+"kln" = "Kalenjin" # Kalenjin
+"km" = "ភាសាខ្មែរ" # Khmer
+"kn" = "ಕನ್ನಡ" # Kannada
+"ko" = "한국어 | 조선어" # Korean
+"kok-Arab" = "کونکنی" # Konkani (Perso-Arabic)
+"kok-Deva" = "कोंकणी" # Konkani (Devanagari) - Official
+"kok-Knda" = "ಕೊಂಕಣಿ" # Konkani (Kannada)
+"kok-Latn" = "Konknni" # Konkani (Latin)
+"kok-Mlym" = "കൊങ്കണി" # Konkani (Malayalam)
+"kr-Arab" = "كَنُرِيِه" # Kanuri (Arabic) - Official
+"kr-Latn" = "Kànùrí" # Kanuri (Latin)
+"ks-Arab" = "کٲشُر" # Kashmiri (Perso-Arabic) - Official
+"ks-Deva" = "कॉशुर" # Kashmiri (Devanagari)
+"ks-Shrd" = "𑆑𑆳𑆮𑆶𑆫𑇀" # Kashmiri (Sharada)
+"ku-Arab" = "کوردی" # Kurdish (Arabic)
+"ku-Latn" = "Kurdî" # Kurdish (Latin) - Official
+"kv-Cyrl" = "коми" # Komi (Cyrillic) - Official
+"kv-Perm" = "𐍚𐍞𐍜𐍙" # Komi (Old Permic)
+"kw" = "Kernewek" # Cornish
+"ky-Arab" = "قىرعىز" # Kyrgyz (Arabic)
+"ky-Cyrl" = "Кыргыз" # Kyrgyz (Cyrillic) - Official
+"ky-Latn" = "Kyrgyz" # Kyrgyz (Latin)
+"ky-Orkh" = "𐰶𐰃𐰺𐰍𐰃𐰕" # Kyrgyz (Old Turkic)
+"la" = "Latina" # Latin
+"lad" = "Ladin" # Ladino
+"lb" = "Lëtzebuergesch" # Luxembourgish
+"ldn" = "Láadan" # Láadan
+"lfn" = "Lingua Franca Nova" # Lingua Franca Nova
+"lg" = "Oluganda" # Ganda | Luganda
+"li" = "Limburgs" # Limburgish
+"lmo" = "Lombard" # Lombard
+"ln" = "Lingála" # Lingala
+"lo-Laoo" = "ລາວ" # Lao (Lao) - Official
+"lo-Thai" = "ลาว" # Lao (Thai)
+"lt" = "lietuvių" # Lithuanian
+"lu" = "Kiluba" # Luba-Katanga
+"luo" = "Dholuo" # Luo
+"lus-Beng" = "মিজো" # Mizo (Bengali)
+"lus-Latn" = "Mizo" # Mizo (Latin) - Official
+"luy" = "Luyia" # Luyia | Luhya
+"lv" = "Latviešu" # Latvian
+"mai-Deva" = "मैथिली" # Maithili (Devanagari) - Official
+"mai-Tirh" = "𑒧𑒻𑒟𑒱𑒪𑒲" # Maithili (Tirhuta)
+"mam" = "Qyool Mam" # Mam
+"mas" = "Maa" # Maasai | Maa
+"mer" = "Kĩmĩĩrũ" # Meru
+"mg-Arab" = "مَلَغَسِ" # Malagasy (Sorabe)
+"mg-Latn" = "Malagasy" # Malagasy (Latin)
+"mh" = "Kajin Ṃajeḷ" # Marshallese
+"mi" = "Māori" # Māori
+"mix" = "Ayuujk" # Mixe
+"mk" = "македонски" # Macedonian
+"ml-Arab" = "مَلَيَاَلَم" # Malayalam (Arabic)
+"ml-Gran" = "𑌮𑌲𑌯𑌾𑌳𑌮𑍍" # Malayalam (Grantha)
+"ml-Hebr" = "מַלַיַאלַם" # Malayalam (Hebrew)
+"ml-Latn" = "Malayāḷam" # Malayalam (Latin)
+"ml-Mlym" = "മലയാളം" # Malayalam (Malayalam) - Official
+"ml-Syrc" = "ܡܠܲܝܲܠܲܡ" # Malayalam (Suriyani)
+"mn-Mong" = "ᠮᠣᠩᠭᠣᠯ" # Mongolian (Mongolian)
+"mn-Cyrl" = "Монгол" # Mongolian (Cyrillic) - Common
+"mni-Beng" = "মৈতৈলোন" # Meitei | Manipuri (Bengali)
+"mni-Latn" = "Meiteilon" # Meitei | Manipuri (Latin)
+"mni-Mtei" = "ꯃꯩꯇꯩꯂꯣꯟ" # Meitei | Manipuri (Meitei Mayek) - Official
+"mr-Deva" = "मराठी" # Marathi (Devanagari) - Official
+"mr-Modi" = "𑘦𑘨𑘰𑘙𑘲" # Marathi (Modi)
+"ms" = "Bahasa Melayu" # Malay
+"mt" = "Malti" # Maltese
+"my" = "မြန်မာ" # Burmese (Myanmar)
+"na" = "Naoero" # Nauru | Nauruan
+"nah" = "Nāhuatl" # Nahuatl | Aztec
+"nan-Hans" = "闽南语（简体）" # Min Nan Chinese (Simplified) - Common
+"nan-Hant" = "閩南語（繁體）" # Min Nan Chinese (Traditional)
+"naq" = "Khoekhoegowab" # Nama
+"nb" = "Norsk Bokmål" # Norwegian Bokmål - Official
+"nd" = "IsiNdebele" # Northern Ndebele
+"ne" = "नेपाली" # Nepali
+"neu" = "Neo" # Neo
+"ng" = "Ndonga" # Ndonga
+"nl" = "Nederlands" # Dutch
+"nn" = "Norsk Nynorsk" # Norwegian Nynorsk
+"no" = "Norsk Riksmål/Høgnorsk" # Norwegian Riksmål or Høgnorsk
+"non" = "Dǫnsk tunga" # Old Norse
+"nov" = "Novial" # Novial
+"nr" = "isiNdebele" # Southern Ndebele
+"nso" = "Sesotho sa Leboa" # Northern Sotho
+"nv" = "Diné Bizaad" # Navajo
+"ny" = "Chichewa" # Chichewa
+"oc" = "Occitan" # Occitan
+"oj-Latn" = "Anishinaabemowin" # Ojibwe (Latin)
+"oj-Cans" = "ᐊᓂᐦᔑᓈᐯᒧᐎᓐ" # Ojibwe (Canadian Syllabic) - Official
+"om" = "Oromoo" # Oromo
+"or-Orya" = "ଓଡ଼ିଆ" # Odia (Odia) - Official
+"or-Brah" = "𑌓𑌡𑌿𑌆" # Odia (Brahmi)
+"os-Cyrl" = "дигорон" # Ossetian (Cyrillic) - Official
+"os-Geor" = "ირონ" # Ossetian (Georgian)
+"os-Grek" = "ирон" # Ossetian (Greek)
+"os-Latn" = "iron" # Ossetian (Latin)
+"pa-Arab" = "پنجابی" # Punjabi (Shahmukhi)
+"pa-Guru" = "ਪੰਜਾਬੀ" # Punjabi (Gurmukhi)
+"pap" = "Papiamentu" # Papiamento
+"pcm" = "Naijá" # Nigerian Pidgin
+"phn" = "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤌" # Phoenician (Phoenician)
+"pi-Brah" = "𑀧𑀸𑀮𑀺" # Pali (Brahmi)
+"pi-Cakm" = "𑄛𑄣𑄨" # Pali (Chakma)
+"pi-Deva" = "पालि" # Pali (Devanagari)
+"pi-Khar" = "𐨤𐨫𐨁" # Pali (Kharoṣṭhī)
+"pi-Khmr" = "បាលី" # Pali (Khmer)
+"pi-Lana" = "ᨷᩤᩊᩦ" # Pali (Lanna / Tai Tham)
+"pi-Mymr" = "ပါဠိ" # Pali (Myanmar)
+"pi-Sinh" = "පාලි" # Pali (Sinhala)
+"pi-Thai" = "ปาฬิ" # Pali (Thai)
+"pl" = "Polski" # Polish
+"ps" = "پښتو" # Pashto
+"pt" = "Português" # Portuguese
+"qu" = "Runa Simi" # Quechua
+"quc" = "Qatzijobʼal" # Kʼicheʼ
+"qya" = "Quenya" # Quenya (Latin) - Common
+"qya-Teng" = "" # Quenya (Tengwar)
+"qya-Cirt" = "" # Quenya (Cirth)
+"rm" = "Rumantsch" # Romansh
+"rmv" = "Romanova" # Romanova
+"rn" = "Ikirundi" # Rundi
+"ro-Latn" = "Română" # Romanian (Latin) - Official
+"ro-Cyrl" = "Ромынэ" # Romanian (Cyrillic)
+"ru" = "русский" # Russian
+"rw" = "Ikinyarwanda" # Kinyarwanda
+"sa-Deva" = "संस्कृत" # Sanskrit (Devanagari) - Common
+"sa-Brah" = "𑀲𑀁𑀲𑁆𑀓𑀾𑀢" # Sanskrit (Brahmi)
+"sat-Beng" = "সান্তালী" # Santali (Bengali)
+"sat-Deva" = "संताली" # Santali (Devanagari)
+"sat-Latn" = "Santali" # Santali (Latin)
+"sat-Olck" = "ᱥᱟᱱᱛᱟᱲᱤ" # Santali (Ol Chiki) - Official
+"sat-Orya" = "ସାନ୍ତାଳୀ" # Santali (Odia)
+"sc" = "Sardu" # Sardinian
+"scn" = "Sicilianu" # Sicilian
+"sd-Arab" = "سِنڌِي" # Sindhi (Perso-Ararbic) - Official
+"sd-Deva" = "सिन्धी" # Sindhi (Devanagari)
+"sd-Khoj" = "𑈙𑈭𑈝𑈲𑈐" # Sindhi (Khojki)
+"sd-Sind" = "𑋝𑋡𑋞𑋣𑋙" # Sindhi (Khudawadi)
+"sd-Guru" = "ਸਿੰਧੀ" # Sindhi (Gurmukhi)
+"sdr" = "Mey" # Sherdukpen
+"se" = "Davvisámegiella" # Northern Sami
+"sg" = "Sängö" # Sango
+"sga" = "Goídelc" # Old Irish
+"si" = "සිංහල" # Sinhala
+"sjn" = "Sindarin" # Sindarin (Latin) - Common
+"sjn-Teng" = "" # Sindarin (Tengwar)
+"sjn-Cirt" = "" # Sindarin (Cirth)
+"sk-Cyrl" = "Словенчина" # Slovak (Cyrillic)
+"sk-Latn" = "Slovenčina" # Slovak (Latin) - Official
+"sl" = "Slovenščina" # Slovenian
+"sm" = "Gagana Sāmoa" # Samoan
+"sma" = "Åarjelsaemien Gïele" # Southern Sami
+"smj" = "Julevsámegiella" # Lule Sami
+"smn" = "Anarâškielâ" # Inari Sami
+"sn" = "ChiShona" # Shona
+"so-Arab" = "الصومالية" # Somali (Wadaad)
+"so-Latn" = "Af Soomaali" # Somali (Latin) - Official
+"so-Osma" = "𐒖𐒍 𐒈𐒝𐒑𐒛𐒐𐒘" # Somali (Osmanya)
+"sq" = "Shqip" # Albanian
+"sr-Cyrl" = "Српски" # Serbian (Cyrillic) - Official
+"sr-Latn" = "Srpski" # Serbian (Latin)
+"ss" = "SiSwati" # Swati | Swazi
+"st" = "Sesotho" # Southern Sotho
+"su-Arab" = "بَاسَا سُوْندَا" # Sundanese (Pegon)
+"su-Java" = "ꦧꦴꦯꦴ​ꦯꦸꦤ꧀ꦢ" # Sundanese (Javanese)
+"su-Kawi" = "𑀩𑀲​𑀲𑀼𑀦𑁆𑀤" # Sundanese (Kawi)
+"su-Latn" = "Basa Sunda" # Sundanese (Latin)
+"su-Sund" = "ᮘᮞᮞᮥᮔ᮪ᮓ" # Sundanese (Sundanese) - Official
+"sv" = "Svenska" # Swedish
+"sw-Arab" = "كِسْوَحِيلِ" # Swahili (Arabic)
+"sw-Latn" = "Kiswahili" # Swahili (Latin)
+"szl" = "Ślōnskŏ Gŏdka" # Silesian
+"ta-Arab" = "تَمِؠلْ" # Tamil (Arabic)
+"ta-Brah" = "𑀢𑀫𑀻𑀴" # Tamil (Brahmi)
+"ta-Gran" = "𑌤𑌮𑌿𑌳𑍁" # Tamil (Grantha)
+"ta-Latn" = "Tamiḻ" # Tamil (Latin)
+"ta-Taml" = "தமிழ்" # Tamil (Tamil) - Official
+"te" = "తెలుగు" # Telugu
+"tg-Arab" = "تاجيکى" # Tajik (Arabic)
+"tg-Cyrl" = "Тоҷикӣ" # Tajik (Cyrillic) - Official
+"tg-Latn" = "Tojikī" # Tajik (Latin)
+"tg-Hebr" = "תאג'יקי" # Tajik (Hebrew)
+"th" = "ไทย" # Thai
+"ti" = "ትግርኛ" # Tigrinya
+"tk-Arab" = "تۆرکمنچه" # Turkmen (Arabic)
+"tk-Cyrl" = "түркменче" # Turkmen (Cyrillic)
+"tk-Latn" = "Türkmençe" # Turkmen (Latin) - Official
+"tl-Latn" = "Tagalog" # Tagalog (Latin) - Official
+"tl-Tglg" = "ᜆᜄᜎᜓᜄ᜔" # Tagalog (Baybayin)
+"tlh-Latn" = "tlhIngan Hol" # Klingon (Latin) - Official
+"tlh-Piqd" = " " # Klingon (Klingon)
+"tn" = "Setswana" # Tswana
+"to" = "Faka-Tonga" # Tongan
+"tok" = "Toki Pona" # Toki Pona
+"tpi" = "Tok Pisin" # Tok Pisin
+"tr" = "Türkçe" # Turkish
+"ts" = "Xitsonga" # Tsonga
+"tt-Arab" = "تاتار" # Tatar (Arabic)
+"tt-Cyrl" = "татар" # Tatar (Cyrillic)
+"tt-Latn" = "Tatar" # Tatar (Latin) - Official
+"tw" = "Ákán" # Twi | Akan
+"ty" = "Tahiti" # Tahitian
+"tzl" = "Talossan" # Talossan
+"ug-Arab" = "ئۇيغۇرچە" # Uyghur (Arabic) - Official
+"ug-Cyrl" = "Уйғурчә" # Uyghur (Cyrillic)
+"ug-Latn" = "Uyghur" # Uyghur (Latin)
+"uga" = "𐎜𐎂𐎗𐎚" # Ugaritic
+"uk" = "українська" # Ukrainian
+"ur" = "اُردُو" # Urdu
+"uz-Arab" = "اۉزبېک" # Uzbek (Arabic)
+"uz-Cyrl" = "ўзбекча" # Uzbek (Cyrillic)
+"uz-Latn" = "Oʻzbekcha" # Uzbek (Latin) - Official
+"ve" = "Tshivenḓa" # Venda
+"vec" = "Vèneto" # Venetian
+"vi-Hani" = "越南語" # Vietnamese
+"vi-Latn" = "Tiếng Việt" # Vietnamese - Official
+"vo" = "Volapük" # Volapük
+"vro" = "Võro" # Võro
+"wa" = "Walon" # Walloon
+"wal-Ethi" = "ወላይታቶ" # Wolaytta (Geʽez) - Common
+"wal-Latn" = "Wolayttatto" # Wolaytta (Latin)
+"wo-Arab" = "وࣷلࣷفْ" # Wolof (Wolofal / Arabic)
+"wo-Gara" = "𞤏𞤮𞤤𞤮𞤬" # Wolof (Garay)
+"wo-Latn" = "Wolof" # Wolof (Latin) - Common
+"xct" = "ཏོ་ས་ཆེན་པོ" # Classical Tibetan
+"xpu" = "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤉𐤌" # Punic
+"xh" = "IsiXhosa" # Xhosa
+"yi-Hebr" = "ייִדיש" # Yiddish (Hebrew) - Official
+"yi-Latn" = "Yiddish" # Yiddish (Latin)
+"yo-Arab" = "یۏرُبَا" # Yoruba (Anjemi Arabic)
+"yo-Latn" = "Yorùbá" # Yoruba (Latin) - Official
+"yua" = "Màaya T'àan" # Yucatec Maya
+"za-hans" = "壮语（简体）" # Zhuang (Simplified) - Official
+"za-hant" = "壯語（繁體）" # Zhuang (Traditional)
+"zba" = "باليبلن" # Balaibalan
+"zgh" = "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Standard Moroccan Tamazight
+"zh-hans" = "华语（简体）" # Chinese (Simplified) - Official
+"zh-hant" = "華語（繁體）" # Chinese (Traditional)
+"zu" = "IsiZulu" # Zulu
+"zza" = "Zazakî" # Zaza

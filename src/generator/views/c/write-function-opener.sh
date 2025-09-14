@@ -26,7 +26,7 @@ views_write_function_opener_c() {
         # execute
         ____exposure="static "
         if [ "$5" = "public" ]; then
-                ____exposure="extern "
+                ____exposure=""
         fi
 
 

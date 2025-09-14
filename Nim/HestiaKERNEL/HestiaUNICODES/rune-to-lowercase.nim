@@ -23,8 +23,7 @@ import HestiaUNICODES/Data
 
 
 
-proc rune_to_lowercase*(
-  cut_count: var uint8,
+proc rune_to_lowercase*(cut_count: var uint8,
   output_char: var openArray[Rune],
   ____codepoint1: Rune,
   ____codepoint2: Rune,

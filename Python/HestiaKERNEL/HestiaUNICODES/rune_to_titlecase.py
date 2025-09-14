@@ -25,8 +25,7 @@ from HestiaKERNEL.HestiaUNICODES.rune_to_uppercase import _rune_to_uppercase
 
 
 
-def _hestiaUNICODES_Rune_To_Titlecase(
-    ____codepoint1: Rune,
+def _hestiaUNICODES_Rune_To_Titlecase(____codepoint1: Rune,
     ____codepoint2: Rune,
     ____codepoint3: Rune,
     ____lang: str,

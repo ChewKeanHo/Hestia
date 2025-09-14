@@ -25,8 +25,7 @@ import HestiaUNICODES/rune-to-uppercase
 
 
 
-proc rune_to_titlecase*(
-  cut_count: var uint8,
+proc rune_to_titlecase*(cut_count: var uint8,
   output_char: var openArray[Rune],
   ____codepoint1: Rune,
   ____codepoint2: Rune,

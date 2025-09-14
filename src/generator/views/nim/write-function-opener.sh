@@ -40,11 +40,11 @@ views_write_function_opener_nim() {
                         fi
 
                         if [ ! "$____params" = "" ]; then
-                                ____params="${____params},"
+                                ____params="${____params},
+  "
                         fi
 
-                        ____params="${____params}
-  ${____line}"
+                        ____params="${____params}${____line}"
                 done<<EOF
 ${3}
 EOF
