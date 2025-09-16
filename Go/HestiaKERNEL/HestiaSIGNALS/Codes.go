@@ -17,7 +17,7 @@
 
 package HestiaSIGNALS
 
-type Signal uint16
+type uint16 Signal
 
 
 

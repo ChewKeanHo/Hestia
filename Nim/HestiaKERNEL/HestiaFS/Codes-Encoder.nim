@@ -16,7 +16,7 @@
 # WARNING: Consult Copyright owners or documentations.
 
 type
-  Encoder* = uint8
+  Encoder*: uint8
 
 
 
@@ -24,6 +24,6 @@ type
 # Encoders' ID
 const
   # Encoder type
-  const HestiaFS_ENCODER_UNKNOWN*: Encoder = 0
-  const HestiaFS_ENCODER_BYTE*: Encoder = 1
-  const HestiaFS_ENCODER_TEXT*: Encoder = 2
+  HestiaFS_ENCODER_UNKNOWN*: Encoder = 0
+  HestiaFS_ENCODER_BYTE*: Encoder = 1
+  HestiaFS_ENCODER_TEXT*: Encoder = 2

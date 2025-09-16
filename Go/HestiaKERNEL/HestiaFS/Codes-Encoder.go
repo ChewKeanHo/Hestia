@@ -17,7 +17,7 @@
 
 package HestiaFS
 
-type Encoder uint8
+type uint8 Encoder
 
 
 

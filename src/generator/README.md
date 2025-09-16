@@ -7,7 +7,7 @@ Example use cases would be (but not exhausive):
 
 * linear enumerations definitions
 * unicode case switching dataset
-* locale language ISO identifers dataset
+* locale language ISO identifiers
 * assembly codes embedding
 
 
@@ -16,7 +16,7 @@ Example use cases would be (but not exhausive):
 ## Adding a New Feature (Example: Programming Language)
 
 To add a new feature, you must first understand that this generator is an
-application oriented by VIPER structure
+application oriented by `VIPER` project structure
 (Views, Interactors, Presenters, Entities, and Routers). The following
 illustrates the data flow from top-to-bottom:
 
@@ -69,36 +69,64 @@ please use "Windows Subsystems for Linux" setup instead.
 
 ### Before You Start
 
-You should take a look inside the `views` component for any existing
-compatible and usable implementations. This saves time and make things a lot
-easier to do. Usually, a simple `routers` and `start.sh` configurations are
-sufficient (refer documentations below). Otherwise, you can follow the
-following to create yours.
+The main documentations of each generators are located inside the `presenters`
+directory, within their respective `README.md` Markdown formatted file. They
+are organized in the `Business Needs-to-Know` strategy. You should read
+through the generator's documentations first before proceeding to perform any
+new development.
+
+If you're new to this project, then the following steps might guide to towards
+a seasoned maintainership.
+
+This project uses pure POSIX Shell script entirely and is already configured
+to auto-import all functions inside `entities`, `views`, and `interactors`.
+Hence, you can go ahead and use the functions directly without explicit import.
+
+**1 function is only allowed in 1 source code**.
 
 
 #### (1) Work on Views
 
-Start working on `views` rendering functions first. These functions should
-not validate data quality but only focus on rendering the output. Data
-sanitations and validations belongs to `entites` component.
+Start working on `views` rendering functions first. These functions only focus
+on rendering the source codes' output segments. They are **NOT SUPPOSE** to
+perform any data processing like sanitations and validations. Those are
+ `entites` components' responsibilities.
 
-Use pure POSIX Shell script to work on the function.
-
-Due to `views` component being a primitive one in nature, it should be safe
-for you to make mistakes without breaking others.
+Due to `views` component being a primitive component by nature, it should be
+safe and easy to recover from your mistakes without breaking other components.
 
 
 #### (2) Work on Interactors
 
 Now map the `views` rendering functions to the corresponding `interactors`
-libraries. This is to let you familarize with how `views` (and `entities`)
-works alongside `interactors`.
+libraries. This is to let you familarize with how `views` and `entities`
+integrate with `interactors`.
 
-Note that if any of your `views` functions introduces a new parameter demands,
-all `views` functions for other languages must aligned together. To use or not
-to use it's `views` functions' internal business needs. However, `interactors`
-functions API must always stay consistent across all languages.
+Hestia generator use `context1/{context1-a.sh,...main.sh}/context2/{...}`
+directory organization to keep the entire generator project maintainable.
+Example, for `enums-linear` generator, the interactor is
 
+`enums/`                                  - designate enumeration type.
+`enums/linear`                            - designate linear enumeration nature.
+`enums/linear/write-import`               - designate the segment function type.
+`enums/linear/write-import/main.sh`       - the control file for the function.
+                                            `presenters` call this function. Its
+                                            sole resonsibility is to call all
+                                            specific context functions at its
+                                            level for concurrent generations.
+`enums/linear/write-import/{c,go,...}.sh` - the context-specific function. In
+                                            this case, it is the specific
+                                            programming rendering coordination
+                                            for `write-import` segment.
+
+Function names are combinations of each folders. Following the example above,
+it is `interactors_enums_linear_write_import_c`. For `main.sh`, remove the
+last context. Always leave the programming language as the last segment in the
+function naming convention.
+
+Some other exploration would be `locales/lang/name` interactors which yields
+multiple output functions per languages. This should give you some ideas for
+`interactors` component.
 
 
 #### (3) Work on Presenters (Business Logics)
@@ -108,11 +136,12 @@ For future-proofing and reducing cost of maintainability, you **MUST** adhere
 to the following rules:
 
 1. `presenters` **MUST ONLY** call POSIX Shell native functions, alias, etc and
-   `interactors` functions. This is to ensure any external influences
-   (e.g. breaking and non-breaking changes) won't easily break the generator
-   and newer integrations' errors are confidently isolated.
+   `interactors' main functions. This is to ensure any external influences
+   (e.g. breaking and non-breaking changes) won't easily break existing
+   generators at will. Also, newer integrations' errors can also be confidently
+   isolated.
 2. `presenters` **MUST NOT** do any data processing logics
-   (e.g. the trim string algorithm) other than algorithm logics coordinations
+   (e.g. the trim string algorithm) other than algorithm coordinations
    (e.g. calling the `interactors_trim_string` interactor function).
 
 Make sure to create a confidently running logic flow first for prototyping
@@ -122,10 +151,10 @@ up and running reliably.
 
 #### (4) Work on Routers
 
-With presenter is up, it's time to work on `routers`. The generator is based
-on configurable output generations where `routers` houses the feature's
-overall configurations and initializations. This is to promote high usability
-and eliminate unnecessary duplications. For example:
+With `presenter` is now up and ready, it's time to work on `routers`. The
+generator is based on configurable output generations where `routers` houses
+the feature's overall configurations and initializations. This is to promote
+high usability and eliminate unnecessary duplications. For example:
 
 * `HestiaSIGNALS.Codes`, `HestiaFS.Codes-Encoders`, `HestiaTESTS.Codes-Verdict`
   and etc are all using the same `linear enumerations` `presenters` feature
@@ -158,7 +187,7 @@ Once done, your feature is now integrated and you can start performing
 in-depth iterative development.
 
 
-#### (7) Develop Interatively
+#### (7) Develop Iteratively
 
 Great, you can now confidently develop your features in-depth and iteratively.
 

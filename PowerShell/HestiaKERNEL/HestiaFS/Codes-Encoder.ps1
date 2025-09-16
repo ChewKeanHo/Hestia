@@ -23,9 +23,3 @@
 ${env:HestiaFS_ENCODER_UNKNOWN} = 0
 ${env:HestiaFS_ENCODER_BYTE} = 1
 ${env:HestiaFS_ENCODER_TEXT} = 2
-
-
-
-
-# report import status
-return 0

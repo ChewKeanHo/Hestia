@@ -17,7 +17,7 @@
 
 package HestiaTESTS
 
-type Verdict uint8
+type uint8 Verdict
 
 
 

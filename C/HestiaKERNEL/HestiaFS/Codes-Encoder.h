@@ -14,11 +14,14 @@
 
 // WARNING: This file is AUTO-GENERATED! DO NOT EDIT!
 // WARNING: Consult Copyright owners or documentations.
-
 #ifndef HestiaFS_CODES_ENCODER
 #define HestiaFS_CODES_ENCODER
 
+
+
+
 #include "../HestiaNUMBERS/Data.h"
+#include "../HestiaSTRINGS/Data.h"
 
 typedef HestiaFS_Encoder uint8;
 
@@ -27,9 +30,11 @@ typedef HestiaFS_Encoder uint8;
 
 // Encoders' ID
 // Encoder type
-#define HestiaFS_ENCODER_UNKNOWN 0
-#define HestiaFS_ENCODER_BYTE 1
-#define HestiaFS_ENCODER_TEXT 2
+#define HestiaFS_ENCODER_UNKNOWN ((HestiaFS_Encoder)0)
+#define HestiaFS_ENCODER_BYTE ((HestiaFS_Encoder)1)
+#define HestiaFS_ENCODER_TEXT ((HestiaFS_Encoder)2)
 
 
-#endif // HestiaFS_CODES_ENCODER
+
+
+#endif

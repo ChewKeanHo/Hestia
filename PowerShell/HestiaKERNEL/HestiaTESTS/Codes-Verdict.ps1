@@ -23,9 +23,3 @@
 ${env:HestiaTESTS_PASSED} = 0
 ${env:HestiaTESTS_FAILED} = 1
 ${env:HestiaTESTS_SKIPPED} = 2
-
-
-
-
-# report import status
-return 0

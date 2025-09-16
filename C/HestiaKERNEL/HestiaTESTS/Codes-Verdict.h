@@ -14,11 +14,14 @@
 
 // WARNING: This file is AUTO-GENERATED! DO NOT EDIT!
 // WARNING: Consult Copyright owners or documentations.
-
 #ifndef HestiaTESTS_CODES_VERDICT
 #define HestiaTESTS_CODES_VERDICT
 
+
+
+
 #include "../HestiaNUMBERS/Data.h"
+#include "../HestiaSTRINGS/Data.h"
 
 typedef HestiaTESTS_Verdict uint8;
 
@@ -27,9 +30,11 @@ typedef HestiaTESTS_Verdict uint8;
 
 // Verdict' ID
 // test verdicts
-#define HestiaTESTS_PASSED 0
-#define HestiaTESTS_FAILED 1
-#define HestiaTESTS_SKIPPED 2
+#define HestiaTESTS_PASSED ((HestiaTESTS_Verdict)0)
+#define HestiaTESTS_FAILED ((HestiaTESTS_Verdict)1)
+#define HestiaTESTS_SKIPPED ((HestiaTESTS_Verdict)2)
 
 
-#endif // HestiaTESTS_CODES_VERDICT
+
+
+#endif

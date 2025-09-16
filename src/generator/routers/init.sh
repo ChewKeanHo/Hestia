@@ -41,11 +41,13 @@ ____import_lib() {
 
                 . "$____item"
                 if [ $? -ne 0 ]; then
-                        HestiaOS_Print_Error "Failed to Import '${____item}'."
-                        HestiaOS_Print_Error "Contact Developer / Maintainer."
-                        HestiaOS_Print_Error "Unable to Proceed."
-                        HestiaOS_Print_Error "Bailing Out..."
-                        HestiaOS_Print_Error ""
+                        HestiaOS_Print_Error "\
+Failed to Import '${____item}'.
+Contact Developer / Maintainer.
+Unable to Proceed.
+Bailing Out...
+
+"
                         return 1
                 fi
         done
@@ -71,6 +73,57 @@ if [ $? -ne 0 ]; then
 fi
 
 unset ____import_lib
+
+
+
+
+# define supported languages
+OUTPUT_TYPE_C="c"
+OUTPUT_TYPE_GO="go"
+OUTPUT_TYPE_NIM="nim"
+OUTPUT_TYPE_POWERSHELL="powershell"
+OUTPUT_TYPE_PYTHON="python"
+OUTPUT_TYPE_RUST="rust"
+OUTPUT_TYPE_SHELL="shell"
+
+
+____old_IFS="$IFS"
+while IFS= read -r ____line || [ -n "$____line" ]; do
+        HestiaOS_Print_Info "Purging '${____line}' Output Directory..."
+        rm -rf "../../${____line}"
+        if [ $? -ne 0 ]; then
+                HestiaOS_Print_Error "\
+Purging Failed.
+Contact Developer / Maintainer.
+Unable to Proceed.
+Bailing Out...
+
+"
+                return 1
+        fi
+
+        sync "../../"
+        if [ $? -ne 0 ]; then
+                HestiaOS_Print_Error "\
+Purging Failed.
+Contact Developer / Maintainer.
+Unable to Proceed.
+Bailing Out...
+
+"
+                return 1
+        fi
+done<<EOF
+C
+Go
+Nim
+PowerShell
+Python
+Rust
+Shell
+EOF
+IFS="$____old_IFS"
+unset ____line ____old_IFS
 
 
 

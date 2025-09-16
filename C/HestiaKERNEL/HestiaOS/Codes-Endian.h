@@ -14,11 +14,14 @@
 
 // WARNING: This file is AUTO-GENERATED! DO NOT EDIT!
 // WARNING: Consult Copyright owners or documentations.
-
 #ifndef HestiaOS_CODES_ENDIAN
 #define HestiaOS_CODES_ENDIAN
 
+
+
+
 #include "../HestiaNUMBERS/Data.h"
+#include "../HestiaSTRINGS/Data.h"
 
 typedef HestiaOS_Endian uint8;
 
@@ -27,8 +30,10 @@ typedef HestiaOS_Endian uint8;
 
 // Endian' ID
 // endian types
-#define HestiaOS_ENDIAN_BIG 0
-#define HestiaOS_ENDIAN_LITTLE 1
+#define HestiaOS_ENDIAN_BIG ((HestiaOS_Endian)0)
+#define HestiaOS_ENDIAN_LITTLE ((HestiaOS_Endian)1)
 
 
-#endif // HestiaOS_CODES_ENDIAN
+
+
+#endif

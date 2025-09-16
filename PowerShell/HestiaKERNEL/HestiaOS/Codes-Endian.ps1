@@ -22,9 +22,3 @@
 # endian types
 ${env:HestiaOS_ENDIAN_BIG} = 0
 ${env:HestiaOS_ENDIAN_LITTLE} = 1
-
-
-
-
-# report import status
-return 0

@@ -16,7 +16,7 @@
 # WARNING: Consult Copyright owners or documentations.
 
 type
-  Verdict* = uint8
+  Verdict*: uint8
 
 
 
@@ -24,6 +24,6 @@ type
 # Verdict' ID
 const
   # test verdicts
-  const HestiaTESTS_PASSED*: Verdict = 0
-  const HestiaTESTS_FAILED*: Verdict = 1
-  const HestiaTESTS_SKIPPED*: Verdict = 2
+  HestiaTESTS_PASSED*: Verdict = 0
+  HestiaTESTS_FAILED*: Verdict = 1
+  HestiaTESTS_SKIPPED*: Verdict = 2

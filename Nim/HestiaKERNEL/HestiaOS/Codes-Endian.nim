@@ -16,7 +16,7 @@
 # WARNING: Consult Copyright owners or documentations.
 
 type
-  Endian* = uint8
+  Endian*: uint8
 
 
 
@@ -24,5 +24,5 @@ type
 # Endian' ID
 const
   # endian types
-  const HestiaOS_ENDIAN_BIG*: Endian = 0
-  const HestiaOS_ENDIAN_LITTLE*: Endian = 1
+  HestiaOS_ENDIAN_BIG*: Endian = 0
+  HestiaOS_ENDIAN_LITTLE*: Endian = 1

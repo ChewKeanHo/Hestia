@@ -305,9 +305,3 @@ ${env:HestiaSIGNALS_USER_KEY_MISSING} = 223
 ${env:HestiaSIGNALS_USER_KEY_INVALID} = 224
 ${env:HestiaSIGNALS_USER_KEY_EXPIRED} = 225
 ${env:HestiaSIGNALS_USER_KEY_MISMATCHED} = 226
-
-
-
-
-# report import status
-return 0

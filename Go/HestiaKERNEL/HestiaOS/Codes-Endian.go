@@ -17,7 +17,7 @@
 
 package HestiaOS
 
-type Endian uint8
+type uint8 Endian
 
 
 

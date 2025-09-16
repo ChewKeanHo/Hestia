@@ -75,45 +75,6 @@ fi
 
 
 
-# clean up all project housing source codes
-rm -rf "../../C"
-if [ $? -ne 0 ]; then
-        return 1
-fi
-
-rm -rf "../../Go"
-if [ $? -ne 0 ]; then
-        return 1
-fi
-
-rm -rf "../../Nim"
-if [ $? -ne 0 ]; then
-        return 1
-fi
-
-rm -rf "../../PowerShell"
-if [ $? -ne 0 ]; then
-        return 1
-fi
-
-rm -rf "../../Python"
-if [ $? -ne 0 ]; then
-        return 1
-fi
-
-rm -rf "../../Rust"
-if [ $? -ne 0 ]; then
-        return 1
-fi
-
-rm -rf "../../Shell"
-if [ $? -ne 0 ]; then
-        return 1
-fi
-
-
-
-
 # generate HestiaSIGNALS/Codes.*
 (. "${PROJECT_PATH_ROOT}/routers/HestiaSIGNALS/Codes.sh") &
 ____pid_hestiasignals_codes=$!
