@@ -17,7 +17,7 @@
 
 views_write_raw_content_c() {
         #____path_dest="$1"
-        #____paths="$2"
+        #____content="$2"
 
 
         # execute

@@ -54,11 +54,11 @@ views_write_switch_change_condition_rust() {
 
         if [ "$____is_first" = "true" ]; then
                 printf -- "%s" "\
-$(views_get_indent_rust "$(( $____indent ))")${____condition} => {
+$(views_get_indent_rust "$____indent")${____condition} => {
 " >> "${1}.tmp"
         else
                 printf -- "%s" "\
-$(views_get_indent_rust "$(( $____indent ))")} ${____condition} => {
+$(views_get_indent_rust "$____indent")} ${____condition} => {
 " >> "${1}.tmp"
         fi
         if [ $? -ne 0 ]; then

@@ -42,7 +42,7 @@ views_write_switch_change_condition_go() {
         esac
 
         printf -- "%s" "\
-$(views_get_indent_go "$(( $____indent ))")${____condition}:
+$(views_get_indent_go "$____indent")${____condition}:
 " >> "${1}.tmp"
         if [ $? -ne 0 ]; then
                 unset ____indent ____condition

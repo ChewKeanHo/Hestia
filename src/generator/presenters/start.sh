@@ -110,9 +110,9 @@ ____pid_hestiaunicodes_runes_to_casing=$!
 
 
 
-# generate HestiaLOCALES/Lang*
-(. "${PROJECT_PATH_ROOT}/routers/HestiaLOCALES/Lang.sh") &
-____pid_hestialocales_lang=$!
+# generate HestiaLOCALES
+(. "${PROJECT_PATH_ROOT}/routers/HestiaLOCALES/Languages/Name.sh") &
+____pid_hestialocales_language_name=$!
 
 
 
@@ -148,7 +148,7 @@ if [ $? -ne 0 ]; then
 fi
 
 
-wait $____pid_hestialocales_lang
+wait $____pid_hestialocales_language_name
 if [ $? -ne 0 ]; then
         return 1
 fi
