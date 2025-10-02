@@ -28,7 +28,7 @@ interactors_locales_languages_name_write_start_toml_nim() {
 
         views_write_function_opener_nim \
                 "$1" \
-                "$LOCALES_UNDERSCORE_LANG_TOML" \
+                "$FUNCTION_NAME_NIM_LANG_TOML" \
                 "" \
                 "cstring" \
                 "public"

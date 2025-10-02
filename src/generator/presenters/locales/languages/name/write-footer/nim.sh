@@ -16,7 +16,7 @@
 
 
 # write for nim
-interactors_write_footer_nim "$LOCALES_IS_LANG_DEST_NIM"
+interactors_write_footer "$LOCALES_IS_LANG_DEST_NIM" "$OUTPUT_TYPE_NIM"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Nim's Is Lang.
@@ -28,7 +28,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_nim "$LOCALES_LANG_LIST_DEST_NIM"
+interactors_write_footer "$LOCALES_LANG_LIST_DEST_NIM" "$OUTPUT_TYPE_NIM"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Nim's Lang List.
@@ -40,7 +40,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_nim "$LOCALES_LANG_NAME_DEST_NIM"
+interactors_write_footer "$LOCALES_LANG_NAME_DEST_NIM" "$OUTPUT_TYPE_NIM"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Nim's Lang Name.
@@ -52,7 +52,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_nim "$LOCALES_LANG_TOML_DEST_NIM"
+interactors_write_footer "$LOCALES_LANG_TOML_DEST_NIM" "$OUTPUT_TYPE_NIM"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Nim's Lang TOML.

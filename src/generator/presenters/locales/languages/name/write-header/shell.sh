@@ -15,11 +15,8 @@
 
 
 
-# write shell
-interactors_write_header_shell \
-        "$LOCALES_IS_LANG_DEST_SHELL" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+# write for shell
+interactors_write_header "$LOCALES_IS_LANG_DEST_SHELL" "$OUTPUT_TYPE_SHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Shell's Is Lang.
@@ -31,10 +28,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_shell \
-        "$LOCALES_LANG_LIST_DEST_SHELL" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_LIST_DEST_SHELL" "$OUTPUT_TYPE_SHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Shell's Lang List.
@@ -46,10 +40,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_shell \
-        "$LOCALES_LANG_NAME_DEST_SHELL" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_NAME_DEST_SHELL" "$OUTPUT_TYPE_SHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Shell's Lang Name.
@@ -61,10 +52,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_shell \
-        "$LOCALES_LANG_TOML_DEST_SHELL" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_TOML_DEST_SHELL" "$OUTPUT_TYPE_SHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Shell's Lang TOML.

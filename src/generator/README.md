@@ -2,8 +2,8 @@
 
 This is `Hestia` internal code generator designed for generating consistent
 dataset and functions source codes for multiple programming langauges.
-It is based on a single data source for sensible maintainability.
-Example use cases would be (but not exhausive):
+It is based on a single data source for sensible maintainability. Example use
+cases would be (but not exhausive):
 
 * linear enumerations definitions
 * unicode case switching dataset
@@ -13,9 +13,9 @@ Example use cases would be (but not exhausive):
 
 
 
-## Adding a New Feature (Example: Programming Language)
+## Directory Structure
 
-To add a new feature, you must first understand that this generator is an
+To perform anything, you must first understand that this generator is an
 application oriented by `VIPER` project structure
 (Views, Interactors, Presenters, Entities, and Routers). The following
 illustrates the data flow from top-to-bottom:
@@ -37,21 +37,24 @@ entities, views
 --------------------------------------------
 ```
 
-* `views` - raw libraries housing all languages source codes rendering functions.
-* `entities` - raw libraries housing all dataset and 3rd-parties functions.
+* `views` - raw libraries housing all languages source codes rendering
+            functions.
+* `entities` - raw libraries housing all dataset and 3rd-parties' functions.
 * `interactors` - adapter libraries isolating `entities` and `views` away from
-                  `presenters` business logics.
+                  `presenters` business logics. This includes source codes'
+                  file rendering logics.
 * `presenters` - The generator's actual business logics that strictly performs
-                 logic coordinations and only calls `interactors`
-                 functionalities.
-* `routers` - the main controller that initiate a set of particular
-              `presenter` businesses.
-* `presenters/start.sh, presenters/start.ps1` - the generator program's actual
-                                                trigger. This calls what routers
-                                                to execute when generator is
-                                                initalized.
-* `Start{.sh.ps1}` - the generator unified trigger for easy to use and easy
-                     to document sake.
+                 generator business logics' coordinations and only calls
+                 `interactors` functionalities.
+* `routers` - the main trigger that initiate a `presenter` for generating a
+              specific outputs.
+* `presenters/start.sh, presenters/start.ps1` - the generator main program.
+                                                This imports all `entities`,
+                                                `views`, and `interactors`
+                                                automatically and execute all
+                                                `routers` after initialization.
+* `Start{.sh.ps1}` - the generator's unified trigger for easy to use and easy
+                     documentation.
 
 This generator is guarded by the localized `.git` commit with single linear
 flow for maintainability. Hence, your development must always be timeline
@@ -59,11 +62,20 @@ stampable with clear commit message.
 
 Everything in the generator except `presenters` are functions. Each function
 is prefixed with its original packaging (e.g. `views` functions has `views_`
-prefix). Only `presenters` are subroutines via source call.
+prefix). Only `presenters` are subroutines via dot source call.
 
 For sanity sake, this generator is strictly using POSIX Compliant Shell
-language. The PowerShell counterpart is completely ignored. For Windows user,
-please use "Windows Subsystems for Linux" setup instead.
+language. The PowerShell counterpart is completely ignored for maintenance
+sanity. Hence, for Windows user, please use "Windows Subsystems for Linux"
+setup instead.
+
+
+
+### Special `logs` work directory
+
+The generator uses parallel-processing by default. Hence, all outputs are
+logged inside a `logs/` workspace directory with respect to `routers` pathing.
+To read the log, simply use `cat` program and read via the terminal.
 
 
 
@@ -72,46 +84,48 @@ please use "Windows Subsystems for Linux" setup instead.
 The main documentations of each generators are located inside the `presenters`
 directory, within their respective `README.md` Markdown formatted file. They
 are organized in the `Business Needs-to-Know` strategy. You should read
-through the generator's documentations first before proceeding to perform any
-new development.
+through the generator's documentations first layer-by-layer before proceeding
+to perform any new development.
 
 If you're new to this project, then the following steps might guide to towards
-a seasoned maintainership.
+your maintainership experiences.
 
-This project uses pure POSIX Shell script entirely and is already configured
-to auto-import all functions inside `entities`, `views`, and `interactors`.
-Hence, you can go ahead and use the functions directly without explicit import.
+This project uses pure POSIX Shell script entirely. It is already configured
+to auto-import all functions inside `entities`, `views`, and `interactors` and
+then auto-execute all shell scripts with `.sh` file extension inside `routers`
+directory. Hence, you do not need to manually import stuffs here and there.
 
-**1 function is only allowed in 1 source code**.
+For maintainability sake, **only 1 function is allowed in 1 source code**.
 
 
 #### (1) Work on Views
 
-Start working on `views` rendering functions first. These functions only focus
-on rendering the source codes' output segments. They are **NOT SUPPOSE** to
-perform any data processing like sanitations and validations. Those are
- `entites` components' responsibilities.
+Start by working on `views` rendering functions. These functions only focus
+on source codes' templating output which are independent in nature. It should
+be safe for beginner to attempt any contribution to the project.
 
-Due to `views` component being a primitive component by nature, it should be
-safe and easy to recover from your mistakes without breaking other components.
+`views` is **NOT SUPPOSE** to perform any data processing like sanitations and
+validations. Those are  `entites` components' responsibilities.
 
 
 #### (2) Work on Interactors
 
-Now map the `views` rendering functions to the corresponding `interactors`
-libraries. This is to let you familarize with how `views` and `entities`
-integrate with `interactors`.
+Next is to map the `views` rendering functions to the corresponding
+`interactors` libraries. This is to let you familarize with how `views` and
+`entities` integrating with `interactors` forming the low-level sides of
+the generator.
 
-Hestia generator use `context1/{context1-a.sh,...main.sh}/context2/{...}`
-directory organization to keep the entire generator project maintainable.
-Example, for `enums-linear` generator, the interactor is
+The generator uses `context1/{context1-a.sh,...main.sh}/context2/{...}`
+directory organization for seamless learning and maintainability.
+Example, for `enums/linear` generator, the interactor is
 
 `enums/`                                  - designate enumeration type.
 `enums/linear`                            - designate linear enumeration nature.
 `enums/linear/write-import`               - designate the segment function type.
-`enums/linear/write-import/main.sh`       - the control file for the function.
-                                            `presenters` call this function. Its
-                                            sole resonsibility is to call all
+`enums/linear/write-import/main.sh`       - the main control file for the
+                                            function. `presenters` will call
+                                            this function instead. Its sole
+                                            resonsibility is to call all
                                             specific context functions at its
                                             level for concurrent generations.
 `enums/linear/write-import/{c,go,...}.sh` - the context-specific function. In
@@ -124,16 +138,16 @@ it is `interactors_enums_linear_write_import_c`. For `main.sh`, remove the
 last context. Always leave the programming language as the last segment in the
 function naming convention.
 
-Some other exploration would be `locales/lang/name` interactors which yields
-multiple output functions per languages. This should give you some ideas for
-`interactors` component.
+Some other exploration would be `locales/lang/name` interactors that yield
+multiple output functions per language. These real production examples should
+provide you some deep understanding for `interactors` component.
 
 
 #### (3) Work on Presenters (Business Logics)
 
-With `interactors` are now available, you can start working on `presenters`.
-For future-proofing and reducing cost of maintainability, you **MUST** adhere
-to the following rules:
+With `interactors` are now available, you can start working on `presenters`
+which coordinates the `interactors` function calls. For future-proofing and
+reducing cost of maintainability, you **MUST** adhere to the following rules:
 
 1. `presenters` **MUST ONLY** call POSIX Shell native functions, alias, etc and
    `interactors' main functions. This is to ensure any external influences
@@ -156,27 +170,15 @@ generator is based on configurable output generations where `routers` houses
 the feature's overall configurations and initializations. This is to promote
 high usability and eliminate unnecessary duplications. For example:
 
-* `HestiaSIGNALS.Codes`, `HestiaFS.Codes-Encoders`, `HestiaTESTS.Codes-Verdict`
-  and etc are all using the same `linear enumerations` `presenters` feature
-  with different `routers/` configurations.
+* `HestiaSIGNALS.Codes`, `HestiaFS.Encoders`, `HestiaTESTS.Verdicts` and etc
+  are all using the same `linear enumerations` `presenters` feature with
+  different `routers/` configurations.
 
-Once your Presenter business logic is ready, it means your Entities data source
-are ready. However, you still need to review and tidy up the Entities before
-proceeding.
-
-
-#### (5) Map to `presenters/start.{sh,ps1}`
-
-With the router is now available, proceed to map the router file into the
-main execution sequences inside `presenters/start.{sh,ps1}` respectively.
-
-In any case, **DO NOT** modify the `Start.sh.ps1` polygot file. That is solely
-meant for keeping user easy to use and easy documentation purposes.
-`Start.sh.ps1` only calls `presenters/start.{sh,ps1}` (based on technology)
-so work on the latter.
+The directory and file placement **MUST** align to the actual Hestia packages
+output paths for clarity purposes.
 
 
-#### (6) Smoke It and Test Run
+#### (5) Smoke It and Test Run
 
 Now that the full pipeline is up, you can proceed to execute `Start.sh.ps1`
 and observe the entire pipeline for your feature can run without error. Focus
@@ -206,15 +208,16 @@ done, perform the `git commit` and upstream the changes.
 POSIX Shell is tough for a lot of people already. Do not make it harder by
 trying to establish unecessary rules.
 
-Strictly english in full text. hungarian notation
-(e.g. use `count` instead of `cnt`) is **STRICTLY PROHIBITIED**.
+Strictly english in full text aligning to International Science Language.
+Hungarian notation (e.g. use the full word `count` instead of `cnt`) is
+**STRICTLY PROHIBITIED**.
 
 Make sure everything is running procedurally that is trackable by following
 the breadcrumb.
 
-Flows and readability scrolling **MUST** always be TOP-TO-BOTTOM. Break line if
-needed. Max width is `120` columns; `80` is preferred for backward
-compatibility. **HORIZONTAL SCROLLING IS STRICTLY PROHIBITED**.
+Flows and readability scrolling **MUST** always be TOP-TO-BOTTOM. Break the
+line whenever needed. Max width is `120` columns; `80` is preferred for
+backward compatibility. **HORIZONTAL SCROLLING IS STRICTLY PROHIBITED**.
 
 
 

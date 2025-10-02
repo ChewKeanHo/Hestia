@@ -17,12 +17,19 @@
 
 views_write_import_guard_closer_c() {
         #____path_dest="$1"
+        #____symbol="$2"
 
 
         # execute
-        printf -- "%s" "\
-#endif
+        if [ ! "$2" = "" ]; then
+                printf -- "%s" "\
+#endif // $(printf -- "%s" "$2" | tr '[:lower:]' '[:upper:]')
 " >> "${1}.tmp"
+        else
+                printf -- "%s" "\
+#endif // import guard
+" >> "${1}.tmp"
+        fi
         if [ $? -ne 0 ]; then
                 return 1
         fi

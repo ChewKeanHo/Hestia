@@ -16,7 +16,9 @@
 
 
 # write for rust
-interactors_write_footer_rust "$LOCALES_IS_LANG_DEST_RUST"
+interactors_write_footer_rust \
+        "$LOCALES_IS_LANG_DEST_RUST" \
+        "$OUTPUT_TYPE_RUST"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Rust's Is Lang.
@@ -28,7 +30,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_rust "$LOCALES_LANG_LIST_DEST_RUST"
+interactors_write_footer_rust \
+        "$LOCALES_LANG_LIST_DEST_RUST" \
+        "$OUTPUT_TYPE_RUST"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Rust's Lang List.
@@ -40,7 +44,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_rust "$LOCALES_LANG_NAME_DEST_RUST"
+interactors_write_footer_rust \
+        "$LOCALES_LANG_NAME_DEST_RUST" \
+        "$OUTPUT_TYPE_RUST"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Rust's Lang Name.
@@ -52,7 +58,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_rust "$LOCALES_LANG_TOML_DEST_RUST"
+interactors_write_footer_rust \
+        "$LOCALES_LANG_TOML_DEST_RUST" \
+        "$OUTPUT_TYPE_RUST"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Rust's Lang TOML.

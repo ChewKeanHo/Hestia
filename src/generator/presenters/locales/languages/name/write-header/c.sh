@@ -16,10 +16,7 @@
 
 
 # write for c
-interactors_write_header_c \
-        "$LOCALES_IS_LANG_DEST_C" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_IS_LANG_DEST_C" "$OUTPUT_TYPE_C"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for C's Is Lang.
@@ -31,10 +28,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_c \
-        "$LOCALES_LANG_LIST_DEST_C" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_LIST_DEST_C" "$OUTPUT_TYPE_C"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for C's Lang List.
@@ -46,10 +40,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_c \
-        "$LOCALES_LANG_NAME_DEST_C" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_NAME_DEST_C" "$OUTPUT_TYPE_C"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for C's Lang Name.
@@ -61,10 +52,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_c \
-        "$LOCALES_LANG_TOML_DEST_C" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_TOML_DEST_C" "$OUTPUT_TYPE_C"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for C's Lang TOML.

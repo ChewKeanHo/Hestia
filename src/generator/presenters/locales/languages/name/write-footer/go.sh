@@ -16,7 +16,7 @@
 
 
 # write for go
-interactors_write_footer_go "$LOCALES_IS_LANG_DEST_GO"
+interactors_write_footer "$LOCALES_IS_LANG_DEST_GO" "$OUTPUT_TYPE_GO"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Go's Is Lang.
@@ -28,7 +28,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_go "$LOCALES_LANG_LIST_DEST_GO"
+interactors_write_footer "$LOCALES_LANG_LIST_DEST_GO" "$OUTPUT_TYPE_GO"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Go's Lang List.
@@ -40,7 +40,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_go "$LOCALES_LANG_NAME_DEST_GO"
+interactors_write_footer "$LOCALES_LANG_NAME_DEST_GO" "$OUTPUT_TYPE_GO"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Go's Lang Name.
@@ -52,7 +52,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_go "$LOCALES_LANG_TOML_DEST_GO"
+interactors_write_footer "$LOCALES_LANG_TOML_DEST_GO" "$OUTPUT_TYPE_GO"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Go's Lang TOML.

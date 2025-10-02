@@ -17,25 +17,24 @@
 
 views_write_header_c() {
         #____path_dest="$1"
-        #____path_source="$2"
+        #____path_source_license="$2"
         #____path_source_notice="$3"
 
 
         # execute
-        ## clean up destination
-        mkdir -p "${1%/*}" 2> /dev/null
-        rm -rf "${1}.tmp" 2> /dev/null
-        sync "${1}.tmp" 2> /dev/null
-
         ## write license header
         ____old_IFS="$IFS"
         while IFS="" read -r ____line || [ -n "$____line" ]; do
                 if [ "$____line" = "" ]; then
-                        printf -- "//\n" "$____line" >> "${1}.tmp"
+                        views_write_raw_content_c "$1" "\
+//
+"
                         continue
                 fi
 
-                printf -- "// %s\n" "$____line" >> "${1}.tmp"
+                views_write_raw_content_c "$1" "\
+// ${____line}
+"
                 if [ $? -ne 0 ]; then
                         IFS="$____old_IFS"
                         unset ____line ____old_IFS
@@ -46,7 +45,10 @@ views_write_header_c() {
         unset ____line ____old_IFS
 
         ## write spacing
-        printf -- "\n\n" "$____line" >> "${1}.tmp"
+        views_write_raw_content_c "$1" "\
+
+
+"
         if [ $? -ne 0 ]; then
                 return 1
         fi
@@ -54,7 +56,9 @@ views_write_header_c() {
         ## write notice
         ____old_IFS="$IFS"
         while IFS="" read -r ____line || [ -n "$____line" ]; do
-                printf -- "// %s\n" "$____line" >> "${1}.tmp"
+                views_write_raw_content_c "$1" "\
+// ${____line}
+"
                 if [ $? -ne 0 ]; then
                         IFS="$____old_IFS"
                         unset ____line ____old_IFS

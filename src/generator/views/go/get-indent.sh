@@ -21,11 +21,8 @@ views_get_indent_go() {
 
         # execute
         case "$1" in
-        *[!0-9]*)
-                printf -- "%s" ""
-                if [ $? -ne 0 ]; then
-                        return 1
-                fi
+        ""|*[!0-9]*)
+                return 1
                 ;;
         *)
                 ____indent=""

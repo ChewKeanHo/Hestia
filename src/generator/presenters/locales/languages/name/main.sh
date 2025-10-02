@@ -15,8 +15,26 @@
 
 
 
+# establish definitions
+. "${PROJECT_PATH_ROOT}/presenters/locales/languages/name/establish-definitions.sh"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+
+
+
 # define all destination paths
 . "${PROJECT_PATH_ROOT}/presenters/locales/languages/name/configure-paths/main.sh"
+if [ $? -ne 0 ]; then
+        return 1
+fi
+
+
+
+
+# clean up destination files
+. "${PROJECT_PATH_ROOT}/presenters/locales/languages/name/clean-up/main.sh"
 if [ $? -ne 0 ]; then
         return 1
 fi

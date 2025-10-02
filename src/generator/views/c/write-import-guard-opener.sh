@@ -21,13 +21,16 @@ views_write_import_guard_opener_c() {
 
 
         # execute
+        ____lock="$(printf -- "%s" "$2" | tr '[:lower:]' '[:upper:]')"
         printf -- "%s" "\
-#ifndef ${2}
-#define ${2}
+#ifndef ${____lock}
+#define ${____lock}
 " >> "${1}.tmp"
         if [ $? -ne 0 ]; then
+                unset ____lock
                 return 1
         fi
+        unset ____lock
 
 
         # report status

@@ -30,7 +30,9 @@ interactors_enums_linear_write_end_c() {
                 return 1
         fi
 
-        views_write_import_guard_closer_c "$1"
+        views_write_import_guard_closer_c "$1" "\
+${ENUMS_LINEAR_PREFIX}_${ENUMS_LINEAR_NAME_C}\
+"
         if [ $? -ne 0 ]; then
                 return 1
         fi

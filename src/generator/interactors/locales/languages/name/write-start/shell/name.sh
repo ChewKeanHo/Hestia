@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_name_shell() {
 
         views_write_function_opener_shell \
                 "$1" \
-                "${LOCALES_PREFIX}_${LOCALES_UNDERSCORE_LANG_NAME}" \
+                "${LOCALES_PREFIX}_${FUNCTION_NAME_SHELL_LANG_NAME}" \
                 "\
 \$${LOCALES_PARAMS_CODE}
 " \

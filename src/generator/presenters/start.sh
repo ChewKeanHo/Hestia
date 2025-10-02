@@ -66,8 +66,59 @@ fi
 
 
 
-# initialize the application
-. "${PROJECT_PATH_ROOT}/routers/init.sh"
+# perform basic initialization
+. "${PROJECT_PATH_ROOT}/entities/HestiaKERNEL/HestiaOS/Print-Info.sh"
+. "${PROJECT_PATH_ROOT}/entities/HestiaKERNEL/HestiaOS/Print-Error.sh"
+
+
+PROJECT_PATH_OUTPUT="${PROJECT_PATH_ROOT%/*}" # remove 'generators/'
+PROJECT_PATH_OUTPUT="${PROJECT_PATH_OUTPUT%/*}" # remove 'src/'
+
+
+SOURCE_LICENSE="${PROJECT_PATH_OUTPUT}/src/licenses/NOTICE_en.txt"
+
+
+SOURCE_NOTICE_AUTOGEN="${PROJECT_PATH_OUTPUT}/src/notices/auto-generated/en.txt"
+
+
+
+
+# import interactors libraries
+____import_lib() {
+        #____path="$1"
+
+        for ____item in "${1}/"*; do
+                if [ -d "$____item" ]; then
+                        ____import_lib "$____item"
+                        continue
+                elif [ ! -f "$____item" ]; then
+                        continue
+                fi
+
+                if [ ${____item%".sh"} = "$____item" ]; then
+                        # not a shell script
+                        continue
+                fi
+
+                . "$____item"
+                if [ $? -ne 0 ]; then
+                        HestiaOS_Print_Error "\
+Failed to Import '${____item}'.
+Contact Developer / Maintainer.
+Unable to Proceed.
+Bailing Out...
+
+"
+                        return 1
+                fi
+        done
+}
+
+
+
+
+HestiaOS_Print_Info "Initializing Entities Libraries..."
+____import_lib "${PROJECT_PATH_ROOT}/entities"
 if [ $? -ne 0 ]; then
         return 1
 fi
@@ -75,82 +126,212 @@ fi
 
 
 
-# generate HestiaSIGNALS/Codes.*
-(. "${PROJECT_PATH_ROOT}/routers/HestiaSIGNALS/Codes.sh") &
-____pid_hestiasignals_codes=$!
-
-
-
-
-# generate HestiaTESTS/Codes.*
-(. "${PROJECT_PATH_ROOT}/routers/HestiaTESTS/Codes.sh") &
-____pid_hestiatests_codes=$!
-
-
-
-
-# generate HestiaOS/Codes-Endian.*
-(. "${PROJECT_PATH_ROOT}/routers/HestiaOS/Codes-Endian.sh") &
-____pid_hestiaos_codes_endians=$!
-
-
-
-
-# generate HestiaFS/Codes-Encoders.*
-(. "${PROJECT_PATH_ROOT}/routers/HestiaFS/Codes-Encoders.sh") &
-____pid_hestiafs_codes_encoders=$!
-
-
-
-
-# generate HestiaUNICODES/runes-to-.*
-(. "${PROJECT_PATH_ROOT}/routers/HestiaUNICODES/runes-to-casing.sh") &
-____pid_hestiaunicodes_runes_to_casing=$!
-
-
-
-
-# generate HestiaLOCALES
-(. "${PROJECT_PATH_ROOT}/routers/HestiaLOCALES/Languages/Name.sh") &
-____pid_hestialocales_language_name=$!
-
-
-
-
-# wait for all completions
-wait $____pid_hestiasignals_codes
+HestiaOS_Print_Info "Initializing Views Libraries..."
+____import_lib "${PROJECT_PATH_ROOT}/views"
 if [ $? -ne 0 ]; then
         return 1
 fi
 
 
-wait $____pid_hestiatests_codes
+
+
+HestiaOS_Print_Info "Initializing Interactors Libraries..."
+____import_lib "${PROJECT_PATH_ROOT}/interactors"
 if [ $? -ne 0 ]; then
         return 1
 fi
 
-
-wait $____pid_hestiaos_codes_endians
-if [ $? -ne 0 ]; then
-        return 1
-fi
+unset ____import_lib
 
 
-wait $____pid_hestiafs_codes_encoders
-if [ $? -ne 0 ]; then
-        return 1
-fi
 
 
-wait $____pid_hestiaunicodes_runes_to_casing
-if [ $? -ne 0 ]; then
-        return 1
-fi
+# define supported languages
+OUTPUT_TYPE_C="c"
+OUTPUT_TYPE_GO="go"
+OUTPUT_TYPE_NIM="nim"
+OUTPUT_TYPE_POWERSHELL="powershell"
+OUTPUT_TYPE_PYTHON="python"
+OUTPUT_TYPE_RUST="rust"
+OUTPUT_TYPE_SHELL="shell"
 
 
-wait $____pid_hestialocales_language_name
-if [ $? -ne 0 ]; then
-        return 1
+____old_IFS="$IFS"
+while IFS= read -r ____line || [ -n "$____line" ]; do
+        HestiaOS_Print_Info "Purging '${____line}' Output Directory..."
+        rm -rf "../../${____line}"
+        if [ $? -ne 0 ]; then
+                HestiaOS_Print_Error "\
+Purging Failed.
+Contact Developer / Maintainer.
+Unable to Proceed.
+Bailing Out...
+
+"
+                return 1
+        fi
+
+        sync "../../"
+        if [ $? -ne 0 ]; then
+                HestiaOS_Print_Error "\
+Purging Failed.
+Contact Developer / Maintainer.
+Unable to Proceed.
+Bailing Out...
+
+"
+                return 1
+        fi
+done<<EOF
+C
+Go
+Nim
+PowerShell
+Python
+Rust
+Shell
+EOF
+IFS="$____old_IFS"
+unset ____line ____old_IFS
+
+
+
+
+# execute all routers
+____pids=""
+____pids_total=0
+rm -rf "${PROJECT_PATH_ROOT}/logs" &> /dev/null
+sync "$PROJECT_PATH_ROOT"
+____execute() {
+        #____path="$1"
+
+        for ____item in "${1}/"*; do
+                if [ -d "$____item" ]; then
+                        ____execute "$____item"
+                        continue
+                elif [ ! -f "$____item" ]; then
+                        continue
+                fi
+
+                if [ ${____item%".sh"} = "$____item" ]; then
+                        continue # not a shell script
+                fi
+
+                if [ ! "$____pids" = "" ]; then
+                        ____pids="${____pids} "
+                fi
+
+                # prepare log path for status logging
+                ____log_path="${____item##*"${PROJECT_PATH_ROOT}/routers"}"
+                ____log_path="${PROJECT_PATH_ROOT}/logs/${____log_path%.*}.txt"
+                mkdir -p "${____log_path%/*}"
+
+                # execute now
+                HestiaOS_Print_Info "Executing '${____item##*"${PROJECT_PATH_ROOT}/"}'..."
+                (. "$____item" &> "$____log_path") &
+                ____pids="${____pids}${!}"
+
+                # register pids for waiting
+                ____pids_total=$(( $____pids_total + 1 ))
+        done
+}
+____execute "${PROJECT_PATH_ROOT}/routers"
+unset ____execute
+
+
+
+
+# monitor progress
+____passed=0
+____failed=0
+____status=""
+____indicator="—"
+while [ $(( $____passed + $____failed )) -lt $____pids_total ]; do
+        ____passed=0
+        ____failed=0
+
+        # check status of each pid
+        ____list="$____pids"
+        while [ ! "$____list" = "" ]; do
+                ____pid="${____list%% *}"
+                ____list="${____list#"${____pid}"}"
+                ____list="${____list#" "}"
+
+                if kill -0 "$____pid" 2>/dev/null; then
+                        continue  # still running
+                else
+                        if wait "$____pid" 2>/dev/null; then
+                                ____passed=$(( $____passed + 1 ))
+                        else
+                                ____failed=$(( $____failed + 1 ))
+                        fi
+                fi
+        done
+
+        # calculate percentage
+        ____percent=$(( ($____passed + $____failed) * 100 / $____pids_total ))
+
+        # create progress bar
+        ____bar=""
+        ____bar_length=50
+        ____filled=$(( ($____passed + $____failed) * $____bar_length / $____pids_total ))
+        ____empty=$(( $____bar_length - $____filled ))
+
+        while [ $____filled -ne 0 ]; do
+                ____bar="${____bar}█"
+                ____filled=$(( $____filled - 1 ))
+        done
+
+        while [ $____empty -ne 0 ]; do
+                ____bar="${____bar}░"
+                ____empty=$(( $____empty - 1 ))
+        done
+
+        # update indicator
+        case "$____indicator" in
+        "—")
+                ____indicator="\\"
+                ;;
+        "\\")
+                ____indicator="|"
+                ;;
+        "|")
+                ____indicator="/"
+                ;;
+        "/")
+                ____indicator="—"
+                ;;
+        *)
+                ____indicator="—"
+                ;;
+        esac
+
+        # display progress
+        1>&2 printf "%s: [%s] %d%% (P:%d|F:%d|T:%d)\r" \
+            "$____indicator" \
+            "$____bar" \
+            "$____percent" \
+            "$____passed" \
+            "$____failed" \
+            "$____pids_total"
+
+        # if not all completed, wait a bit before next update
+        if [ $(( $____passed + $____failed )) -lt $____pids_total ]; then
+            sleep 1
+        fi
+done
+1>&2 printf -- "\n"
+
+
+# clear the progress line and show final result
+if [ $____failed -ne 0 ]; then
+        HestiaOS_Print_Error "\
+Completed ${____failed}/${____pids_total} failed.
+"
+else
+        HestiaOS_Print_Success "\
+Completed ${____passed}/${____pids_total} passed.
+"
 fi
 
 

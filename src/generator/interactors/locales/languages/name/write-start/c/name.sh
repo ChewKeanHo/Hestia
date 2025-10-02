@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_name_c() {
 
         views_write_function_opener_c \
                 "$1" \
-                "$LOCALES_UNDERSCORE_LANG_NAME" \
+                "$FUNCTION_NAME_C_LANG_NAME" \
                 "\
 const char *${LOCALES_PARAMS_CODE}
 " \

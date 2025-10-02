@@ -15,7 +15,7 @@
 
 
 
-HestiaOS_Print_Info "Writing Locales Languages' Name Header Segment..."
+HestiaOS_Print_Info "Writing Header Segment..."
 . "${PROJECT_PATH_ROOT}/presenters/locales/languages/name/write-header/c.sh"
 if [ $? -ne 0 ]; then
         return 1

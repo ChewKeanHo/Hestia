@@ -21,7 +21,7 @@ interactors_locales_languages_name_write_import_is_lang_c() {
 
         # execute
         views_write_import_guard_opener_c "$1" "\
-${LOCALES_PREFIX}_${LOCALES_UNDERSCORE_UPPERCASE_IS_LANG}\
+${LOCALES_PREFIX}_${FUNCTION_NAME_C_IS_LANG}\
 "
         if [ $? -ne 0 ]; then
                 return 1
@@ -33,7 +33,8 @@ ${LOCALES_PREFIX}_${LOCALES_UNDERSCORE_UPPERCASE_IS_LANG}\
         fi
 
         views_write_import_c "$1" "\
-#include \"../HestiaKERNEL/HestiaSTRINGS/Are-Same-CString.c\"
+#include \"../HestiaBOOLEANS/Data.c\"
+#include \"../HestiaSTRINGS/Are-Same-CString.c\"
 "
         if [ $? -ne 0 ]; then
                 return 1

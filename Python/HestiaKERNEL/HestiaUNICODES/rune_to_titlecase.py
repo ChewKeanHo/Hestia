@@ -19,19 +19,24 @@
 
 
 from HestiaKERNEL.HestiaUNICODES.Data import Rune
-from HestiaKERNEL.HestiaUNICODES.rune_to_lowercase import _rune_to_lowercase
-from HestiaKERNEL.HestiaUNICODES.rune_to_uppercase import _rune_to_uppercase
+from HestiaKERNEL.HestiaUNICODES.rune_to_lowercase import rune_to_lowercase
+from HestiaKERNEL.HestiaUNICODES.rune_to_uppercase import rune_to_uppercase
 
 
 
 
-def _hestiaUNICODES_Rune_To_Titlecase(____codepoint1: Rune,
+# This is an internal-only function for changing rune character into titlecase.
+#
+# It is an output from a synthesized and processed titlecase rune characters
+# databases sourced from Unicode.org directly. End-user should not call this
+# function directly as there are higher-level processing (enyzme streaming
+# algorithm) needed for making a complete case switching.
+def rune_to_titlecase(____codepoint1: Rune,
     ____codepoint2: Rune,
     ____codepoint3: Rune,
     ____lang: str,
     ____to_titlecase: bool) -> tuple[int, list[Rune]]:
-
-
+    # execute
     # language sensitive special cases
     match ____lang:
         case "az" | "tr":
@@ -41,92 +46,92 @@ def _hestiaUNICODES_Rune_To_Titlecase(____codepoint1: Rune,
                     match ____codepoint2:
                         case 0x0307:
                             if ____to_titlecase != True:
-                                return 2, [0x0049, 0x0307]
+                                return (2, [0x0049, 0x0307])
                             else:
-                                return 2, [0x0069]
+                                return (2, [0x0069])
                         case _:
                             if ____to_titlecase != True:
-                                return 1, [0x0049]
+                                return (1, [0x0049])
                             else:
-                                return 1, [0x0131]
+                                return (1, [0x0131])
                         case 0x0069 | 0x0130:
                             if ____to_titlecase != "":
-                                return 1, [0x0130]
+                                return (1, [0x0130])
                             else:
-                                return 1, [0x0069]
+                                return (1, [0x0069])
         case "lt":
             # Lithuanian
             match ____codepoint1:
                 case 0x0049:
                     if ____to_titlecase == True:
-                        return 1, [0x0049]
+                        return (1, [0x0049])
                     else:
-                        return 1, [0x0069, 0x0307]
+                        return (1, [0x0069, 0x0307])
                 case 0x004A:
                     if ____to_titlecase == True:
-                        return 1, [0x004A]
+                        return (1, [0x004A])
                     else:
-                        return 1, [0x006A, 0x0307]
+                        return (1, [0x006A, 0x0307])
                 case 0x0069:
                     match ____codepoint2:
                         case 0x0307:
                             match ____codepoint3:
                                 case 0x0300:
                                     if ____to_titlecase == True:
-                                        return 3, [0x00CC]
+                                        return (3, [0x00CC])
                                     else:
-                                        return 3, [0x0069, 0x0307, 0x0300]
+                                        return (3, [0x0069, 0x0307, 0x0300])
                                 case 0x0301:
                                     if ____to_titlecase == True:
-                                        return 3, [0x00CD]
+                                        return (3, [0x00CD])
                                     else:
-                                        return 3, [0x0069, 0x0307, 0x0301]
+                                        return (3, [0x0069, 0x0307, 0x0301])
                                 case 0x0303:
                                     if ____to_titlecase == True:
-                                        return 3, [0x0128]
+                                        return (3, [0x0128])
                                     else:
-                                        return 3, [0x0069, 0x0307, 0x0303]
+                                        return (3, [0x0069, 0x0307, 0x0303])
                                 case _:
                                     if ____to_titlecase == True:
-                                        return 2, [0x0049]
+                                        return (2, [0x0049])
                                     else:
-                                        return 2, [0x0069, 0x0307]
+                                        return (2, [0x0069, 0x0307])
                 case 0x006A:
                     match ____codepoint2:
                         case 0x0307:
                             if ____to_titlecase == True:
-                                return 2, [0x004A]
+                                return (2, [0x004A])
                             else:
-                                return 2, [0x006A, 0x0307]
+                                return (2, [0x006A, 0x0307])
                 case 0x00CC:
                     if ____to_titlecase == True:
-                        return 1, [0x00CC]
+                        return (1, [0x00CC])
                     else:
-                        return 1, [0x0069, 0x0307, 0x0300]
+                        return (1, [0x0069, 0x0307, 0x0300])
                 case 0x00CD:
                     if ____to_titlecase == True:
-                        return 1, [0x00CD]
+                        return (1, [0x00CD])
                     else:
-                        return 1, [0x0069, 0x0307, 0x0301]
+                        return (1, [0x0069, 0x0307, 0x0301])
                 case 0x0128:
                     if ____to_titlecase == True:
-                        return 1, [0x0128]
+                        return (1, [0x0128])
                     else:
-                        return 1, [0x0069, 0x0307, 0x0303]
+                        return (1, [0x0069, 0x0307, 0x0303])
                 case 0x012E:
                     if ____to_titlecase == True:
-                        return 1, [0x012E]
+                        return (1, [0x012E])
                     else:
-                        return 1, [0x012F, 0x0307]
+                        return (1, [0x012F, 0x0307])
                 case 0x012F:
                     match ____codepoint2:
                         case 0x0307:
                             if ____to_titlecase == True:
-                                return 2, [0x012E]
+                                return (2, [0x012E])
                             else:
-                                return 2, [0x012F, 0x0307]
+                                return (2, [0x012F, 0x0307])
                 case 0x0307:
-                    return 1, []
+                    return (1, [])
 
 
     # language insensitive special cases
@@ -145,21 +150,21 @@ def _hestiaUNICODES_Rune_To_Titlecase(____codepoint1: Rune,
                         case 0x0049:
                             pass
                             if ____to_titlecase == True:
-                                return 3, [70, 102, 105]
+                                return (3, [70, 102, 105])
                             else:
-                                return 3, [64259]
+                                return (3, [64259])
                         case 0x004C:
                             pass
                             if ____to_titlecase == True:
-                                return 3, [70, 102, 108]
+                                return (3, [70, 102, 108])
                             else:
-                                return 3, [64260]
+                                return (3, [64260])
                         case _:
                             pass
                             if ____to_titlecase == True:
-                                return 2, [70, 102]
+                                return (2, [70, 102])
                             else:
-                                return 2, [64256]
+                                return (2, [64256])
                 case 0x0049:
                     pass
                     if ____to_titlecase == True:
@@ -313,9 +318,9 @@ def _hestiaUNICODES_Rune_To_Titlecase(____codepoint1: Rune,
                         case 0x0399:
                             pass
                             if ____to_titlecase == True:
-                                return 3, [913, 834, 837]
+                                return (3, [913, 834, 837])
                             else:
-                                return 3, [8119]
+                                return (3, [8119])
                         case _:
                             pass
                 case 0x0399:
@@ -335,9 +340,9 @@ def _hestiaUNICODES_Rune_To_Titlecase(____codepoint1: Rune,
                         case 0x0399:
                             pass
                             if ____to_titlecase == True:
-                                return 3, [919, 834, 837]
+                                return (3, [919, 834, 837])
                             else:
-                                return 3, [8135]
+                                return (3, [8135])
                         case _:
                             pass
                 case 0x0399:
@@ -403,9 +408,9 @@ def _hestiaUNICODES_Rune_To_Titlecase(____codepoint1: Rune,
                         case 0x0399:
                             pass
                             if ____to_titlecase == True:
-                                return 3, [937, 834, 837]
+                                return (3, [937, 834, 837])
                             else:
-                                return 3, [8183]
+                                return (3, [8183])
                         case _:
                             pass
                 case 0x0399:
@@ -1188,21 +1193,16 @@ def _hestiaUNICODES_Rune_To_Titlecase(____codepoint1: Rune,
                 return 1, [1348, 1389]
             else:
                 return 1, [64279]
-
-
-    # switching normal 1:1 casing now
-    if ____to_titlecase == "":
-        return _hestiaUNICODES_Rune_To_Uppercase(
-            ____codepoint1,
+    if ____to_titlecase == True:
+        return rune_to_uppercase(____codepoint1,
             ____codepoint2,
             ____codepoint3,
-            ____lang)
+            ____to_titlecase)
     else:
-        return _hestiaUNICODES_Rune_To_Lowercase(
-            ____codepoint1,
+        return rune_to_lowercase(____codepoint1,
             ____codepoint2,
             ____codepoint3,
-            ____lang)
+            ____to_titlecase)
 
 
 

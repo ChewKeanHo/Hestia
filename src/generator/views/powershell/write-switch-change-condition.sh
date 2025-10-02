@@ -41,14 +41,31 @@ views_write_switch_change_condition_powershell() {
                 ;;
         esac
 
-        printf -- "%s" "\
+        ____is_first=false
+        case "$4" in
+        [0-9])
+                if [ $4 -eq 0 ]; then
+                        ____is_first=true
+                fi
+                ;;
+        *)
+                ;;
+        esac
+
+        if [ "$____is_first" = "true" ]; then
+                printf -- "%s" "\
+$(views_get_indent_powershell "$____indent")${____condition} {
+" >> "${1}.tmp"
+        else
+                printf -- "%s" "\
 $(views_get_indent_powershell "$____indent")} ${____condition} {
 " >> "${1}.tmp"
+        fi
         if [ $? -ne 0 ]; then
-                unset ____indent  ____condition
+                unset ____is_first ____indent  ____condition
                 return 1
         fi
-        unset ____indent ____condition
+        unset ____is_first ____indent ____condition
 
 
         # report status

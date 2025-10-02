@@ -15,11 +15,10 @@
 
 
 
-# write powershell
-interactors_write_header_powershell \
+# write for powershell
+interactors_write_header \
         "$LOCALES_IS_LANG_DEST_POWERSHELL" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+        "$OUTPUT_TYPE_POWERSHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for PowerShell's Is Lang.
@@ -31,10 +30,9 @@ Bailing Out...
 fi
 
 
-interactors_write_header_powershell \
+interactors_write_header \
         "$LOCALES_LANG_LIST_DEST_POWERSHELL" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+        "$OUTPUT_TYPE_POWERSHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for PowerShell's Lang List.
@@ -46,10 +44,9 @@ Bailing Out...
 fi
 
 
-interactors_write_header_powershell \
+interactors_write_header \
         "$LOCALES_LANG_NAME_DEST_POWERSHELL" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+        "$OUTPUT_TYPE_POWERSHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for PowerShell's Lang Name.
@@ -61,10 +58,9 @@ Bailing Out...
 fi
 
 
-interactors_write_header_powershell \
+interactors_write_header \
         "$LOCALES_LANG_TOML_DEST_POWERSHELL" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+        "$OUTPUT_TYPE_POWERSHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for PowerShell's Lang TOML.

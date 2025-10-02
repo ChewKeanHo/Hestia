@@ -27,22 +27,22 @@ interactors_locales_languages_name_write_end_list_c() {
 
 };
 
-const size_t ${LOCALES_LANG_LIST_CONST}_COUNT =
-$(views_get_indent_c "1")sizeof(${LOCALES_LANG_LIST_CONST}) / sizeof(${LOCALES_LANG_LIST_CONST}[0]);
+const size_t ${FUNCTION_NAME_C_LANG_LIST_NAME}_COUNT =
+$(views_get_indent_c "1")sizeof(${FUNCTION_NAME_C_LANG_LIST_NAME}) / sizeof(${FUNCTION_NAME_C_LANG_LIST_NAME}[0]);
 
 
 
 
-int ${LOCALES_UNDERSCORE_LANG_LIST}(const char ***output, size_t *output_count) {
+int ${FUNCTION_NAME_C_LANG_LIST}(const char ***output, size_t *output_count) {
 $(views_get_indent_c "1")if (output == NULL) {
 $(views_get_indent_c "2")return HestiaSIGNALS_ENTITY_MISSING;
 $(views_get_indent_c "1")}
 
 
 $(views_get_indent_c "1")// execute
-$(views_get_indent_c "1")*output = ${LOCALES_LANG_LIST_CONST};
+$(views_get_indent_c "1")*output = ${FUNCTION_NAME_C_LANG_LIST_NAME};
 $(views_get_indent_c "1")if (output_count != NULL) {
-$(views_get_indent_c "2")*output_count = ${LOCALES_LANG_LIST_CONST}_COUNT;
+$(views_get_indent_c "2")*output_count = ${FUNCTION_NAME_C_LANG_LIST_NAME}_COUNT;
 $(views_get_indent_c "1")}
 
 
@@ -59,7 +59,9 @@ $(views_get_indent_c "1")return 0;
                 return 1
         fi
 
-        views_write_import_guard_closer_c "$1"
+        views_write_import_guard_closer_c "$1" "\
+${LOCALES_PREFIX}_${FUNCTION_NAME_C_LANG_LIST}\
+"
         if [ $? -ne 0 ]; then
                 return 1
         fi

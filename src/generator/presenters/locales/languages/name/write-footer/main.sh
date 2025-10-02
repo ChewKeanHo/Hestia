@@ -15,7 +15,7 @@
 
 
 
-HestiaOS_Print_Info "Writing Locales Languages' Name Footer Segment..."
+HestiaOS_Print_Info "Writing Footer Segment..."
 . "${PROJECT_PATH_ROOT}/presenters/locales/languages/name/write-footer/c.sh"
 if [ $? -ne 0 ]; then
         return 1

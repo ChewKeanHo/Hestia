@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_is_lang_rust() {
 
         views_write_function_opener_rust \
                 "$1" \
-                "$LOCALES_UNDERSCORE_LOWERCASE_IS_LANG" \
+                "$FUNCTION_NAME_RUST_IS_LANG" \
                 "\
 ${LOCALES_PARAMS_CODE}: &str
 " \

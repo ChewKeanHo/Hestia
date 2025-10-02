@@ -21,10 +21,37 @@ views_write_import_powershell() {
 
 
         # execute
-        printf -- "%s" "$2" >> "${1}.tmp"
+        ____list=""
+        ____old_IFS="$IFS"
+        while IFS= read -r ____library || [ -n "$____library" ]; do
+                if [ "$____library" = "" ]; then
+                        continue
+                fi
+
+                if [ ! "$____list" = "" ]; then
+                        ____list="${____list},
+"
+                fi
+
+                ____list="${____list}        \"${____library}\""
+        done<<EOF
+${2}
+EOF
+        IFS="$____old_IFS"
+        unset ____library ____old_IFS
+
+        printf -- "%s" "\
+foreach (\$____library in @(
+${____list}
+)) {
+        \$null = . \$____library
+}
+" >> "${1}.tmp"
         if [ $? -ne 0 ]; then
+                unset ____list
                 return 1
         fi
+        unset ____list
 
 
         # report status

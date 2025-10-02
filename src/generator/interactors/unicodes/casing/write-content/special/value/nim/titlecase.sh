@@ -1,0 +1,111 @@
+#!/bin/sh
+# Copyright 2025 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
+# Copyright 2024 (Holloway) Chew, Kean Ho <hello@hollowaykeanho.com>
+# Copyright 2023 (Holloway) Chew, Kean Ho <hollowaykeanho@gmail.com>
+#
+#
+# Licensed under (Holloway) Chew, Kean Ho's Liberal License (the 'License').
+# You must comply with the license to use the content. Get the License at:
+#
+# https://doi.org/10.5281/zenodo.13770769
+#
+# You MUST ensure any interaction with the content STRICTLY COMPLIES with
+# the permissions and limitations set forth in the license.
+
+
+
+
+interactors_unicodes_casing_write_content_special_value_titlecase_nim() {
+        #____dest_path="$1"
+        #____codepoints="$2"
+        #____indent_level="$3"
+        #____trim_count="$4"
+        #____codepoint_lowercase="$5"
+        #____codepoint_titlecase="$6"
+
+
+        # execute
+        ## write opening
+        views_write_raw_content_nim "$1" "\
+$(views_get_indent_nim "$(( $3 + 1 ))")cut_count = ${4}
+$(views_get_indent_nim "$(( $3 + 1 ))")if ${UNICODES_ELEMENT_NAME_TO_TITLECASE} == true:
+"
+        if [ $? -ne 0 ]; then
+                return 1
+        fi
+
+        ## process title characters data
+        ____buffer="$6"
+        ____index=0
+        while [ ! "$____buffer" = "" ]; do
+                ## parse character codepoint
+                ____char="${____buffer%%_*}"
+                ____buffer="${____buffer#${____char}}"
+                if [ "${____buffer%"${____buffer#?}"}" = "_" ]; then
+                        ____buffer="${____buffer#_}"
+                fi
+                ____char="0${____char}"
+
+                ## all good - write the character
+                views_write_raw_content_nim "$1" "\
+$(views_get_indent_nim "$(( $3 + 2 ))")output_char[${____index}] = ${____char}
+"
+                if [ $? -ne 0 ]; then
+                        unset ____char ____index ____buffer
+                        return 1
+                fi
+
+                ____index=$(( $____index + 1 ))
+        done
+        unset ____char ____index ____buffer
+
+        views_write_raw_content_nim "$1" "\
+$(views_get_indent_nim "$(( $3 + 1 ))")else:
+"
+        if [ $? -ne 0 ]; then
+                return 1
+        fi
+
+        ## process default lowercase characters data
+        ____buffer="$5"
+        ____index=0
+        while [ ! "$____buffer" = "" ]; do
+                ## parse character codepoint
+                ____char="${____buffer%%_*}"
+                ____buffer="${____buffer#${____char}}"
+                if [ "${____buffer%"${____buffer#?}"}" = "_" ]; then
+                        ____buffer="${____buffer#_}"
+                fi
+                ____char="0${____char}"
+
+                ## all good - write the character
+                views_write_raw_content_nim "$1" "\
+$(views_get_indent_nim "$(( $3 + 2 ))")output_char[${____index}] = ${____char}
+"
+                if [ $? -ne 0 ]; then
+                        unset ____char ____index ____buffer
+                        return 1
+                fi
+
+                ____index=$(( $____index + 1 ))
+        done
+        unset ____char ____index ____buffer
+
+        ## write closing
+        views_write_raw_content_nim "$1" "\
+$(views_get_indent_nim "$(( $3 + 1 ))")return 0
+"
+        if [ $? -ne 0 ]; then
+                return 1
+        fi
+
+
+        # report status
+        return 0
+}
+
+
+
+
+# report import status
+return 0

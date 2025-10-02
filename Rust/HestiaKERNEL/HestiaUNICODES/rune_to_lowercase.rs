@@ -18,21 +18,19 @@
 
 
 
-#[allow(non_snake_case)]
-use crate::HestiaUNICODES::data::Rune;
-
-
-
-
+// This is an internal-only function for changing rune character into lowercase.
+//
+// It is an output from a synthesized and processed lowercase rune characters
+// databases sourced from Unicode.org directly. End-user should not call this
+// function directly as there are higher-level processing (enyzme streaming
+// algorithm) needed for making a complete case switching.
 pub fn rune_to_lowercase(cut_count: &mut u8,
 	output_char: &mut Vec<Rune>,
 	____codepoint1: Rune,
 	____codepoint2: Rune,
 	____codepoint3: Rune,
-	____lang: String,
-	____to_titlecase: bool) -> i16 {
-
-
+	____lang: String) -> u8 {
+	// execute
 	// language sensitive special cases
 	match ____lang {
 	"az" | "tr" => {

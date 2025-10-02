@@ -16,7 +16,9 @@
 
 
 # write for powershell
-interactors_write_footer_powershell "$LOCALES_IS_LANG_DEST_POWERSHELL"
+interactors_write_footer \
+        "$LOCALES_IS_LANG_DEST_POWERSHELL" \
+        "$OUTPUT_TYPE_POWERSHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for PowerShell's Is Lang.
@@ -28,7 +30,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_powershell "$LOCALES_LANG_LIST_DEST_POWERSHELL"
+interactors_write_footer \
+        "$LOCALES_LANG_LIST_DEST_POWERSHELL" \
+        "$OUTPUT_TYPE_POWERSHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for PowerShell's Lang List.
@@ -40,7 +44,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_powershell "$LOCALES_LANG_NAME_DEST_POWERSHELL"
+interactors_write_footer \
+        "$LOCALES_LANG_NAME_DEST_POWERSHELL" \
+        "$OUTPUT_TYPE_POWERSHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for PowerShell's Lang Name.
@@ -52,7 +58,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_powershell "$LOCALES_LANG_TOML_DEST_POWERSHELL"
+interactors_write_footer \
+        "$LOCALES_LANG_TOML_DEST_POWERSHELL" \
+        "$OUTPUT_TYPE_POWERSHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for PowerShell's Lang TOML.

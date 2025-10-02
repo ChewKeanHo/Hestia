@@ -16,7 +16,7 @@
 
 
 # write for c
-interactors_write_footer_c "$LOCALES_IS_LANG_DEST_C"
+interactors_write_footer "$LOCALES_IS_LANG_DEST_C" "$OUTPUT_TYPE_C"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for C's Is Lang.
@@ -28,7 +28,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_c "$LOCALES_LANG_LIST_DEST_C"
+interactors_write_footer "$LOCALES_LANG_LIST_DEST_C" "$OUTPUT_TYPE_C"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for C's Lang List.
@@ -40,7 +40,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_c "$LOCALES_LANG_NAME_DEST_C"
+interactors_write_footer "$LOCALES_LANG_NAME_DEST_C" "$OUTPUT_TYPE_C"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for C's Lang Name.
@@ -52,7 +52,7 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_c "$LOCALES_LANG_TOML_DEST_C"
+interactors_write_footer "$LOCALES_LANG_TOML_DEST_C" "$OUTPUT_TYPE_C"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for C's Lang TOML.

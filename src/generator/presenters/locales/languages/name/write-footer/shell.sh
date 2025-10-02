@@ -16,7 +16,9 @@
 
 
 # write for shell
-interactors_write_footer_shell "$LOCALES_IS_LANG_DEST_SHELL"
+interactors_write_footer \
+        "$LOCALES_IS_LANG_DEST_SHELL" \
+        "$OUTPUT_TYPE_SHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Shell's Is Lang.
@@ -28,7 +30,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_shell "$LOCALES_LANG_LIST_DEST_SHELL"
+interactors_write_footer_shell \
+        "$LOCALES_LANG_LIST_DEST_SHELL" \
+        "$OUTPUT_TYPE_SHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Shell's Lang List.
@@ -40,7 +44,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_shell "$LOCALES_LANG_NAME_DEST_SHELL"
+interactors_write_footer_shell \
+        "$LOCALES_LANG_NAME_DEST_SHELL" \
+        "$OUTPUT_TYPE_SHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Shell's Lang Name.
@@ -52,7 +58,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_shell "$LOCALES_LANG_TOML_DEST_SHELL"
+interactors_write_footer_shell \
+        "$LOCALES_LANG_TOML_DEST_SHELL" \
+        "$OUTPUT_TYPE_SHELL"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Shell's Lang TOML.

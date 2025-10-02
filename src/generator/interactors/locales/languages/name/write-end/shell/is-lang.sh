@@ -32,7 +32,7 @@ interactors_locales_lang_is_lang_write_end_shell() {
 
         views_write_raw_content_shell "$1" "\
 $(views_get_indent_shell "2")printf -- \"%s\" \"false\"
-$(views_get_indent_shell "2")return \$HestiaSIGNALS_UNSUPPORTED
+$(views_get_indent_shell "2")return \$HestiaSIGNALS_DATA_INVALID
 "
         if [ $? -ne 0 ]; then
                 return 1

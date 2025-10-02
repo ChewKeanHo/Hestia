@@ -31,7 +31,7 @@ interactors_locales_languages_name_write_end_is_lang_nim() {
         fi
 
         views_write_raw_content_nim "$1" "\
-$(views_get_indent_nim "3")return false
+$(views_get_indent_nim "2")return false
 "
         if [ $? -ne 0 ]; then
                 return 1

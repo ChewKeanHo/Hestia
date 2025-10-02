@@ -26,11 +26,9 @@ function Is-Language {
         )
 
 
-
-
         # execute
         switch -Wildcard (____code) {
-        } "aa" {
+        "aa" {
                 return $true # Afar
         } "ab" {
                 return $true # Abkhazian

@@ -36,7 +36,9 @@ interactors_locales_languages_name_write_end_toml_c() {
                 return 1
         fi
 
-        views_write_import_guard_closer_c "$1"
+        views_write_import_guard_closer_c "$1" "\
+${LOCALES_PREFIX}_${FUNCTION_NAME_C_LANG_TOML}\
+"
         if [ $? -ne 0 ]; then
                 return 1
         fi

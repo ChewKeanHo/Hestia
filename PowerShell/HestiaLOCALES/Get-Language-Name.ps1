@@ -26,11 +26,9 @@ function Get-Language-Name {
         )
 
 
-
-
         # execute
         switch -Wildcard (____code) {
-        } "aa" {
+        "aa" {
                 return "Qafar" # Afar
         } "ab" {
                 return "аҧсшәа" # Abkhazian

@@ -54,7 +54,9 @@ $(views_get_indent_c "2")return \"\";
                 return 1
         fi
 
-        views_write_import_guard_closer_c "$1"
+        views_write_import_guard_closer_c "$1" "\
+${LOCALES_PREFIX}_${FUNCTION_NAME_C_LANG_NAME}\
+"
         if [ $? -ne 0 ]; then
                 return 1
         fi

@@ -29,7 +29,7 @@ interactors_locales_languages_name_write_start_list_c() {
         views_write_raw_content_c \
                 "$1" \
                 "\
-const char * const ${LOCALES_LANG_LIST_CONST}[] = {
+const char * const ${FUNCTION_NAME_C_LANG_LIST_NAME}[] = {
 "
         if [ $? -ne 0 ]; then
                 return 1

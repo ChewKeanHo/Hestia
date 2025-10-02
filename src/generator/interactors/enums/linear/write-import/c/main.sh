@@ -21,7 +21,7 @@ interactors_enums_linear_write_import_c() {
 
         # execute
         views_write_import_guard_opener_c "$1" "\
-${ENUMS_LINEAR_PREFIX}_${ENUMS_LINEAR_UNDERSCORE_UPPERCASE_NAME}\
+${ENUMS_LINEAR_PREFIX}_${ENUMS_LINEAR_NAME_C}\
 "
         if [ $? -ne 0 ]; then
                 return 1
@@ -33,8 +33,8 @@ ${ENUMS_LINEAR_PREFIX}_${ENUMS_LINEAR_UNDERSCORE_UPPERCASE_NAME}\
         fi
 
         views_write_import_c "$1" "\
-#include \"../HestiaNUMBERS/Data.h\"
-#include \"../HestiaSTRINGS/Data.h\"
+#include \"../HestiaNUMBERS/Data.c\"
+#include \"../HestiaSTRINGS/Data.c\"
 
 typedef ${ENUMS_LINEAR_PREFIX}_${ENUMS_LINEAR_DATA_TYPE_NAME} \
 $(views_to_data_type_c "$ENUMS_LINEAR_DATA_TYPE");

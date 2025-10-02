@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_is_lang_nim() {
 
         views_write_function_opener_nim \
                 "$1" \
-                "$LOCALES_UNDERSCORE_IS_LANG" \
+                "$FUNCTION_NAME_NIM_IS_LANG" \
                 "\
 ${LOCALES_PARAMS_CODE}: cstring
 " \

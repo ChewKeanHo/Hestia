@@ -21,6 +21,25 @@ views_write_import_shell() {
 
 
         # execute
+        ____list=""
+        ____old_IFS="$IFS"
+        while IFS= read -r ____library || [ -n "$____library" ]; do
+                if [ "$____library" = "" ]; then
+                        continue
+                fi
+
+                if [ ! "$____list" = "" ]; then
+                        ____list="${____list}
+"
+                fi
+
+                ____list="${____list}${____library}"
+        done<<EOF
+${2}
+EOF
+        IFS="$____old_IFS"
+        unset ____library ____old_IFS
+
         printf -- "%s" "\
 ____old_IFS=\"\$IFS\"
 while IFS= read -r ____library || [ -n \"\$____library\" ]; do
@@ -29,7 +48,7 @@ while IFS= read -r ____library || [ -n \"\$____library\" ]; do
                 IFS=\"\$____old_IFS\"
                 unset ____library ____old_IFS
                 1>&2 printf -- \"%s\" \"\\
-E: From '${1}': Failed to Import '\${____library}'.
+E: From '${1##*/}': Failed to Import '\${____library}'.
 E: Unable to Proceed.
 E: Contact Developer or Maintainer.
 E: Bailing Out...
@@ -38,14 +57,16 @@ E: Bailing Out...
                 return 1
         fi
 done <<EOF
-${2}
+${____list}
 EOF
 IFS=\"\$____old_IFS\"
 unset ____library ____old_IFS
 "  >> "${1}.tmp"
         if [ $? -ne 0 ]; then
+                unset ____list
                 return 1
         fi
+        unset ____list
 
 
         # report status

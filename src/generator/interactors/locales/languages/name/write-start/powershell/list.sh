@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_list_powershell() {
 
         views_write_function_opener_powershell \
                 "$1" \
-                "$LOCALES_LANG_LIST" \
+                "$FUNCTION_NAME_POWERSHELL_LANG_LIST" \
                 "" \
                 "[[]string]" \
                 "public"

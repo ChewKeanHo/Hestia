@@ -25,20 +25,25 @@ use crate::HestiaUNICODES::data::Rune;
 use crate::HestiaUNICODES::rune_to_lowercase::rune_to_lowercase;
 
 #[allow(non_snake_case)]
-use crate::HestiaUNICODES::rune_to_uppercase::rune_to_uppercase;
+use crate::HestiaUNICODES::rune_to_uppercase::rune_to_titlecase;
 
 
 
 
+// This is an internal-only function for changing rune character into titlecase.
+//
+// It is an output from a synthesized and processed titlecase rune characters
+// databases sourced from Unicode.org directly. End-user should not call this
+// function directly as there are higher-level processing (enyzme streaming
+// algorithm) needed for making a complete case switching.
 pub fn rune_to_titlecase(cut_count: &mut u8,
 	output_char: &mut Vec<Rune>,
 	____codepoint1: Rune,
 	____codepoint2: Rune,
 	____codepoint3: Rune,
 	____lang: String,
-	____to_titlecase: bool) -> i16 {
-
-
+	____to_titlecase: bool) -> u8 {
+	// execute
 	// language sensitive special cases
 	match ____lang {
 	"az" | "tr" => {
@@ -1669,9 +1674,6 @@ pub fn rune_to_titlecase(cut_count: &mut u8,
 			return 0;
 		}
 	}};
-
-
-	// switching normal 1:1 casing now
 	if ____to_titlecase == true {
 		return rune_to_uppercase(cut_count,
 			output_char,

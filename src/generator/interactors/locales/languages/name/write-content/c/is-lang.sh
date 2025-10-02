@@ -24,11 +24,17 @@ interactors_locales_languages_name_write_content_is_lang_c() {
         #____entry_index="$6"
 
 
+        # validate input
+        if [ "$2" = "" ]; then
+                return 1
+        fi
+
+
         # execute
         views_write_if_else_change_condition_c \
                 "$1" \
                 "\
-HestiaSTRINGS_Are_Same_CString(${LOCALES_PARAMS_CODE}, \"${2}\", ${LOCLAES_CODE_LENGTH})\
+HestiaSTRINGS_Are_Same_CString(${LOCALES_PARAMS_CODE}, \"${2}\", ${#2})\
 " \
                 "1" \
                 "$6"
@@ -37,7 +43,7 @@ HestiaSTRINGS_Are_Same_CString(${LOCALES_PARAMS_CODE}, \"${2}\", ${LOCLAES_CODE_
         fi
 
         views_write_raw_content_c "$1" "\
-$(views_get_indent_c "2")return 1; // ${4}
+$(views_get_indent_c "2")return HestiaBOOLEANS_TRUE; // ${4}
 "
         if [ $? -ne 0 ]; then
                 return 1

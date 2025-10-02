@@ -15,11 +15,8 @@
 
 
 
-# write rust
-interactors_write_header_rust \
-        "$LOCALES_IS_LANG_DEST_RUST" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+# write for rust
+interactors_write_header "$LOCALES_IS_LANG_DEST_RUST" "$OUTPUT_TYPE_RUST"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Rust's Is Lang.
@@ -31,10 +28,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_rust \
-        "$LOCALES_LANG_LIST_DEST_RUST" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_LIST_DEST_RUST" "$OUTPUT_TYPE_RUST"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Rust's Lang List.
@@ -46,10 +40,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_rust \
-        "$LOCALES_LANG_NAME_DEST_RUST" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_NAME_DEST_RUST" "$OUTPUT_TYPE_RUST"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Rust's Lang Name.
@@ -61,10 +52,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_rust \
-        "$LOCALES_LANG_TOML_DEST_RUST" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_TOML_DEST_RUST" "$OUTPUT_TYPE_RUST"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Rust's Lang TOML.

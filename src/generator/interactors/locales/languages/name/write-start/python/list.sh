@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_list_python() {
 
         views_write_function_opener_python \
                 "$1" \
-                "$LOCALES_UNDERSCORE_LANG_LIST" \
+                "$FUNCTION_NAME_PYTHON_LANG_LIST" \
                 "" \
                 "list[str]" \
                 "public"

@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_is_lang_python() {
 
         views_write_function_opener_python \
                 "$1" \
-                "$LOCALES_UNDERSCORE_IS_LANG" \
+                "$FUNCTION_NAME_PYTHON_IS_LANG" \
                 "\
 ${LOCALES_PARAMS_CODE}: str
 " \

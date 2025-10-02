@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_name_powershell() {
 
         views_write_function_opener_powershell \
                 "$1" \
-                "$LOCALES_LANG_NAME" \
+                "$FUNCTION_NAME_POWERSHELL_LANG_NAME" \
                 "\
 [string]\$${LOCALES_PARAMS_CODE}
 " \
@@ -37,22 +37,16 @@ interactors_locales_languages_name_write_start_name_powershell() {
                 return 1
         fi
 
-        views_write_page_break_powershell "$1"
-        if [ $? -ne 0 ]; then
-                return 1
-        fi
-
         views_write_raw_content_powershell "$1" "\
+
+
 $(views_get_indent_powershell "1")# execute
 "
         if [ $? -ne 0 ]; then
                 return 1
         fi
 
-        views_write_switch_opener_powershell \
-                "$1" \
-                "$LOCALES_PARAMS_CODE" \
-                "1"
+        views_write_switch_opener_powershell "$1" "$LOCALES_PARAMS_CODE" "1"
         if [ $? -ne 0 ]; then
                 return 1
         fi

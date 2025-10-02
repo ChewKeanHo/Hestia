@@ -1,0 +1,6 @@
+This is an internal-only function for changing rune character into titlecase.
+
+It is an output from a synthesized and processed titlecase rune characters
+databases sourced from Unicode.org directly. End-user should not call this
+function directly as there are higher-level processing (enyzme streaming
+algorithm) needed for making a complete case switching.

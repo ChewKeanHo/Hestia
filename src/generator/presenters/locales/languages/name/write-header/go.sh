@@ -15,11 +15,8 @@
 
 
 
-# write go
-interactors_write_header_go \
-        "$LOCALES_IS_LANG_DEST_GO" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+# write for go
+interactors_write_header "$LOCALES_IS_LANG_DEST_GO" "$OUTPUT_TYPE_GO"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Go's Is Lang.
@@ -31,10 +28,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_go \
-        "$LOCALES_LANG_LIST_DEST_GO" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_LIST_DEST_GO" "$OUTPUT_TYPE_GO"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Go's Lang List.
@@ -46,10 +40,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_go \
-        "$LOCALES_LANG_NAME_DEST_GO" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_NAME_DEST_GO" "$OUTPUT_TYPE_GO"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Go's Lang Name.
@@ -61,10 +52,7 @@ Bailing Out...
 fi
 
 
-interactors_write_header_go \
-        "$LOCALES_LANG_TOML_DEST_GO" \
-        "$SOURCE_LICENSE" \
-        "$SOURCE_NOTICE_AUTOGEN"
+interactors_write_header "$LOCALES_LANG_TOML_DEST_GO" "$OUTPUT_TYPE_GO"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_ERROR "\
 Failed to Write for Go's Lang TOML.

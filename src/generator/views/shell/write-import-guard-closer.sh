@@ -17,6 +17,7 @@
 
 views_write_import_guard_closer_shell() {
         #____path_dest="$1"
+        #____symbol="$2"
 
 
         # shell does not need any import guard

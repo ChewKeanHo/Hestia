@@ -24,11 +24,17 @@ interactors_locales_languages_name_write_content_name_c() {
         #____entry_index="$6"
 
 
+        # validate inputs
+        if [ "$2" = "" ]; then
+                return 1
+        fi
+
+
         # execute
         views_write_if_else_change_condition_c \
                 "$1" \
                 "\
-HestiaSTRINGS_Are_Same_CString(${LOCALES_PARAMS_CODE}, \"${2}\", ${LOCLAES_CODE_LENGTH})\
+HestiaSTRINGS_Are_Same_CString(${LOCALES_PARAMS_CODE}, \"${2}\", ${#2})\
 "\
                 "1" \
                 "$6"

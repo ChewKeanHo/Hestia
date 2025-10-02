@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_toml_c() {
 
         views_write_function_opener_c \
                 "$1" \
-                "$LOCALES_UNDERSCORE_LANG_TOML" \
+                "$FUNCTION_NAME_C_LANG_TOML" \
                 "" \
                 "const char *" \
                 "public"

@@ -23,29 +23,25 @@ interactors_locales_languages_name_write_start_shell() {
         # execute
         case "$2" in
         "$LOCALES_OUTPUT_TYPE_IS_LANG")
-                interactors_locales_languages_name_write_start_is_lang_shell \
-                        "$1"
+                interactors_locales_languages_name_write_start_is_lang_shell "$1"
                 if [ $? -ne 0 ]; then
                         return 1
                 fi
                 ;;
         "$LOCALES_OUTPUT_TYPE_LANG_LIST")
-                interactors_locales_languages_name_write_start_list_shell \
-                        "$1"
+                interactors_locales_languages_name_write_start_list_shell "$1"
                 if [ $? -ne 0 ]; then
                         return 1
                 fi
                 ;;
         "$LOCALES_OUTPUT_TYPE_LANG_NAME")
-                interactors_locales_languages_name_write_start_name_shell \
-                        "$1"
+                interactors_locales_languages_name_write_start_name_shell "$1"
                 if [ $? -ne 0 ]; then
                         return 1
                 fi
                 ;;
         "$LOCALES_OUTPUT_TYPE_LANG_TOML")
-                interactors_locales_languages_name_write_start_toml_shell \
-                        "$1"
+                interactors_locales_languages_name_write_start_toml_shell "$1"
                 if [ $? -ne 0 ]; then
                         return 1
                 fi

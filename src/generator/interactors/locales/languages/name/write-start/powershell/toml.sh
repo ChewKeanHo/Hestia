@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_toml_powershell() {
 
         views_write_function_opener_powershell \
                 "$1" \
-                "$LOCALES_LANG_TOML" \
+                "$FUNCTION_NAME_POWERSHELL_LANG_TOML" \
                 ""\
                 "[string]" \
                 "public"

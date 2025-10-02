@@ -15,7 +15,7 @@
 
 
 
-HestiaOS_Print_Info "Exporting Locales Languages' Name Files..."
+HestiaOS_Print_Info "Exporting Name Files..."
 . "${PROJECT_PATH_ROOT}/presenters/locales/languages/name/export-files/c.sh"
 if [ $? -ne 0 ]; then
         return 1

@@ -33,7 +33,7 @@ interactors_locales_languages_name_write_end_is_lang_c() {
         views_write_raw_content_c \
                 "$1" \
                 "\
-$(views_get_indent_c "2")return 0;
+$(views_get_indent_c "2")return HestiaBOOLEANS_FALSE;
 "
         if [ $? -ne 0 ]; then
                 return 1
@@ -54,7 +54,9 @@ $(views_get_indent_c "2")return 0;
                 return 1
         fi
 
-        views_write_import_guard_closer_c "$1"
+        views_write_import_guard_closer_c "$1" "\
+${LOCALES_PREFIX}_${FUNCTION_NAME_C_IS_LANG}\
+"
         if [ $? -ne 0 ]; then
                 return 1
         fi

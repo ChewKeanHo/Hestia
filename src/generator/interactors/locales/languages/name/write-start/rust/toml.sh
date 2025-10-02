@@ -27,7 +27,7 @@ interactors_locales_languages_name_write_start_toml_rust() {
 
         views_write_function_opener_rust \
                 "$1" \
-                "$LOCALES_UNDERSCORE_LOWERCASE_LANG_TOML" \
+                "$FUNCTION_NAME_RUST_LANG_TOML" \
                 "" \
                 "&'static str" \
                 "public"

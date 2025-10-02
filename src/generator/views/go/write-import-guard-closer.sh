@@ -17,6 +17,7 @@
 
 views_write_import_guard_closer_go() {
         #____path_dest="$1"
+        #____symbol="$2"
 
 
         # go does not need any import guard

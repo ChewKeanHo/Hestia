@@ -15,7 +15,7 @@
 
 
 
-HestiaOS_Print_Info "Writing Locales Languages' Name Imports Segment..."
+HestiaOS_Print_Info "Writing Import Segment..."
 . "${PROJECT_PATH_ROOT}/presenters/locales/languages/name/write-import/c.sh"
 if [ $? -ne 0 ]; then
         return 1

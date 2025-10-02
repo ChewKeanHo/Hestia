@@ -16,7 +16,9 @@
 
 
 # write for python
-interactors_write_footer_python "$LOCALES_IS_LANG_DEST_PYTHON"
+interactors_write_footer \
+        "$LOCALES_IS_LANG_DEST_PYTHON" \
+        "$OUTPUT_TYPE_PYTHON"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Python's Is Lang.
@@ -28,7 +30,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_python "$LOCALES_LANG_LIST_DEST_PYTHON"
+interactors_write_footer \
+        "$LOCALES_LANG_LIST_DEST_PYTHON" \
+        "$OUTPUT_TYPE_PYTHON"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Python's Lang List.
@@ -40,7 +44,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_python "$LOCALES_LANG_NAME_DEST_PYTHON"
+interactors_write_footer \
+        "$LOCALES_LANG_NAME_DEST_PYTHON" \
+        "$OUTPUT_TYPE_PYTHON"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Python's Lang Name.
@@ -52,7 +58,9 @@ Bailing Out...
 fi
 
 
-interactors_write_footer_python "$LOCALES_LANG_TOML_DEST_PYTHON"
+interactors_write_footer_python \
+        "$LOCALES_LANG_TOML_DEST_PYTHON" \
+        "$OUTPUT_TYPE_PYTHON"
 if [ $? -ne 0 ]; then
         HestiaOS_Print_Error "\
 Failed to Write for Python's Lang TOML.

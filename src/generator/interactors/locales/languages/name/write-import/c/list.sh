@@ -21,7 +21,7 @@ interactors_locales_languages_name_write_import_list_c() {
 
         # execute
         views_write_import_guard_opener_c "$1" "\
-${LOCALES_PREFIX}_${LOCALES_UNDERSCORE_UPPERCASE_LANG_LIST}\
+${LOCALES_PREFIX}_${FUNCTION_NAME_C_LANG_LIST}\
 "
         if [ $? -ne 0 ]; then
                 return 1
@@ -33,7 +33,7 @@ ${LOCALES_PREFIX}_${LOCALES_UNDERSCORE_UPPERCASE_LANG_LIST}\
         fi
 
         views_write_import_c "$1" "\
-#include \"../HestiaKERNEL/HestiaSIGNALS/Codes.h\"
+#include \"../HestiaKERNEL/HestiaSIGNALS/Codes.c\"
 "
         if [ $? -ne 0 ]; then
                 return 1

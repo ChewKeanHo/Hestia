@@ -22,7 +22,7 @@ interactors_locales_languages_name_write_end_list_python() {
 
         # execute
         views_write_raw_content_python "$1" "\
-$(views_get_indent_python "1")];
+$(views_get_indent_python "1")]
 "
         if [ $? -ne 0 ]; then
                 return 1
