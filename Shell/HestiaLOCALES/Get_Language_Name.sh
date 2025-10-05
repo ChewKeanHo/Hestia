@@ -67,6 +67,10 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Ɛl-Afrihili" # Afrihili
                 return $HestiaSIGNALS_OK
                 ;;
+        "agq")
+                printf -- "%s" "Wum" # Aghem
+                return $HestiaSIGNALS_OK
+                ;;
         "ak")
                 printf -- "%s" "Ákán" # Akan
                 return $HestiaSIGNALS_OK
@@ -87,6 +91,14 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Ænglisc" # Old English
                 return $HestiaSIGNALS_OK
                 ;;
+        "ann")
+                printf -- "%s" "Andoni" # Obolo
+                return $HestiaSIGNALS_OK
+                ;;
+        "apc")
+                printf -- "%s" "شامي" # Levantine Arabic
+                return $HestiaSIGNALS_OK
+                ;;
         "ar")
                 printf -- "%s" "اَلْعَرَبِيَّةُ" # Arabic
                 return $HestiaSIGNALS_OK
@@ -95,8 +107,20 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "ארמית, ܐܪܡܐܝܬ" # Aramaic
                 return $HestiaSIGNALS_OK
                 ;;
+        "arn")
+                printf -- "%s" "Mapudungun" # Mapudungun, Mapuche
+                return $HestiaSIGNALS_OK
+                ;;
         "as")
                 printf -- "%s" "অসমীয়া" # Assamese
+                return $HestiaSIGNALS_OK
+                ;;
+        "asa")
+                printf -- "%s" "Kipare" # Pare, Asu Tanzania
+                return $HestiaSIGNALS_OK
+                ;;
+        "ast")
+                printf -- "%s" "Asturianu" # Asturian, Asturleonese, Bable, Leonese
                 return $HestiaSIGNALS_OK
                 ;;
         "av-Arab")
@@ -155,8 +179,36 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "башҡорт" # Bashkir (Cyrillic)
                 return $HestiaSIGNALS_OK
                 ;;
+        "bal-Arab")
+                printf -- "%s" "بلۏچی" # Baluchi (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "bal-Latn")
+                printf -- "%s" "Balòci" # Baluchi (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "bal")
+                printf -- "%s" "بلۏچی" # Baluchi (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "bas")
+                printf -- "%s" "Ɓàsàa" # Basa Cameroon
+                return $HestiaSIGNALS_OK
+                ;;
         "be")
                 printf -- "%s" "беларуская" # Belarusian
+                return $HestiaSIGNALS_OK
+                ;;
+        "bem")
+                printf -- "%s" "Chibemba" # Bemba Zambia
+                return $HestiaSIGNALS_OK
+                ;;
+        "bew")
+                printf -- "%s" "Betawi" # Betawi
+                return $HestiaSIGNALS_OK
+                ;;
+        "bez")
+                printf -- "%s" "Ekibena" # Bena Tanzania
                 return $HestiaSIGNALS_OK
                 ;;
         "bg")
@@ -165,6 +217,10 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "bgc")
                 printf -- "%s" "हरियाणवी" # Haryanvi
+                return $HestiaSIGNALS_OK
+                ;;
+        "bgn")
+                printf -- "%s" "بلۏچی" # Western Balochi
                 return $HestiaSIGNALS_OK
                 ;;
         "bho-Deva")
@@ -177,6 +233,14 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "bho")
                 printf -- "%s" "भोजपुरी" # Bhojpuri (Devanagari)
+                return $HestiaSIGNALS_OK
+                ;;
+        "blo")
+                printf -- "%s" "Basila" # Anii
+                return $HestiaSIGNALS_OK
+                ;;
+        "blt")
+                printf -- "%s" "ꪼꪕꪒꪾ" # Tai Dam
                 return $HestiaSIGNALS_OK
                 ;;
         "bi")
@@ -239,6 +303,22 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "bosanski" # Bosnian
                 return $HestiaSIGNALS_OK
                 ;;
+        "bss")
+                printf -- "%s" "Ɓàsò" # Akoose Manenguba
+                return $HestiaSIGNALS_OK
+                ;;
+        "byn-Latn")
+                printf -- "%s" "Blin" # Bilen, Bilin, Blin
+                return $HestiaSIGNALS_OK
+                ;;
+        "byn-Ethi")
+                printf -- "%s" "ብሊን" # Bilen, Bilin, Blin
+                return $HestiaSIGNALS_OK
+                ;;
+        "byn")
+                printf -- "%s" "Blin" # Bilen, Bilin, Blin
+                return $HestiaSIGNALS_OK
+                ;;
         "bzt")
                 printf -- "%s" "Comroig" # Brithenig
                 return $HestiaSIGNALS_OK
@@ -267,8 +347,32 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Нохчийн" # Chechen (Cyrillic)
                 return $HestiaSIGNALS_OK
                 ;;
+        "cad")
+                printf -- "%s" "Hasí꞉nay" # Caddo
+                return $HestiaSIGNALS_OK
+                ;;
+        "cch")
+                printf -- "%s" "Cawai" # Atsam
+                return $HestiaSIGNALS_OK
+                ;;
+        "ccp-Cakm")
+                printf -- "%s" "𑄌𑄋𑄴𑄟𑄳𑄦" # Chakma (Chakma)
+                return $HestiaSIGNALS_OK
+                ;;
+        "ccp-Zzzz")
+                printf -- "%s" "𑄖𑄧𑄐𑄴𑄌𑄧𑄁𑄉𑄴𑄡" # Chakma (Tanchangya)
+                return $HestiaSIGNALS_OK
+                ;;
+        "ccp")
+                printf -- "%s" "𑄌𑄋𑄴𑄟𑄳𑄦" # Chakma (Chakma)
+                return $HestiaSIGNALS_OK
+                ;;
         "ceb")
                 printf -- "%s" "Bisayâ" # Cebuano
+                return $HestiaSIGNALS_OK
+                ;;
+        "cgg")
+                printf -- "%s" "Orukiga" # Kiga
                 return $HestiaSIGNALS_OK
                 ;;
         "ch")
@@ -280,7 +384,7 @@ HestiaLOCALES_Get_Language_Name() {
                 return $HestiaSIGNALS_OK
                 ;;
         "chr-Cher")
-                printf -- "%s" "ᏣᎳᎩ" # Cherokee (Cherokee)
+                printf -- "%s" "ᏣᎳᎩ" # Cherokee
                 return $HestiaSIGNALS_OK
                 ;;
         "chr-Latn")
@@ -288,7 +392,23 @@ HestiaLOCALES_Get_Language_Name() {
                 return $HestiaSIGNALS_OK
                 ;;
         "chr")
-                printf -- "%s" "ᏣᎳᎩ" # Cherokee (Cherokee)
+                printf -- "%s" "ᏣᎳᎩ" # Cherokee
+                return $HestiaSIGNALS_OK
+                ;;
+        "cic")
+                printf -- "%s" "Chikashshanompaꞌ" # Chickasaw
+                return $HestiaSIGNALS_OK
+                ;;
+        "ckb-Arab")
+                printf -- "%s" "سۆرانی" # Central Kurdish
+                return $HestiaSIGNALS_OK
+                ;;
+        "ckb-Latn")
+                printf -- "%s" "Soranî" # Central Kurdish
+                return $HestiaSIGNALS_OK
+                ;;
+        "ckb")
+                printf -- "%s" "سۆرانی" # Central Kurdish
                 return $HestiaSIGNALS_OK
                 ;;
         "co")
@@ -300,7 +420,7 @@ HestiaLOCALES_Get_Language_Name() {
                 return $HestiaSIGNALS_OK
                 ;;
         "cr-Cans")
-                printf -- "%s" "ᓀᐦᐃᔭᐍᐏᐣ" # Cree (Canadian Aboriginal)
+                printf -- "%s" "ᓀᐦᐃᔭᐍᐏᐣ" # Canadian Aboriginal Cree
                 return $HestiaSIGNALS_OK
                 ;;
         "cr-Latn")
@@ -313,6 +433,10 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "csb")
                 printf -- "%s" "Kaszëbsczi" # Kashubian
+                return $HestiaSIGNALS_OK
+                ;;
+        "csw")
+                printf -- "%s" "ᓀᐦᐃᓇᐍᐏᐣ" # Swampy Cree
                 return $HestiaSIGNALS_OK
                 ;;
         "cu-Cyrl")
@@ -335,8 +459,24 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Dansk" # Danish
                 return $HestiaSIGNALS_OK
                 ;;
+        "dav")
+                printf -- "%s" "Taita–Sagala" # Taita, Dawida
+                return $HestiaSIGNALS_OK
+                ;;
         "de")
                 printf -- "%s" "Deutsch" # German
+                return $HestiaSIGNALS_OK
+                ;;
+        "dje-Arab")
+                printf -- "%s" "زَرْمَ" # Zarma (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "dje-Latn")
+                printf -- "%s" "Zabarma" # Zarma (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "dje")
+                printf -- "%s" "زَرْمَ" # Zarma (Arabic)
                 return $HestiaSIGNALS_OK
                 ;;
         "dmf")
@@ -367,6 +507,10 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "dolnoserbšćina" # Lower Sorbian
                 return $HestiaSIGNALS_OK
                 ;;
+        "dua")
+                printf -- "%s" "Duálá" # Duala
+                return $HestiaSIGNALS_OK
+                ;;
         "dv-Latn")
                 printf -- "%s" "Dhivehi" # Maldivian | Dhivehi (Latin)
                 return $HestiaSIGNALS_OK
@@ -383,8 +527,16 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Dutton Speedwords" # Dutton Speedwords (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "dyo")
+                printf -- "%s" "Kujóolay" # Jola-Fonyi
+                return $HestiaSIGNALS_OK
+                ;;
         "dz")
                 printf -- "%s" "རྫོང་ཁ་" # Dzongkha
+                return $HestiaSIGNALS_OK
+                ;;
+        "ebu")
+                printf -- "%s" "Kiembu" # Embu
                 return $HestiaSIGNALS_OK
                 ;;
         "ee")
@@ -431,6 +583,10 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Euskara" # Basque
                 return $HestiaSIGNALS_OK
                 ;;
+        "ewo")
+                printf -- "%s" "Beti" # Ewondo
+                return $HestiaSIGNALS_OK
+                ;;
         "fa")
                 printf -- "%s" "فارسی" # Persian
                 return $HestiaSIGNALS_OK
@@ -455,6 +611,18 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Suomi" # Finnish
                 return $HestiaSIGNALS_OK
                 ;;
+        "fil-Latn")
+                printf -- "%s" "Filipino" # Filipino (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "fil-Tglg")
+                printf -- "%s" "ᜉᜒᜎᜒᜉᜒᜈ" # Filipino (Baybayin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "fil")
+                printf -- "%s" "Filipino" # Filipino (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
         "fj")
                 printf -- "%s" "Vosa Vaka-Viti" # Fijian
                 return $HestiaSIGNALS_OK
@@ -467,8 +635,16 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Français" # French
                 return $HestiaSIGNALS_OK
                 ;;
+        "frr")
+                printf -- "%s" "Noorfriisk" # North Frisian
+                return $HestiaSIGNALS_OK
+                ;;
         "fro")
                 printf -- "%s" "Franceis" # Old French
+                return $HestiaSIGNALS_OK
+                ;;
+        "fur")
+                printf -- "%s" "Furlan" # Friulian
                 return $HestiaSIGNALS_OK
                 ;;
         "fy")
@@ -487,6 +663,10 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Gaeilge" # Irish (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "gaa")
+                printf -- "%s" "Gã" # Ga
+                return $HestiaSIGNALS_OK
+                ;;
         "gd-Latn")
                 printf -- "%s" "Gàidhlig" # Scottish Gaelic (Latin)
                 return $HestiaSIGNALS_OK
@@ -497,6 +677,18 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "gd")
                 printf -- "%s" "Gàidhlig" # Scottish Gaelic (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "gez-Ethi")
+                printf -- "%s" "ግዕዝ" # Geʽez (Geʽez)
+                return $HestiaSIGNALS_OK
+                ;;
+        "gez-Sarb")
+                printf -- "%s" "𐩴𐩹𐩹" # Geʽez (Ancient South Arabian)
+                return $HestiaSIGNALS_OK
+                ;;
+        "gez")
+                printf -- "%s" "ግዕዝ" # Geʽez (Geʽez)
                 return $HestiaSIGNALS_OK
                 ;;
         "gl")
@@ -517,6 +709,10 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "grc")
                 printf -- "%s" "Ἑλληνική" # Ancient Greek
+                return $HestiaSIGNALS_OK
+                ;;
+        "gsw")
+                printf -- "%s" "Schwiizerdütsch" # Swiss German, Alemannic, Alsatian
                 return $HestiaSIGNALS_OK
                 ;;
         "gu")
@@ -565,6 +761,26 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "hit")
                 printf -- "%s" "𒌷𒉌𒅆𒇷" # Hittite
+                return $HestiaSIGNALS_OK
+                ;;
+        "hnj-Hmng")
+                printf -- "%s" "𖬇𖬰𖬞𖬵 𖬄𖬶𖬟 𖬌𖬣𖬵" # Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
+                return $HestiaSIGNALS_OK
+                ;;
+        "hnj-Hmnp")
+                printf -- "%s" "𞄋𞄤𞄰𞄘𞄤𞄬𞄩𞄰" # Hmong Njua, Mong Leng, Mong Njua (Nyiakeng Puachue Hmong)
+                return $HestiaSIGNALS_OK
+                ;;
+        "hnj-Latn")
+                printf -- "%s" "Hmoob" # Hmong Njua, Mong Leng, Mong Njua (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "hnj-Plrd")
+                printf -- "%s" "𖼀𖽙𖾐𖼊𖽙𖾑" # Hmong Njua, Mong Leng, Mong Njua (Pollard)
+                return $HestiaSIGNALS_OK
+                ;;
+        "hnj")
+                printf -- "%s" "𖬇𖬰𖬞𖬵 𖬄𖬶𖬟 𖬌𖬣𖬵" # Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
                 return $HestiaSIGNALS_OK
                 ;;
         "ho")
@@ -679,6 +895,14 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "La .lojban." # Lojban
                 return $HestiaSIGNALS_OK
                 ;;
+        "jgo")
+                printf -- "%s" "Nda’a" # Ngomba
+                return $HestiaSIGNALS_OK
+                ;;
+        "jmc")
+                printf -- "%s" "Kimachame" # West Kilimanjaro, Machame
+                return $HestiaSIGNALS_OK
+                ;;
         "jv-Arab")
                 printf -- "%s" "باسا جاوا" # Javanese (Pegon)
                 return $HestiaSIGNALS_OK
@@ -699,6 +923,46 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "ქართული ენა" # Georgian
                 return $HestiaSIGNALS_OK
                 ;;
+        "kaa-Arab")
+                printf -- "%s" "قاراقالپاق" # Karakalpak (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kaa-Cyrl")
+                printf -- "%s" "Қарақалпақ" # Karakalpak (Cyrillic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kaa-Latn")
+                printf -- "%s" "Qaraqalpaq" # Karakalpak (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kaa")
+                printf -- "%s" "Қарақалпақ" # Karakalpak (Cyrillic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kab-Arab")
+                printf -- "%s" "ثاقبايليث" # Kabyle (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kab-Latn")
+                printf -- "%s" "Taqbaylit" # Kabyle (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kab-Tfng")
+                printf -- "%s" "ⵜⴰⵇⴱⴰⵢⵍⵉⵜ" # Kabyle (Tifinagh)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kab")
+                printf -- "%s" "Taqbaylit" # Kabyle (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kaj")
+                printf -- "%s" "Jhyuo, Kaje" # Jju
+                return $HestiaSIGNALS_OK
+                ;;
+        "kam")
+                printf -- "%s" "Kikamba" # Kamba
+                return $HestiaSIGNALS_OK
+                ;;
         "kbd-Cyrl")
                 printf -- "%s" "адыгэбзэ" # Kabardian (Cyrillic)
                 return $HestiaSIGNALS_OK
@@ -715,20 +979,32 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "адыгэбзэ" # Kabardian (Cyrillic)
                 return $HestiaSIGNALS_OK
                 ;;
-        "kam")
-                printf -- "%s" "Kikamba" # Kamba
+        "kcg")
+                printf -- "%s" "Tyap" # Tyap
+                return $HestiaSIGNALS_OK
+                ;;
+        "kde")
+                printf -- "%s" "Chinimakonde" # Makonde
+                return $HestiaSIGNALS_OK
+                ;;
+        "kea")
+                printf -- "%s" "Kabuverdianu" # Kabuverdianu
                 return $HestiaSIGNALS_OK
                 ;;
         "kek")
                 printf -- "%s" "Q'eqchi" # Q'eqchi'
                 return $HestiaSIGNALS_OK
                 ;;
-        "kg-Latn")
-                printf -- "%s" "Kikongo" # Kongo
+        "ken")
+                printf -- "%s" "Nyang" # Kenyang
                 return $HestiaSIGNALS_OK
                 ;;
         "kg")
                 printf -- "%s" "Kikongo" # Kongo
+                return $HestiaSIGNALS_OK
+                ;;
+        "kgp")
+                printf -- "%s" "Kanhgág" # Kaingang
                 return $HestiaSIGNALS_OK
                 ;;
         "kha-Beng")
@@ -741,6 +1017,18 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "kha")
                 printf -- "%s" "Ka Ktien Khasi" # Khasi (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "khq-Arab")
+                printf -- "%s" "جٜنّٜ ٺِينِ" # Koyra Chiini Songhay (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "khq-Latn")
+                printf -- "%s" "Koyra ciini" # Koyra Chiini Songhay (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "khq")
+                printf -- "%s" "Koyra ciini" # Koyra Chiini Songhay (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
         "ki")
@@ -765,6 +1053,10 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "kk")
                 printf -- "%s" "qazaqşa" # Kazakh (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kkj")
+                printf -- "%s" "Kakó" # Kako
                 return $HestiaSIGNALS_OK
                 ;;
         "kl")
@@ -823,6 +1115,18 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "كَنُرِيِه" # Kanuri (Arabic)
                 return $HestiaSIGNALS_OK
                 ;;
+        "kpe-Kpel")
+                printf -- "%s" "Kpɛlɛwoo" # Kpelle (Kpelle)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kpe-Latn")
+                printf -- "%s" "Kpɛlɛ" # Kpelle (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kpe")
+                printf -- "%s" "Kpɛlɛ" # Kpelle (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
         "ks-Arab")
                 printf -- "%s" "کٲشُر" # Kashmiri (Perso-Arabic)
                 return $HestiaSIGNALS_OK
@@ -837,6 +1141,18 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "ks")
                 printf -- "%s" "کٲشُر" # Kashmiri (Perso-Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "ksb")
+                printf -- "%s" "Kisambaa" # Shambala
+                return $HestiaSIGNALS_OK
+                ;;
+        "ksf")
+                printf -- "%s" "Rikpa" # Bafia
+                return $HestiaSIGNALS_OK
+                ;;
+        "ksh")
+                printf -- "%s" "Kölsch" # Colognian, Kölsch
                 return $HestiaSIGNALS_OK
                 ;;
         "ku-Arab")
@@ -867,6 +1183,26 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Kernewek" # Cornish
                 return $HestiaSIGNALS_OK
                 ;;
+        "kxv-Deva")
+                printf -- "%s" "कुवि" # Kuvi (Devanagari)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kxv-Latn")
+                printf -- "%s" "Kuwi" # Kuvi (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kxv-Orya")
+                printf -- "%s" "କୁୱି" # Kuvi (Odia)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kxv-Telu")
+                printf -- "%s" "କୁୱି" # Kuvi (Telugu)
+                return $HestiaSIGNALS_OK
+                ;;
+        "kxv")
+                printf -- "%s" "କୁୱି" # Kuvi (Odia)
+                return $HestiaSIGNALS_OK
+                ;;
         "ky-Arab")
                 printf -- "%s" "قىرعىز" # Kyrgyz (Arabic)
                 return $HestiaSIGNALS_OK
@@ -895,6 +1231,10 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Ladin" # Ladino
                 return $HestiaSIGNALS_OK
                 ;;
+        "lag")
+                printf -- "%s" "Kɨlaangi" # Rangi
+                return $HestiaSIGNALS_OK
+                ;;
         "lb")
                 printf -- "%s" "Lëtzebuergesch" # Luxembourgish
                 return $HestiaSIGNALS_OK
@@ -913,6 +1253,18 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "li")
                 printf -- "%s" "Limburgs" # Limburgish
+                return $HestiaSIGNALS_OK
+                ;;
+        "lij")
+                printf -- "%s" "Lìgure" # Ligurian
+                return $HestiaSIGNALS_OK
+                ;;
+        "lkt")
+                printf -- "%s" "Lakȟótiyapi" # Lakota
+                return $HestiaSIGNALS_OK
+                ;;
+        "lld")
+                printf -- "%s" "Ladin" # Ladin
                 return $HestiaSIGNALS_OK
                 ;;
         "lmo")
@@ -935,8 +1287,16 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "ລາວ" # Lao (Lao)
                 return $HestiaSIGNALS_OK
                 ;;
+        "lrc")
+                printf -- "%s" "لری" # Luri
+                return $HestiaSIGNALS_OK
+                ;;
         "lt")
-                printf -- "%s" "lietuvių" # Lithuanian
+                printf -- "%s" "Lietuvių" # Lithuanian
+                return $HestiaSIGNALS_OK
+                ;;
+        "ltg")
+                printf -- "%s" "Latgalīšu" # Latgalian
                 return $HestiaSIGNALS_OK
                 ;;
         "lu")
@@ -987,8 +1347,16 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Maa" # Maasai | Maa
                 return $HestiaSIGNALS_OK
                 ;;
+        "mdf")
+                printf -- "%s" "мокшень" # Moksha
+                return $HestiaSIGNALS_OK
+                ;;
         "mer")
                 printf -- "%s" "Kĩmĩĩrũ" # Meru
+                return $HestiaSIGNALS_OK
+                ;;
+        "mfe")
+                printf -- "%s" "Kreol Morisien" # Mauritian Creole
                 return $HestiaSIGNALS_OK
                 ;;
         "mg-Arab")
@@ -999,12 +1367,36 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Malagasy" # Malagasy (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "mgh")
+                printf -- "%s" "Emakuana" # Makhuwa, Makhuwa-Meetto
+                return $HestiaSIGNALS_OK
+                ;;
+        "mgo")
+                printf -- "%s" "Meta" # Meta'
+                return $HestiaSIGNALS_OK
+                ;;
+        "mhn")
+                printf -- "%s" "Bersntolerisch" # Mòcheno
+                return $HestiaSIGNALS_OK
+                ;;
         "mh")
                 printf -- "%s" "Kajin Ṃajeḷ" # Marshallese
                 return $HestiaSIGNALS_OK
                 ;;
         "mi")
                 printf -- "%s" "Māori" # Māori
+                return $HestiaSIGNALS_OK
+                ;;
+        "mic-Zzzz")
+                printf -- "%s" "𐒢𐒃𐒄𐒑𐒛𐒍𐒖𐒆" # Mi'kmaq, Micmac (Gomgwejui'gasit)
+                return $HestiaSIGNALS_OK
+                ;;
+        "mic-Latn")
+                printf -- "%s" "Miꞌkmawiꞌsimk" # Mi'kmaq, Micmac (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "mic")
+                printf -- "%s" "Miꞌkmawiꞌsimk" # Mi'kmaq, Micmac (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
         "mix")
@@ -1071,6 +1463,10 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "ꯃꯩꯇꯩꯂꯣꯟ" # Meitei | Manipuri (Meitei Mayek)
                 return $HestiaSIGNALS_OK
                 ;;
+        "moh")
+                printf -- "%s" "Kanienʼkéha" # Mohawk
+                return $HestiaSIGNALS_OK
+                ;;
         "mr-Deva")
                 printf -- "%s" "मराठी" # Marathi (Devanagari)
                 return $HestiaSIGNALS_OK
@@ -1091,8 +1487,24 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Malti" # Maltese
                 return $HestiaSIGNALS_OK
                 ;;
+        "mua")
+                printf -- "%s" "Mundaŋ" # Mundang
+                return $HestiaSIGNALS_OK
+                ;;
+        "mus")
+                printf -- "%s" "Mvskoke" # Muscogee
+                return $HestiaSIGNALS_OK
+                ;;
         "my")
                 printf -- "%s" "မြန်မာ" # Burmese (Myanmar)
+                return $HestiaSIGNALS_OK
+                ;;
+        "myv")
+                printf -- "%s" "эрзянь" # Erzya
+                return $HestiaSIGNALS_OK
+                ;;
+        "mzn")
+                printf -- "%s" "مازِرونی‎" # Mazanderani
                 return $HestiaSIGNALS_OK
                 ;;
         "na")
@@ -1143,8 +1555,16 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Nederlands" # Dutch
                 return $HestiaSIGNALS_OK
                 ;;
+        "nmg")
+                printf -- "%s" "Ngumba, Kola" # Kwasio
+                return $HestiaSIGNALS_OK
+                ;;
         "nn")
                 printf -- "%s" "Norsk Nynorsk" # Norwegian Nynorsk
+                return $HestiaSIGNALS_OK
+                ;;
+        "nnh")
+                printf -- "%s" "Ngiembɔɔn" # Ngiemboon
                 return $HestiaSIGNALS_OK
                 ;;
         "no")
@@ -1159,6 +1579,10 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Novial" # Novial
                 return $HestiaSIGNALS_OK
                 ;;
+        "nqo")
+                printf -- "%s" "ߒߞߏ" # N'Ko
+                return $HestiaSIGNALS_OK
+                ;;
         "nr")
                 printf -- "%s" "isiNdebele" # Southern Ndebele
                 return $HestiaSIGNALS_OK
@@ -1167,12 +1591,20 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Sesotho sa Leboa" # Northern Sotho
                 return $HestiaSIGNALS_OK
                 ;;
+        "nus")
+                printf -- "%s" "Thok Naath" # Nuer
+                return $HestiaSIGNALS_OK
+                ;;
         "nv")
                 printf -- "%s" "Diné Bizaad" # Navajo
                 return $HestiaSIGNALS_OK
                 ;;
         "ny")
                 printf -- "%s" "Chichewa" # Chichewa
+                return $HestiaSIGNALS_OK
+                ;;
+        "nyn")
+                printf -- "%s" "Orunyankore" # Nyankole
                 return $HestiaSIGNALS_OK
                 ;;
         "oc")
@@ -1225,6 +1657,18 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "os")
                 printf -- "%s" "дигорон" # Ossetian (Cyrillic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "osa-Latn")
+                printf -- "%s" "Wažáže ie" # Osage (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "osa-Osge")
+                printf -- "%s" "𐓏𐒰𐓓𐒰𐓓𐒷 𐒻𐒷‎" # Osage (Osage)
+                return $HestiaSIGNALS_OK
+                ;;
+        "osa")
+                printf -- "%s" "𐓏𐒰𐓓𐒰𐓓𐒷 𐒻𐒷‎" # Osage (Osage)
                 return $HestiaSIGNALS_OK
                 ;;
         "pa-Arab")
@@ -1283,8 +1727,16 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "ปาฬิ" # Pali (Thai)
                 return $HestiaSIGNALS_OK
                 ;;
+        "pis")
+                printf -- "%s" "Pijin" # Solomon Islands Pidgin
+                return $HestiaSIGNALS_OK
+                ;;
         "pl")
                 printf -- "%s" "Polski" # Polish
+                return $HestiaSIGNALS_OK
+                ;;
+        "prg")
+                printf -- "%s" "Prūsiskai" # Old Prussian
                 return $HestiaSIGNALS_OK
                 ;;
         "ps")
@@ -1319,6 +1771,70 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Quenya" # Quenya (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "raj-Arab")
+                printf -- "%s" "راجستھانی" # Rajasthani (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "raj-Deva")
+                printf -- "%s" "राजस्थानी" # Rajasthani (Devanagari)
+                return $HestiaSIGNALS_OK
+                ;;
+        "raj-Guru")
+                printf -- "%s" "ਰਾਜਸਥਾਨੀ" # Rajasthani (Gurmukhī)
+                return $HestiaSIGNALS_OK
+                ;;
+        "raj-Khoj")
+                printf -- "%s" "𑈉𑈖𑈭𑈲𑈝𑈞𑈪" # Rajasthani (Khojkī)
+                return $HestiaSIGNALS_OK
+                ;;
+        "raj-Mahj")
+                printf -- "%s" "𑅱𑅢𑅛𑅧𑅣" # Rajasthani (Mahajani)
+                return $HestiaSIGNALS_OK
+                ;;
+        "raj-Sind")
+                printf -- "%s" "𑋏𑋣𑋩𑋢𑋣𑋞𑋙" # Rajasthani (Khudabadi)
+                return $HestiaSIGNALS_OK
+                ;;
+        "raj")
+                printf -- "%s" "राजस्थानी" # Rajasthani (Devanagari)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rhg-Arab")
+                printf -- "%s" " رُحَ࣪ڠۡگَ࣪ـݠـ" # Rohingya (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rhg-Beng")
+                printf -- "%s" "রোহিঙ্গা" # Rohingya (Bengali–Assamese)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rhg-Mymr")
+                printf -- "%s" "ရိုဟင်ဂျာ" # Rohingya (Burmese)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rhg-Rohg")
+                printf -- "%s" "𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝" # Rohingya (Hanifi Rohingya)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rhg")
+                printf -- "%s" "𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝" # Rohingya (Hanifi Rohingya)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rif-Arab")
+                printf -- "%s" "الريفية" # Tarifit (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rif-Latn")
+                printf -- "%s" "Riffian, Tarifiyt, Tmaziɣt" # Tarifit (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rif-Tfng")
+                printf -- "%s" "ⵜⴰⵔⵉⴼⵉⵜ" # Tarifit (Tifinagh)
+                return $HestiaSIGNALS_OK
+                ;;
+        "rif")
+                printf -- "%s" "ⵜⴰⵔⵉⴼⵉⵜ" # Tarifit (Tifinagh)
+                return $HestiaSIGNALS_OK
+                ;;
         "rm")
                 printf -- "%s" "Rumantsch" # Romansh
                 return $HestiaSIGNALS_OK
@@ -1343,12 +1859,20 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Română" # Romanian (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "rof")
+                printf -- "%s" "Kirombo" # Rombo
+                return $HestiaSIGNALS_OK
+                ;;
         "ru")
                 printf -- "%s" "русский" # Russian
                 return $HestiaSIGNALS_OK
                 ;;
         "rw")
                 printf -- "%s" "Ikinyarwanda" # Kinyarwanda
+                return $HestiaSIGNALS_OK
+                ;;
+        "rwk")
+                printf -- "%s" "West Chaga" # West Kilimanjaro, Rwa
                 return $HestiaSIGNALS_OK
                 ;;
         "sa-Deva")
@@ -1361,6 +1885,22 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "sa")
                 printf -- "%s" "संस्कृत" # Sanskrit (Devanagari)
+                return $HestiaSIGNALS_OK
+                ;;
+        "sah-Cyrl")
+                printf -- "%s" "саха тыла" # Yakut (Cyrillic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "sah-Latn")
+                printf -- "%s" "saxa tıla" # Yakut (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "sah")
+                printf -- "%s" "саха тыла" # Yakut (Cyrillic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "saq")
+                printf -- "%s" "Sampur, ɔl Maa" # Samburu
                 return $HestiaSIGNALS_OK
                 ;;
         "sat-Beng")
@@ -1385,6 +1925,10 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "sat")
                 printf -- "%s" "ᱥᱟᱱᱛᱟᱲᱤ" # Santali (Ol Chiki)
+                return $HestiaSIGNALS_OK
+                ;;
+        "sbp")
+                printf -- "%s" "Kisangu" # Sangu
                 return $HestiaSIGNALS_OK
                 ;;
         "sc")
@@ -1419,12 +1963,32 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "سِنڌِي" # Sindhi (Perso-Ararbic)
                 return $HestiaSIGNALS_OK
                 ;;
+        "sdh")
+                printf -- "%s" "کوردی خوارین" # Southern Kurdish
+                return $HestiaSIGNALS_OK
+                ;;
         "sdr")
                 printf -- "%s" "Mey" # Sherdukpen
                 return $HestiaSIGNALS_OK
                 ;;
         "se")
                 printf -- "%s" "Davvisámegiella" # Northern Sami
+                return $HestiaSIGNALS_OK
+                ;;
+        "seh-Latn")
+                printf -- "%s" "Sena" # Sena (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "seh-Zzzz")
+                printf -- "%s" "𑵻𑵶𑵼" # Sena (Mwangwego)
+                return $HestiaSIGNALS_OK
+                ;;
+        "seh")
+                printf -- "%s" "Sena" # Sena (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "ses")
+                printf -- "%s" "كࣷيْرَبࣷرࣷ سٜنِّ" # Koyraboro Senni, Koyraboro Senni Songhai
                 return $HestiaSIGNALS_OK
                 ;;
         "sg")
@@ -1435,8 +1999,28 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Goídelc" # Old Irish
                 return $HestiaSIGNALS_OK
                 ;;
+        "shi-Arab")
+                printf -- "%s" "تاشلحيت" # Tachelhit, Shilha (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "shi-Latn")
+                printf -- "%s" "Taclḥiyt" # Tachelhit, Shilha (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "shi-Tfng")
+                printf -- "%s" "ⵜⴰⵛⵍⵃⵉⵢⵜ" # Tachelhit, Shilha (Tifinagh)
+                return $HestiaSIGNALS_OK
+                ;;
+        "shn")
+                printf -- "%s" "ၵႂၢမ်းတႆး" # Shan
+                return $HestiaSIGNALS_OK
+                ;;
         "si")
                 printf -- "%s" "සිංහල" # Sinhala
+                return $HestiaSIGNALS_OK
+                ;;
+        "sid")
+                printf -- "%s" "Sidaamu Afoo" # Sidama
                 return $HestiaSIGNALS_OK
                 ;;
         "sjn")
@@ -1467,6 +2051,30 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Slovenčina" # Slovak (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "skr-Arab")
+                printf -- "%s" "سرائیکی" # Saraiki (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "skr-Deva")
+                printf -- "%s" "सराइकी" # Saraiki (Devanāgarī)
+                return $HestiaSIGNALS_OK
+                ;;
+        "skr-Guru")
+                printf -- "%s" "ਸਰਾਇਕੀ" # Saraiki (Gurmukhī)
+                return $HestiaSIGNALS_OK
+                ;;
+        "skr-Khoj")
+                printf -- "%s" "𑈙𑈞𑈝𑈈𑈪" # Saraiki (Khojkī)
+                return $HestiaSIGNALS_OK
+                ;;
+        "skr-Mult")
+                printf -- "%s" "𑊩𑊡𑊖𑊚" # Saraiki (Multani)
+                return $HestiaSIGNALS_OK
+                ;;
+        "skr")
+                printf -- "%s" "𑊩𑊡𑊖𑊚" # Saraiki (Multani)
+                return $HestiaSIGNALS_OK
+                ;;
         "sl")
                 printf -- "%s" "Slovenščina" # Slovenian
                 return $HestiaSIGNALS_OK
@@ -1485,6 +2093,10 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "smn")
                 printf -- "%s" "Anarâškielâ" # Inari Sami
+                return $HestiaSIGNALS_OK
+                ;;
+        "sms")
+                printf -- "%s" "Sääʹmǩiõll, Nuõrttsääʹmǩiõll" # Skolt Sámi
                 return $HestiaSIGNALS_OK
                 ;;
         "sn")
@@ -1567,6 +2179,26 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Kiswahili" # Swahili (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "syr-Syrc")
+                printf -- "%s" "ܣܘܪܝܝܐ" # Syriac (Syriac)
+                return $HestiaSIGNALS_OK
+                ;;
+        "syr-Syre")
+                printf -- "%s" "ܣܘܪܝܝܐ ܐܣܛܪܢܓܠܐ" # Syriac (ʾEsṭrangēlā)
+                return $HestiaSIGNALS_OK
+                ;;
+        "syr-Syrj")
+                printf -- "%s" "ܣܘܪܝܝܐ ܡܥܪܒܝܐ" # Syriac (Western)
+                return $HestiaSIGNALS_OK
+                ;;
+        "syr-Syrn")
+                printf -- "%s" "ܣܘܪܝܝܐ ܡܕܢܚܝܐ" # Syriac (Eastern)
+                return $HestiaSIGNALS_OK
+                ;;
+        "syr")
+                printf -- "%s" "ܣܘܪܝܝܐ" # Syriac (Syriac)
+                return $HestiaSIGNALS_OK
+                ;;
         "szl")
                 printf -- "%s" "Ślōnskŏ Gŏdka" # Silesian
                 return $HestiaSIGNALS_OK
@@ -1599,6 +2231,10 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "తెలుగు" # Telugu
                 return $HestiaSIGNALS_OK
                 ;;
+        "teo")
+                printf -- "%s" "Ateso" # Teso
+                return $HestiaSIGNALS_OK
+                ;;
         "tg-Arab")
                 printf -- "%s" "تاجيکى" # Tajik (Arabic)
                 return $HestiaSIGNALS_OK
@@ -1625,6 +2261,18 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "ti")
                 printf -- "%s" "ትግርኛ" # Tigrinya
+                return $HestiaSIGNALS_OK
+                ;;
+        "tig-Arab")
+                printf -- "%s" "تيغرې" # Tigre (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "tig-Ethi")
+                printf -- "%s" "ትግሬ, ትግራይት" # Tigre (Geʽez)
+                return $HestiaSIGNALS_OK
+                ;;
+        "tig")
+                printf -- "%s" "ትግሬ, ትግራይት" # Tigre (Geʽez)
                 return $HestiaSIGNALS_OK
                 ;;
         "tk-Arab")
@@ -1711,12 +2359,32 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Ákán" # Twi | Akan
                 return $HestiaSIGNALS_OK
                 ;;
+        "twq")
+                printf -- "%s" "Tásàwàq" # Tasawaq
+                return $HestiaSIGNALS_OK
+                ;;
         "ty")
                 printf -- "%s" "Tahiti" # Tahitian
                 return $HestiaSIGNALS_OK
                 ;;
+        "tyv")
+                printf -- "%s" "Тыва дыл" # Tuvan
+                return $HestiaSIGNALS_OK
+                ;;
         "tzl")
                 printf -- "%s" "Talossan" # Talossan
+                return $HestiaSIGNALS_OK
+                ;;
+        "tzm-Arab")
+                printf -- "%s" "أمازيغية أطلس الأوسط" # Central Atlas Tamazight (Arabic)
+                return $HestiaSIGNALS_OK
+                ;;
+        "tzm-Tfng")
+                printf -- "%s" "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Central Atlas Tamazight (Tifinagh)
+                return $HestiaSIGNALS_OK
+                ;;
+        "tzm")
+                printf -- "%s" "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Central Atlas Tamazight (Tifinagh)
                 return $HestiaSIGNALS_OK
                 ;;
         "ug-Arab")
@@ -1763,6 +2431,18 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Oʻzbekcha" # Uzbek (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "vai-Latn")
+                printf -- "%s" "Vai" # Vai (Latin)
+                return $HestiaSIGNALS_OK
+                ;;
+        "vai-Vaii")
+                printf -- "%s" "ꕙꔤ" # Vai (Vai)
+                return $HestiaSIGNALS_OK
+                ;;
+        "vai")
+                printf -- "%s" "ꕙꔤ" # Vai (Vai)
+                return $HestiaSIGNALS_OK
+                ;;
         "ve")
                 printf -- "%s" "Tshivenḓa" # Venda
                 return $HestiaSIGNALS_OK
@@ -1783,8 +2463,16 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Tiếng Việt" # Vietnamese
                 return $HestiaSIGNALS_OK
                 ;;
+        "vmw")
+                printf -- "%s" "Emakuana" # Makhuwa
+                return $HestiaSIGNALS_OK
+                ;;
         "vo")
                 printf -- "%s" "Volapük" # Volapük
+                return $HestiaSIGNALS_OK
+                ;;
+        "vun")
+                printf -- "%s" "Kivunjo" # Wunjo
                 return $HestiaSIGNALS_OK
                 ;;
         "vro")
@@ -1793,6 +2481,10 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "wa")
                 printf -- "%s" "Walon" # Walloon
+                return $HestiaSIGNALS_OK
+                ;;
+        "wae")
+                printf -- "%s" "Walscher" # Walser German
                 return $HestiaSIGNALS_OK
                 ;;
         "wal-Ethi")
@@ -1805,6 +2497,10 @@ HestiaLOCALES_Get_Language_Name() {
                 ;;
         "wal")
                 printf -- "%s" "ወላይታቶ" # Wolaytta (Geʽez)
+                return $HestiaSIGNALS_OK
+                ;;
+        "wbp")
+                printf -- "%s" "Warlpiri" # Warlpiri
                 return $HestiaSIGNALS_OK
                 ;;
         "wo-Arab")
@@ -1823,16 +2519,36 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Wolof" # Wolof (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "xh")
+                printf -- "%s" "IsiXhosa" # Xhosa
+                return $HestiaSIGNALS_OK
+                ;;
+        "xnr-Deva")
+                printf -- "%s" "कांगड़ी" # Kangri (Devanāgarī)
+                return $HestiaSIGNALS_OK
+                ;;
+        "xnr-Takr")
+                printf -- "%s" "𑚊𑚭𑚫𑚌𑚪𑚯" # Kangri (Takri)
+                return $HestiaSIGNALS_OK
+                ;;
+        "xnr")
+                printf -- "%s" "𑚊𑚭𑚫𑚌𑚪𑚯" # Kangri (Takri)
+                return $HestiaSIGNALS_OK
+                ;;
         "xct")
                 printf -- "%s" "ཏོ་ས་ཆེན་པོ" # Classical Tibetan
+                return $HestiaSIGNALS_OK
+                ;;
+        "xog")
+                printf -- "%s" "Lusoga" # Soga
                 return $HestiaSIGNALS_OK
                 ;;
         "xpu")
                 printf -- "%s" "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤉𐤌" # Punic
                 return $HestiaSIGNALS_OK
                 ;;
-        "xh")
-                printf -- "%s" "IsiXhosa" # Xhosa
+        "yav")
+                printf -- "%s" "Yangben" # Yangben
                 return $HestiaSIGNALS_OK
                 ;;
         "yi-Hebr")
@@ -1859,15 +2575,31 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "Yorùbá" # Yoruba (Latin)
                 return $HestiaSIGNALS_OK
                 ;;
+        "yrl")
+                printf -- "%s" "Nhẽẽgatú" # Nhengatu
+                return $HestiaSIGNALS_OK
+                ;;
         "yua")
                 printf -- "%s" "Màaya T'àan" # Yucatec Maya
                 return $HestiaSIGNALS_OK
                 ;;
-        "za-hans")
+        "yue-Hans")
+                printf -- "%s" "粵語（简体）" # Yue Chinese (Simplified)
+                return $HestiaSIGNALS_OK
+                ;;
+        "yue-Hant")
+                printf -- "%s" "粤语（繁體）" # Yue Chinese (Traditional)
+                return $HestiaSIGNALS_OK
+                ;;
+        "yue")
+                printf -- "%s" "粵語（简体）" # Yue Chinese (Simplified)
+                return $HestiaSIGNALS_OK
+                ;;
+        "za-Hans")
                 printf -- "%s" "壮语（简体）" # Zhuang (Simplified)
                 return $HestiaSIGNALS_OK
                 ;;
-        "za-hant")
+        "za-Hant")
                 printf -- "%s" "壯語（繁體）" # Zhuang (Traditional)
                 return $HestiaSIGNALS_OK
                 ;;
@@ -1883,11 +2615,11 @@ HestiaLOCALES_Get_Language_Name() {
                 printf -- "%s" "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Standard Moroccan Tamazight
                 return $HestiaSIGNALS_OK
                 ;;
-        "zh-hans")
+        "zh-Hans")
                 printf -- "%s" "华语（简体）" # Chinese (Simplified)
                 return $HestiaSIGNALS_OK
                 ;;
-        "zh-hant")
+        "zh-Hant")
                 printf -- "%s" "華語（繁體）" # Chinese (Traditional)
                 return $HestiaSIGNALS_OK
                 ;;

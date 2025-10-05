@@ -38,6 +38,8 @@ function Get-Language-Name {
                 return "Afrikaans" # Afrikaans
         } "afh" {
                 return "Ɛl-Afrihili" # Afrihili
+        } "agq" {
+                return "Wum" # Aghem
         } "ak" {
                 return "Ákán" # Akan
         } "akk" {
@@ -48,12 +50,22 @@ function Get-Language-Name {
                 return "Aragonés" # Aragonese
         } "ang" {
                 return "Ænglisc" # Old English
+        } "ann" {
+                return "Andoni" # Obolo
+        } "apc" {
+                return "شامي" # Levantine Arabic
         } "ar" {
                 return "اَلْعَرَبِيَّةُ" # Arabic
         } "arc" {
                 return "ארמית, ܐܪܡܐܝܬ" # Aramaic
+        } "arn" {
+                return "Mapudungun" # Mapudungun, Mapuche
         } "as" {
                 return "অসমীয়া" # Assamese
+        } "asa" {
+                return "Kipare" # Pare, Asu Tanzania
+        } "ast" {
+                return "Asturianu" # Asturian, Asturleonese, Bable, Leonese
         } "av-Arab" {
                 return "آوَار" # Avaric (Arabic)
         } "av-Cyrl" {
@@ -82,18 +94,38 @@ function Get-Language-Name {
                 return "başqort" # Bashkir (Latin)
         } "ba" {
                 return "башҡорт" # Bashkir (Cyrillic)
+        } "bal-Arab" {
+                return "بلۏچی" # Baluchi (Arabic)
+        } "bal-Latn" {
+                return "Balòci" # Baluchi (Latin)
+        } "bal" {
+                return "بلۏچی" # Baluchi (Arabic)
+        } "bas" {
+                return "Ɓàsàa" # Basa Cameroon
         } "be" {
                 return "беларуская" # Belarusian
+        } "bem" {
+                return "Chibemba" # Bemba Zambia
+        } "bew" {
+                return "Betawi" # Betawi
+        } "bez" {
+                return "Ekibena" # Bena Tanzania
         } "bg" {
                 return "български" # Bulgarian
         } "bgc" {
                 return "हरियाणवी" # Haryanvi
+        } "bgn" {
+                return "بلۏچی" # Western Balochi
         } "bho-Deva" {
                 return "भोजपुरी" # Bhojpuri (Devanagari)
         } "bho-Kthi" {
                 return "𑂦𑂷𑂔𑂣𑂳𑂩𑂲" # Bhojpuri (Kaithi)
         } "bho" {
                 return "भोजपुरी" # Bhojpuri (Devanagari)
+        } "blo" {
+                return "Basila" # Anii
+        } "blt" {
+                return "ꪼꪕꪒꪾ" # Tai Dam
         } "bi" {
                 return "Bichelamar" # Bislama
         } "bm-Arab" {
@@ -124,6 +156,14 @@ function Get-Language-Name {
                 return "bosanski" # Bosnian
         } "bs" {
                 return "bosanski" # Bosnian
+        } "bss" {
+                return "Ɓàsò" # Akoose Manenguba
+        } "byn-Latn" {
+                return "Blin" # Bilen, Bilin, Blin
+        } "byn-Ethi" {
+                return "ብሊን" # Bilen, Bilin, Blin
+        } "byn" {
+                return "Blin" # Bilen, Bilin, Blin
         } "bzt" {
                 return "Comroig" # Brithenig
         } "ca" {
@@ -138,30 +178,52 @@ function Get-Language-Name {
                 return "Noxçiyn" # Chechen (Latin)
         } "ce" {
                 return "Нохчийн" # Chechen (Cyrillic)
+        } "cad" {
+                return "Hasí꞉nay" # Caddo
+        } "cch" {
+                return "Cawai" # Atsam
+        } "ccp-Cakm" {
+                return "𑄌𑄋𑄴𑄟𑄳𑄦" # Chakma (Chakma)
+        } "ccp-Zzzz" {
+                return "𑄖𑄧𑄐𑄴𑄌𑄧𑄁𑄉𑄴𑄡" # Chakma (Tanchangya)
+        } "ccp" {
+                return "𑄌𑄋𑄴𑄟𑄳𑄦" # Chakma (Chakma)
         } "ceb" {
                 return "Bisayâ" # Cebuano
+        } "cgg" {
+                return "Orukiga" # Kiga
         } "ch" {
                 return "Chamoru" # Chamorro
         } "cho" {
                 return "Chahta anumpa" # Choctaw
         } "chr-Cher" {
-                return "ᏣᎳᎩ" # Cherokee (Cherokee)
+                return "ᏣᎳᎩ" # Cherokee
         } "chr-Latn" {
                 return "Tsalagi" # Cherokee (Latin)
         } "chr" {
-                return "ᏣᎳᎩ" # Cherokee (Cherokee)
+                return "ᏣᎳᎩ" # Cherokee
+        } "cic" {
+                return "Chikashshanompaꞌ" # Chickasaw
+        } "ckb-Arab" {
+                return "سۆرانی" # Central Kurdish
+        } "ckb-Latn" {
+                return "Soranî" # Central Kurdish
+        } "ckb" {
+                return "سۆرانی" # Central Kurdish
         } "co" {
                 return "corsu" # Corsican
         } "cop" {
                 return "ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ" # Coptic
         } "cr-Cans" {
-                return "ᓀᐦᐃᔭᐍᐏᐣ" # Cree (Canadian Aboriginal)
+                return "ᓀᐦᐃᔭᐍᐏᐣ" # Canadian Aboriginal Cree
         } "cr-Latn" {
                 return "Nēhiyawēwin" # Cree (Latin)
         } "cs" {
                 return "Čeština" # Czech
         } "csb" {
                 return "Kaszëbsczi" # Kashubian
+        } "csw" {
+                return "ᓀᐦᐃᓇᐍᐏᐣ" # Swampy Cree
         } "cu-Cyrl" {
                 return "словѣньскъ" # Old Church Slavonic (Cyrillic)
         } "cu-Glag" {
@@ -172,8 +234,16 @@ function Get-Language-Name {
                 return "Cymraeg" # Welsh
         } "da" {
                 return "Dansk" # Danish
+        } "dav" {
+                return "Taita–Sagala" # Taita, Dawida
         } "de" {
                 return "Deutsch" # German
+        } "dje-Arab" {
+                return "زَرْمَ" # Zarma (Arabic)
+        } "dje-Latn" {
+                return "Zabarma" # Zarma (Latin)
+        } "dje" {
+                return "زَرْمَ" # Zarma (Arabic)
         } "dmf" {
                 return "𖹝𖹰𖹯𖹼𖹫 𖹚𖹬𖹾𖹠𖹯‎ / Obɛri Ɔkaimɛ" # Medefaidrin
         } "doi-Aran" {
@@ -188,6 +258,8 @@ function Get-Language-Name {
                 return "डोगरी" # Dogri (Devanagari)
         } "dsb" {
                 return "dolnoserbšćina" # Lower Sorbian
+        } "dua" {
+                return "Duálá" # Duala
         } "dv-Latn" {
                 return "Dhivehi" # Maldivian | Dhivehi (Latin)
         } "dv-Thaa" {
@@ -196,8 +268,12 @@ function Get-Language-Name {
                 return "ދިވެހި" # Maldivian | Dhivehi (Thaana)
         } "dws" {
                 return "Dutton Speedwords" # Dutton Speedwords (Latin)
+        } "dyo" {
+                return "Kujóolay" # Jola-Fonyi
         } "dz" {
                 return "རྫོང་ཁ་" # Dzongkha
+        } "ebu" {
+                return "Kiembu" # Embu
         } "ee" {
                 return "Eʋegbe" # Ewe
         } "el" {
@@ -220,6 +296,8 @@ function Get-Language-Name {
                 return "𐌄𐌓𐌔𐌍𐌀𐌂" # Etruscan
         } "eu" {
                 return "Euskara" # Basque
+        } "ewo" {
+                return "Beti" # Ewondo
         } "fa" {
                 return "فارسی" # Persian
         } "ff-Adlm" {
@@ -232,14 +310,24 @@ function Get-Language-Name {
                 return "𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫" # Fula | Fulani | Fulah (Adlam Pular)
         } "fi" {
                 return "Suomi" # Finnish
+        } "fil-Latn" {
+                return "Filipino" # Filipino (Latin)
+        } "fil-Tglg" {
+                return "ᜉᜒᜎᜒᜉᜒᜈ" # Filipino (Baybayin)
+        } "fil" {
+                return "Filipino" # Filipino (Latin)
         } "fj" {
                 return "Vosa Vaka-Viti" # Fijian
         } "fo" {
                 return "føroyskt" # Faroese
         } "fr" {
                 return "Français" # French
+        } "frr" {
+                return "Noorfriisk" # North Frisian
         } "fro" {
                 return "Franceis" # Old French
+        } "fur" {
+                return "Furlan" # Friulian
         } "fy" {
                 return "Frysk" # Western Frisian
         } "ga-Latn" {
@@ -248,12 +336,20 @@ function Get-Language-Name {
                 return "ᚌᚐᚓᚔᚂᚌᚓ" # Irish (Ogham)
         } "ga" {
                 return "Gaeilge" # Irish (Latin)
+        } "gaa" {
+                return "Gã" # Ga
         } "gd-Latn" {
                 return "Gàidhlig" # Scottish Gaelic (Latin)
         } "gd-Ogam" {
                 return "ᚌᚐᚔᚇᚆᚂᚔᚌ" # Scottish Gaelic (Ogham)
         } "gd" {
                 return "Gàidhlig" # Scottish Gaelic (Latin)
+        } "gez-Ethi" {
+                return "ግዕዝ" # Geʽez (Geʽez)
+        } "gez-Sarb" {
+                return "𐩴𐩹𐩹" # Geʽez (Ancient South Arabian)
+        } "gez" {
+                return "ግዕዝ" # Geʽez (Geʽez)
         } "gl" {
                 return "Galego" # Galician (Latin)
         } "gmy" {
@@ -264,6 +360,8 @@ function Get-Language-Name {
                 return "Diutisk" # Old High German
         } "grc" {
                 return "Ἑλληνική" # Ancient Greek
+        } "gsw" {
+                return "Schwiizerdütsch" # Swiss German, Alemannic, Alsatian
         } "gu" {
                 return "ગુજરાતી" # Gujarati
         } "guz" {
@@ -288,6 +386,16 @@ function Get-Language-Name {
                 return "हिन्दी" # Hindi (Devanagari)
         } "hit" {
                 return "𒌷𒉌𒅆𒇷" # Hittite
+        } "hnj-Hmng" {
+                return "𖬇𖬰𖬞𖬵 𖬄𖬶𖬟 𖬌𖬣𖬵" # Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
+        } "hnj-Hmnp" {
+                return "𞄋𞄤𞄰𞄘𞄤𞄬𞄩𞄰" # Hmong Njua, Mong Leng, Mong Njua (Nyiakeng Puachue Hmong)
+        } "hnj-Latn" {
+                return "Hmoob" # Hmong Njua, Mong Leng, Mong Njua (Latin)
+        } "hnj-Plrd" {
+                return "𖼀𖽙𖾐𖼊𖽙𖾑" # Hmong Njua, Mong Leng, Mong Njua (Pollard)
+        } "hnj" {
+                return "𖬇𖬰𖬞𖬵 𖬄𖬶𖬟 𖬌𖬣𖬵" # Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
         } "ho" {
                 return "Hiri Motu" # Hiri Motu
         } "hr-Glag" {
@@ -344,6 +452,10 @@ function Get-Language-Name {
                 return "日本語" # Japanese
         } "jbo" {
                 return "La .lojban." # Lojban
+        } "jgo" {
+                return "Nda’a" # Ngomba
+        } "jmc" {
+                return "Kimachame" # West Kilimanjaro, Machame
         } "jv-Arab" {
                 return "باسا جاوا" # Javanese (Pegon)
         } "jv-Java" {
@@ -354,6 +466,26 @@ function Get-Language-Name {
                 return "Basa Jawa" # Javanese (Latin)
         } "ka" {
                 return "ქართული ენა" # Georgian
+        } "kaa-Arab" {
+                return "قاراقالپاق" # Karakalpak (Arabic)
+        } "kaa-Cyrl" {
+                return "Қарақалпақ" # Karakalpak (Cyrillic)
+        } "kaa-Latn" {
+                return "Qaraqalpaq" # Karakalpak (Latin)
+        } "kaa" {
+                return "Қарақалпақ" # Karakalpak (Cyrillic)
+        } "kab-Arab" {
+                return "ثاقبايليث" # Kabyle (Arabic)
+        } "kab-Latn" {
+                return "Taqbaylit" # Kabyle (Latin)
+        } "kab-Tfng" {
+                return "ⵜⴰⵇⴱⴰⵢⵍⵉⵜ" # Kabyle (Tifinagh)
+        } "kab" {
+                return "Taqbaylit" # Kabyle (Latin)
+        } "kaj" {
+                return "Jhyuo, Kaje" # Jju
+        } "kam" {
+                return "Kikamba" # Kamba
         } "kbd-Cyrl" {
                 return "адыгэбзэ" # Kabardian (Cyrillic)
         } "kbd-Latn" {
@@ -362,20 +494,32 @@ function Get-Language-Name {
                 return "آد‍ہگەبزە" # Kabardian (Perso Arabic)
         } "kbd" {
                 return "адыгэбзэ" # Kabardian (Cyrillic)
-        } "kam" {
-                return "Kikamba" # Kamba
+        } "kcg" {
+                return "Tyap" # Tyap
+        } "kde" {
+                return "Chinimakonde" # Makonde
+        } "kea" {
+                return "Kabuverdianu" # Kabuverdianu
         } "kek" {
                 return "Q'eqchi" # Q'eqchi'
-        } "kg-Latn" {
-                return "Kikongo" # Kongo
+        } "ken" {
+                return "Nyang" # Kenyang
         } "kg" {
                 return "Kikongo" # Kongo
+        } "kgp" {
+                return "Kanhgág" # Kaingang
         } "kha-Beng" {
                 return "ক ক্তিয়েন খাসি" # Khasi (Bengali)
         } "kha-Latn" {
                 return "Ka Ktien Khasi" # Khasi (Latin)
         } "kha" {
                 return "Ka Ktien Khasi" # Khasi (Latin)
+        } "khq-Arab" {
+                return "جٜنّٜ ٺِينِ" # Koyra Chiini Songhay (Arabic)
+        } "khq-Latn" {
+                return "Koyra ciini" # Koyra Chiini Songhay (Latin)
+        } "khq" {
+                return "Koyra ciini" # Koyra Chiini Songhay (Latin)
         } "ki" {
                 return "Gĩgĩkũyũ" # Kikuyu
         } "kj" {
@@ -388,6 +532,8 @@ function Get-Language-Name {
                 return "qazaqşa" # Kazakh (Latin)
         } "kk" {
                 return "qazaqşa" # Kazakh (Latin)
+        } "kkj" {
+                return "Kakó" # Kako
         } "kl" {
                 return "Kalaallisut" # Kalaallisut
         } "kln" {
@@ -416,6 +562,12 @@ function Get-Language-Name {
                 return "Kànùrí" # Kanuri (Latin)
         } "kr" {
                 return "كَنُرِيِه" # Kanuri (Arabic)
+        } "kpe-Kpel" {
+                return "Kpɛlɛwoo" # Kpelle (Kpelle)
+        } "kpe-Latn" {
+                return "Kpɛlɛ" # Kpelle (Latin)
+        } "kpe" {
+                return "Kpɛlɛ" # Kpelle (Latin)
         } "ks-Arab" {
                 return "کٲشُر" # Kashmiri (Perso-Arabic)
         } "ks-Deva" {
@@ -424,6 +576,12 @@ function Get-Language-Name {
                 return "𑆑𑆳𑆮𑆶𑆫𑇀" # Kashmiri (Sharada)
         } "ks" {
                 return "کٲشُر" # Kashmiri (Perso-Arabic)
+        } "ksb" {
+                return "Kisambaa" # Shambala
+        } "ksf" {
+                return "Rikpa" # Bafia
+        } "ksh" {
+                return "Kölsch" # Colognian, Kölsch
         } "ku-Arab" {
                 return "کوردی" # Kurdish (Arabic)
         } "ku-Latn" {
@@ -438,6 +596,16 @@ function Get-Language-Name {
                 return "коми" # Komi (Cyrillic)
         } "kw" {
                 return "Kernewek" # Cornish
+        } "kxv-Deva" {
+                return "कुवि" # Kuvi (Devanagari)
+        } "kxv-Latn" {
+                return "Kuwi" # Kuvi (Latin)
+        } "kxv-Orya" {
+                return "କୁୱି" # Kuvi (Odia)
+        } "kxv-Telu" {
+                return "କୁୱି" # Kuvi (Telugu)
+        } "kxv" {
+                return "କୁୱି" # Kuvi (Odia)
         } "ky-Arab" {
                 return "قىرعىز" # Kyrgyz (Arabic)
         } "ky-Cyrl" {
@@ -452,6 +620,8 @@ function Get-Language-Name {
                 return "Latina" # Latin
         } "lad" {
                 return "Ladin" # Ladino
+        } "lag" {
+                return "Kɨlaangi" # Rangi
         } "lb" {
                 return "Lëtzebuergesch" # Luxembourgish
         } "ldn" {
@@ -462,6 +632,12 @@ function Get-Language-Name {
                 return "Oluganda" # Ganda | Luganda
         } "li" {
                 return "Limburgs" # Limburgish
+        } "lij" {
+                return "Lìgure" # Ligurian
+        } "lkt" {
+                return "Lakȟótiyapi" # Lakota
+        } "lld" {
+                return "Ladin" # Ladin
         } "lmo" {
                 return "Lombard" # Lombard
         } "ln" {
@@ -472,8 +648,12 @@ function Get-Language-Name {
                 return "ลาว" # Lao (Thai)
         } "lo" {
                 return "ລາວ" # Lao (Lao)
+        } "lrc" {
+                return "لری" # Luri
         } "lt" {
-                return "lietuvių" # Lithuanian
+                return "Lietuvių" # Lithuanian
+        } "ltg" {
+                return "Latgalīšu" # Latgalian
         } "lu" {
                 return "Kiluba" # Luba-Katanga
         } "luo" {
@@ -498,16 +678,32 @@ function Get-Language-Name {
                 return "Qyool Mam" # Mam
         } "mas" {
                 return "Maa" # Maasai | Maa
+        } "mdf" {
+                return "мокшень" # Moksha
         } "mer" {
                 return "Kĩmĩĩrũ" # Meru
+        } "mfe" {
+                return "Kreol Morisien" # Mauritian Creole
         } "mg-Arab" {
                 return "مَلَغَسِ" # Malagasy (Sorabe)
         } "mg-Latn" {
                 return "Malagasy" # Malagasy (Latin)
+        } "mgh" {
+                return "Emakuana" # Makhuwa, Makhuwa-Meetto
+        } "mgo" {
+                return "Meta" # Meta'
+        } "mhn" {
+                return "Bersntolerisch" # Mòcheno
         } "mh" {
                 return "Kajin Ṃajeḷ" # Marshallese
         } "mi" {
                 return "Māori" # Māori
+        } "mic-Zzzz" {
+                return "𐒢𐒃𐒄𐒑𐒛𐒍𐒖𐒆" # Mi'kmaq, Micmac (Gomgwejui'gasit)
+        } "mic-Latn" {
+                return "Miꞌkmawiꞌsimk" # Mi'kmaq, Micmac (Latin)
+        } "mic" {
+                return "Miꞌkmawiꞌsimk" # Mi'kmaq, Micmac (Latin)
         } "mix" {
                 return "Ayuujk" # Mixe
         } "mk" {
@@ -540,6 +736,8 @@ function Get-Language-Name {
                 return "ꯃꯩꯇꯩꯂꯣꯟ" # Meitei | Manipuri (Meitei Mayek)
         } "mni" {
                 return "ꯃꯩꯇꯩꯂꯣꯟ" # Meitei | Manipuri (Meitei Mayek)
+        } "moh" {
+                return "Kanienʼkéha" # Mohawk
         } "mr-Deva" {
                 return "मराठी" # Marathi (Devanagari)
         } "mr-Modi" {
@@ -550,8 +748,16 @@ function Get-Language-Name {
                 return "Bahasa Melayu" # Malay
         } "mt" {
                 return "Malti" # Maltese
+        } "mua" {
+                return "Mundaŋ" # Mundang
+        } "mus" {
+                return "Mvskoke" # Muscogee
         } "my" {
                 return "မြန်မာ" # Burmese (Myanmar)
+        } "myv" {
+                return "эрзянь" # Erzya
+        } "mzn" {
+                return "مازِرونی‎" # Mazanderani
         } "na" {
                 return "Naoero" # Nauru | Nauruan
         } "nah" {
@@ -576,22 +782,32 @@ function Get-Language-Name {
                 return "Ndonga" # Ndonga
         } "nl" {
                 return "Nederlands" # Dutch
+        } "nmg" {
+                return "Ngumba, Kola" # Kwasio
         } "nn" {
                 return "Norsk Nynorsk" # Norwegian Nynorsk
+        } "nnh" {
+                return "Ngiembɔɔn" # Ngiemboon
         } "no" {
                 return "Norsk Riksmål/Høgnorsk" # Norwegian Riksmål or Høgnorsk
         } "non" {
                 return "Dǫnsk tunga" # Old Norse
         } "nov" {
                 return "Novial" # Novial
+        } "nqo" {
+                return "ߒߞߏ" # N'Ko
         } "nr" {
                 return "isiNdebele" # Southern Ndebele
         } "nso" {
                 return "Sesotho sa Leboa" # Northern Sotho
+        } "nus" {
+                return "Thok Naath" # Nuer
         } "nv" {
                 return "Diné Bizaad" # Navajo
         } "ny" {
                 return "Chichewa" # Chichewa
+        } "nyn" {
+                return "Orunyankore" # Nyankole
         } "oc" {
                 return "Occitan" # Occitan
         } "oj-Latn" {
@@ -618,6 +834,12 @@ function Get-Language-Name {
                 return "iron" # Ossetian (Latin)
         } "os" {
                 return "дигорон" # Ossetian (Cyrillic)
+        } "osa-Latn" {
+                return "Wažáže ie" # Osage (Latin)
+        } "osa-Osge" {
+                return "𐓏𐒰𐓓𐒰𐓓𐒷 𐒻𐒷‎" # Osage (Osage)
+        } "osa" {
+                return "𐓏𐒰𐓓𐒰𐓓𐒷 𐒻𐒷‎" # Osage (Osage)
         } "pa-Arab" {
                 return "پنجابی" # Punjabi (Shahmukhi)
         } "pa-Guru" {
@@ -646,8 +868,12 @@ function Get-Language-Name {
                 return "පාලි" # Pali (Sinhala)
         } "pi-Thai" {
                 return "ปาฬิ" # Pali (Thai)
+        } "pis" {
+                return "Pijin" # Solomon Islands Pidgin
         } "pl" {
                 return "Polski" # Polish
+        } "prg" {
+                return "Prūsiskai" # Old Prussian
         } "ps" {
                 return "پښتو" # Pashto
         } "pt" {
@@ -664,6 +890,38 @@ function Get-Language-Name {
                 return "" # Quenya (Cirth)
         } "qya" {
                 return "Quenya" # Quenya (Latin)
+        } "raj-Arab" {
+                return "راجستھانی" # Rajasthani (Arabic)
+        } "raj-Deva" {
+                return "राजस्थानी" # Rajasthani (Devanagari)
+        } "raj-Guru" {
+                return "ਰਾਜਸਥਾਨੀ" # Rajasthani (Gurmukhī)
+        } "raj-Khoj" {
+                return "𑈉𑈖𑈭𑈲𑈝𑈞𑈪" # Rajasthani (Khojkī)
+        } "raj-Mahj" {
+                return "𑅱𑅢𑅛𑅧𑅣" # Rajasthani (Mahajani)
+        } "raj-Sind" {
+                return "𑋏𑋣𑋩𑋢𑋣𑋞𑋙" # Rajasthani (Khudabadi)
+        } "raj" {
+                return "राजस्थानी" # Rajasthani (Devanagari)
+        } "rhg-Arab" {
+                return " رُحَ࣪ڠۡگَ࣪ـݠـ" # Rohingya (Arabic)
+        } "rhg-Beng" {
+                return "রোহিঙ্গা" # Rohingya (Bengali–Assamese)
+        } "rhg-Mymr" {
+                return "ရိုဟင်ဂျာ" # Rohingya (Burmese)
+        } "rhg-Rohg" {
+                return "𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝" # Rohingya (Hanifi Rohingya)
+        } "rhg" {
+                return "𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝" # Rohingya (Hanifi Rohingya)
+        } "rif-Arab" {
+                return "الريفية" # Tarifit (Arabic)
+        } "rif-Latn" {
+                return "Riffian, Tarifiyt, Tmaziɣt" # Tarifit (Latin)
+        } "rif-Tfng" {
+                return "ⵜⴰⵔⵉⴼⵉⵜ" # Tarifit (Tifinagh)
+        } "rif" {
+                return "ⵜⴰⵔⵉⴼⵉⵜ" # Tarifit (Tifinagh)
         } "rm" {
                 return "Rumantsch" # Romansh
         } "rmv" {
@@ -676,16 +934,28 @@ function Get-Language-Name {
                 return "Ромынэ" # Romanian (Cyrillic)
         } "ro" {
                 return "Română" # Romanian (Latin)
+        } "rof" {
+                return "Kirombo" # Rombo
         } "ru" {
                 return "русский" # Russian
         } "rw" {
                 return "Ikinyarwanda" # Kinyarwanda
+        } "rwk" {
+                return "West Chaga" # West Kilimanjaro, Rwa
         } "sa-Deva" {
                 return "संस्कृत" # Sanskrit (Devanagari)
         } "sa-Brah" {
                 return "𑀲𑀁𑀲𑁆𑀓𑀾𑀢" # Sanskrit (Brahmi)
         } "sa" {
                 return "संस्कृत" # Sanskrit (Devanagari)
+        } "sah-Cyrl" {
+                return "саха тыла" # Yakut (Cyrillic)
+        } "sah-Latn" {
+                return "saxa tıla" # Yakut (Latin)
+        } "sah" {
+                return "саха тыла" # Yakut (Cyrillic)
+        } "saq" {
+                return "Sampur, ɔl Maa" # Samburu
         } "sat-Beng" {
                 return "সান্তালী" # Santali (Bengali)
         } "sat-Deva" {
@@ -698,6 +968,8 @@ function Get-Language-Name {
                 return "ସାନ୍ତାଳୀ" # Santali (Odia)
         } "sat" {
                 return "ᱥᱟᱱᱛᱟᱲᱤ" # Santali (Ol Chiki)
+        } "sbp" {
+                return "Kisangu" # Sangu
         } "sc" {
                 return "Sardu" # Sardinian
         } "scn" {
@@ -714,16 +986,36 @@ function Get-Language-Name {
                 return "ਸਿੰਧੀ" # Sindhi (Gurmukhi)
         } "sd" {
                 return "سِنڌِي" # Sindhi (Perso-Ararbic)
+        } "sdh" {
+                return "کوردی خوارین" # Southern Kurdish
         } "sdr" {
                 return "Mey" # Sherdukpen
         } "se" {
                 return "Davvisámegiella" # Northern Sami
+        } "seh-Latn" {
+                return "Sena" # Sena (Latin)
+        } "seh-Zzzz" {
+                return "𑵻𑵶𑵼" # Sena (Mwangwego)
+        } "seh" {
+                return "Sena" # Sena (Latin)
+        } "ses" {
+                return "كࣷيْرَبࣷرࣷ سٜنِّ" # Koyraboro Senni, Koyraboro Senni Songhai
         } "sg" {
                 return "Sängö" # Sango
         } "sga" {
                 return "Goídelc" # Old Irish
+        } "shi-Arab" {
+                return "تاشلحيت" # Tachelhit, Shilha (Arabic)
+        } "shi-Latn" {
+                return "Taclḥiyt" # Tachelhit, Shilha (Latin)
+        } "shi-Tfng" {
+                return "ⵜⴰⵛⵍⵃⵉⵢⵜ" # Tachelhit, Shilha (Tifinagh)
+        } "shn" {
+                return "ၵႂၢမ်းတႆး" # Shan
         } "si" {
                 return "සිංහල" # Sinhala
+        } "sid" {
+                return "Sidaamu Afoo" # Sidama
         } "sjn" {
                 return "Sindarin" # Sindarin (Latin)
         } "sjn-Teng" {
@@ -738,6 +1030,18 @@ function Get-Language-Name {
                 return "Slovenčina" # Slovak (Latin)
         } "sk" {
                 return "Slovenčina" # Slovak (Latin)
+        } "skr-Arab" {
+                return "سرائیکی" # Saraiki (Arabic)
+        } "skr-Deva" {
+                return "सराइकी" # Saraiki (Devanāgarī)
+        } "skr-Guru" {
+                return "ਸਰਾਇਕੀ" # Saraiki (Gurmukhī)
+        } "skr-Khoj" {
+                return "𑈙𑈞𑈝𑈈𑈪" # Saraiki (Khojkī)
+        } "skr-Mult" {
+                return "𑊩𑊡𑊖𑊚" # Saraiki (Multani)
+        } "skr" {
+                return "𑊩𑊡𑊖𑊚" # Saraiki (Multani)
         } "sl" {
                 return "Slovenščina" # Slovenian
         } "sm" {
@@ -748,6 +1052,8 @@ function Get-Language-Name {
                 return "Julevsámegiella" # Lule Sami
         } "smn" {
                 return "Anarâškielâ" # Inari Sami
+        } "sms" {
+                return "Sääʹmǩiõll, Nuõrttsääʹmǩiõll" # Skolt Sámi
         } "sn" {
                 return "ChiShona" # Shona
         } "so-Arab" {
@@ -788,6 +1094,16 @@ function Get-Language-Name {
                 return "كِسْوَحِيلِ" # Swahili (Arabic)
         } "sw-Latn" {
                 return "Kiswahili" # Swahili (Latin)
+        } "syr-Syrc" {
+                return "ܣܘܪܝܝܐ" # Syriac (Syriac)
+        } "syr-Syre" {
+                return "ܣܘܪܝܝܐ ܐܣܛܪܢܓܠܐ" # Syriac (ʾEsṭrangēlā)
+        } "syr-Syrj" {
+                return "ܣܘܪܝܝܐ ܡܥܪܒܝܐ" # Syriac (Western)
+        } "syr-Syrn" {
+                return "ܣܘܪܝܝܐ ܡܕܢܚܝܐ" # Syriac (Eastern)
+        } "syr" {
+                return "ܣܘܪܝܝܐ" # Syriac (Syriac)
         } "szl" {
                 return "Ślōnskŏ Gŏdka" # Silesian
         } "ta-Arab" {
@@ -804,6 +1120,8 @@ function Get-Language-Name {
                 return "தமிழ்" # Tamil (Tamil)
         } "te" {
                 return "తెలుగు" # Telugu
+        } "teo" {
+                return "Ateso" # Teso
         } "tg-Arab" {
                 return "تاجيکى" # Tajik (Arabic)
         } "tg-Cyrl" {
@@ -818,6 +1136,12 @@ function Get-Language-Name {
                 return "ไทย" # Thai
         } "ti" {
                 return "ትግርኛ" # Tigrinya
+        } "tig-Arab" {
+                return "تيغرې" # Tigre (Arabic)
+        } "tig-Ethi" {
+                return "ትግሬ, ትግራይት" # Tigre (Geʽez)
+        } "tig" {
+                return "ትግሬ, ትግራይት" # Tigre (Geʽez)
         } "tk-Arab" {
                 return "تۆرکمنچه" # Turkmen (Arabic)
         } "tk-Cyrl" {
@@ -860,10 +1184,20 @@ function Get-Language-Name {
                 return "Tatar" # Tatar (Latin)
         } "tw" {
                 return "Ákán" # Twi | Akan
+        } "twq" {
+                return "Tásàwàq" # Tasawaq
         } "ty" {
                 return "Tahiti" # Tahitian
+        } "tyv" {
+                return "Тыва дыл" # Tuvan
         } "tzl" {
                 return "Talossan" # Talossan
+        } "tzm-Arab" {
+                return "أمازيغية أطلس الأوسط" # Central Atlas Tamazight (Arabic)
+        } "tzm-Tfng" {
+                return "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Central Atlas Tamazight (Tifinagh)
+        } "tzm" {
+                return "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Central Atlas Tamazight (Tifinagh)
         } "ug-Arab" {
                 return "ئۇيغۇرچە" # Uyghur (Arabic)
         } "ug-Cyrl" {
@@ -886,6 +1220,12 @@ function Get-Language-Name {
                 return "Oʻzbekcha" # Uzbek (Latin)
         } "uz" {
                 return "Oʻzbekcha" # Uzbek (Latin)
+        } "vai-Latn" {
+                return "Vai" # Vai (Latin)
+        } "vai-Vaii" {
+                return "ꕙꔤ" # Vai (Vai)
+        } "vai" {
+                return "ꕙꔤ" # Vai (Vai)
         } "ve" {
                 return "Tshivenḓa" # Venda
         } "vec" {
@@ -896,18 +1236,26 @@ function Get-Language-Name {
                 return "Tiếng Việt" # Vietnamese
         } "vi" {
                 return "Tiếng Việt" # Vietnamese
+        } "vmw" {
+                return "Emakuana" # Makhuwa
         } "vo" {
                 return "Volapük" # Volapük
+        } "vun" {
+                return "Kivunjo" # Wunjo
         } "vro" {
                 return "Võro" # Võro
         } "wa" {
                 return "Walon" # Walloon
+        } "wae" {
+                return "Walscher" # Walser German
         } "wal-Ethi" {
                 return "ወላይታቶ" # Wolaytta (Geʽez)
         } "wal-Latn" {
                 return "Wolayttatto" # Wolaytta (Latin)
         } "wal" {
                 return "ወላይታቶ" # Wolaytta (Geʽez)
+        } "wbp" {
+                return "Warlpiri" # Warlpiri
         } "wo-Arab" {
                 return "وࣷلࣷفْ" # Wolof (Wolofal / Arabic)
         } "wo-Gara" {
@@ -916,12 +1264,22 @@ function Get-Language-Name {
                 return "Wolof" # Wolof (Latin)
         } "wo" {
                 return "Wolof" # Wolof (Latin)
-        } "xct" {
-                return "ཏོ་ས་ཆེན་པོ" # Classical Tibetan
-        } "xpu" {
-                return "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤉𐤌" # Punic
         } "xh" {
                 return "IsiXhosa" # Xhosa
+        } "xnr-Deva" {
+                return "कांगड़ी" # Kangri (Devanāgarī)
+        } "xnr-Takr" {
+                return "𑚊𑚭𑚫𑚌𑚪𑚯" # Kangri (Takri)
+        } "xnr" {
+                return "𑚊𑚭𑚫𑚌𑚪𑚯" # Kangri (Takri)
+        } "xct" {
+                return "ཏོ་ས་ཆེན་པོ" # Classical Tibetan
+        } "xog" {
+                return "Lusoga" # Soga
+        } "xpu" {
+                return "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤉𐤌" # Punic
+        } "yav" {
+                return "Yangben" # Yangben
         } "yi-Hebr" {
                 return "ייִדיש" # Yiddish (Hebrew)
         } "yi-Latn" {
@@ -934,11 +1292,19 @@ function Get-Language-Name {
                 return "Yorùbá" # Yoruba (Latin)
         } "yo" {
                 return "Yorùbá" # Yoruba (Latin)
+        } "yrl" {
+                return "Nhẽẽgatú" # Nhengatu
         } "yua" {
                 return "Màaya T'àan" # Yucatec Maya
-        } "za-hans" {
+        } "yue-Hans" {
+                return "粵語（简体）" # Yue Chinese (Simplified)
+        } "yue-Hant" {
+                return "粤语（繁體）" # Yue Chinese (Traditional)
+        } "yue" {
+                return "粵語（简体）" # Yue Chinese (Simplified)
+        } "za-Hans" {
                 return "壮语（简体）" # Zhuang (Simplified)
-        } "za-hant" {
+        } "za-Hant" {
                 return "壯語（繁體）" # Zhuang (Traditional)
         } "za" {
                 return "壮语（简体）" # Zhuang (Simplified)
@@ -946,9 +1312,9 @@ function Get-Language-Name {
                 return "باليبلن" # Balaibalan
         } "zgh" {
                 return "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Standard Moroccan Tamazight
-        } "zh-hans" {
+        } "zh-Hans" {
                 return "华语（简体）" # Chinese (Simplified)
-        } "zh-hant" {
+        } "zh-Hant" {
                 return "華語（繁體）" # Chinese (Traditional)
         } "zh" {
                 return "华语（简体）" # Chinese (Simplified)

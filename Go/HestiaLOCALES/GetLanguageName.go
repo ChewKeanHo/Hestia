@@ -33,6 +33,8 @@ func GetLanguageName(____code string) string {
 		return "Afrikaans" // Afrikaans
 	case "afh":
 		return "Ɛl-Afrihili" // Afrihili
+	case "agq":
+		return "Wum" // Aghem
 	case "ak":
 		return "Ákán" // Akan
 	case "akk":
@@ -43,12 +45,22 @@ func GetLanguageName(____code string) string {
 		return "Aragonés" // Aragonese
 	case "ang":
 		return "Ænglisc" // Old English
+	case "ann":
+		return "Andoni" // Obolo
+	case "apc":
+		return "شامي" // Levantine Arabic
 	case "ar":
 		return "اَلْعَرَبِيَّةُ" // Arabic
 	case "arc":
 		return "ארמית, ܐܪܡܐܝܬ" // Aramaic
+	case "arn":
+		return "Mapudungun" // Mapudungun, Mapuche
 	case "as":
 		return "অসমীয়া" // Assamese
+	case "asa":
+		return "Kipare" // Pare, Asu Tanzania
+	case "ast":
+		return "Asturianu" // Asturian, Asturleonese, Bable, Leonese
 	case "av-Arab":
 		return "آوَار" // Avaric (Arabic)
 	case "av-Cyrl":
@@ -77,18 +89,38 @@ func GetLanguageName(____code string) string {
 		return "başqort" // Bashkir (Latin)
 	case "ba":
 		return "башҡорт" // Bashkir (Cyrillic)
+	case "bal-Arab":
+		return "بلۏچی" // Baluchi (Arabic)
+	case "bal-Latn":
+		return "Balòci" // Baluchi (Latin)
+	case "bal":
+		return "بلۏچی" // Baluchi (Arabic)
+	case "bas":
+		return "Ɓàsàa" // Basa Cameroon
 	case "be":
 		return "беларуская" // Belarusian
+	case "bem":
+		return "Chibemba" // Bemba Zambia
+	case "bew":
+		return "Betawi" // Betawi
+	case "bez":
+		return "Ekibena" // Bena Tanzania
 	case "bg":
 		return "български" // Bulgarian
 	case "bgc":
 		return "हरियाणवी" // Haryanvi
+	case "bgn":
+		return "بلۏچی" // Western Balochi
 	case "bho-Deva":
 		return "भोजपुरी" // Bhojpuri (Devanagari)
 	case "bho-Kthi":
 		return "𑂦𑂷𑂔𑂣𑂳𑂩𑂲" // Bhojpuri (Kaithi)
 	case "bho":
 		return "भोजपुरी" // Bhojpuri (Devanagari)
+	case "blo":
+		return "Basila" // Anii
+	case "blt":
+		return "ꪼꪕꪒꪾ" // Tai Dam
 	case "bi":
 		return "Bichelamar" // Bislama
 	case "bm-Arab":
@@ -119,6 +151,14 @@ func GetLanguageName(____code string) string {
 		return "bosanski" // Bosnian
 	case "bs":
 		return "bosanski" // Bosnian
+	case "bss":
+		return "Ɓàsò" // Akoose Manenguba
+	case "byn-Latn":
+		return "Blin" // Bilen, Bilin, Blin
+	case "byn-Ethi":
+		return "ብሊን" // Bilen, Bilin, Blin
+	case "byn":
+		return "Blin" // Bilen, Bilin, Blin
 	case "bzt":
 		return "Comroig" // Brithenig
 	case "ca":
@@ -133,30 +173,52 @@ func GetLanguageName(____code string) string {
 		return "Noxçiyn" // Chechen (Latin)
 	case "ce":
 		return "Нохчийн" // Chechen (Cyrillic)
+	case "cad":
+		return "Hasí꞉nay" // Caddo
+	case "cch":
+		return "Cawai" // Atsam
+	case "ccp-Cakm":
+		return "𑄌𑄋𑄴𑄟𑄳𑄦" // Chakma (Chakma)
+	case "ccp-Zzzz":
+		return "𑄖𑄧𑄐𑄴𑄌𑄧𑄁𑄉𑄴𑄡" // Chakma (Tanchangya)
+	case "ccp":
+		return "𑄌𑄋𑄴𑄟𑄳𑄦" // Chakma (Chakma)
 	case "ceb":
 		return "Bisayâ" // Cebuano
+	case "cgg":
+		return "Orukiga" // Kiga
 	case "ch":
 		return "Chamoru" // Chamorro
 	case "cho":
 		return "Chahta anumpa" // Choctaw
 	case "chr-Cher":
-		return "ᏣᎳᎩ" // Cherokee (Cherokee)
+		return "ᏣᎳᎩ" // Cherokee
 	case "chr-Latn":
 		return "Tsalagi" // Cherokee (Latin)
 	case "chr":
-		return "ᏣᎳᎩ" // Cherokee (Cherokee)
+		return "ᏣᎳᎩ" // Cherokee
+	case "cic":
+		return "Chikashshanompaꞌ" // Chickasaw
+	case "ckb-Arab":
+		return "سۆرانی" // Central Kurdish
+	case "ckb-Latn":
+		return "Soranî" // Central Kurdish
+	case "ckb":
+		return "سۆرانی" // Central Kurdish
 	case "co":
 		return "corsu" // Corsican
 	case "cop":
 		return "ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ" // Coptic
 	case "cr-Cans":
-		return "ᓀᐦᐃᔭᐍᐏᐣ" // Cree (Canadian Aboriginal)
+		return "ᓀᐦᐃᔭᐍᐏᐣ" // Canadian Aboriginal Cree
 	case "cr-Latn":
 		return "Nēhiyawēwin" // Cree (Latin)
 	case "cs":
 		return "Čeština" // Czech
 	case "csb":
 		return "Kaszëbsczi" // Kashubian
+	case "csw":
+		return "ᓀᐦᐃᓇᐍᐏᐣ" // Swampy Cree
 	case "cu-Cyrl":
 		return "словѣньскъ" // Old Church Slavonic (Cyrillic)
 	case "cu-Glag":
@@ -167,8 +229,16 @@ func GetLanguageName(____code string) string {
 		return "Cymraeg" // Welsh
 	case "da":
 		return "Dansk" // Danish
+	case "dav":
+		return "Taita–Sagala" // Taita, Dawida
 	case "de":
 		return "Deutsch" // German
+	case "dje-Arab":
+		return "زَرْمَ" // Zarma (Arabic)
+	case "dje-Latn":
+		return "Zabarma" // Zarma (Latin)
+	case "dje":
+		return "زَرْمَ" // Zarma (Arabic)
 	case "dmf":
 		return "𖹝𖹰𖹯𖹼𖹫 𖹚𖹬𖹾𖹠𖹯‎ / Obɛri Ɔkaimɛ" // Medefaidrin
 	case "doi-Aran":
@@ -183,6 +253,8 @@ func GetLanguageName(____code string) string {
 		return "डोगरी" // Dogri (Devanagari)
 	case "dsb":
 		return "dolnoserbšćina" // Lower Sorbian
+	case "dua":
+		return "Duálá" // Duala
 	case "dv-Latn":
 		return "Dhivehi" // Maldivian | Dhivehi (Latin)
 	case "dv-Thaa":
@@ -191,8 +263,12 @@ func GetLanguageName(____code string) string {
 		return "ދިވެހި" // Maldivian | Dhivehi (Thaana)
 	case "dws":
 		return "Dutton Speedwords" // Dutton Speedwords (Latin)
+	case "dyo":
+		return "Kujóolay" // Jola-Fonyi
 	case "dz":
 		return "རྫོང་ཁ་" // Dzongkha
+	case "ebu":
+		return "Kiembu" // Embu
 	case "ee":
 		return "Eʋegbe" // Ewe
 	case "el":
@@ -215,6 +291,8 @@ func GetLanguageName(____code string) string {
 		return "𐌄𐌓𐌔𐌍𐌀𐌂" // Etruscan
 	case "eu":
 		return "Euskara" // Basque
+	case "ewo":
+		return "Beti" // Ewondo
 	case "fa":
 		return "فارسی" // Persian
 	case "ff-Adlm":
@@ -227,14 +305,24 @@ func GetLanguageName(____code string) string {
 		return "𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫" // Fula | Fulani | Fulah (Adlam Pular)
 	case "fi":
 		return "Suomi" // Finnish
+	case "fil-Latn":
+		return "Filipino" // Filipino (Latin)
+	case "fil-Tglg":
+		return "ᜉᜒᜎᜒᜉᜒᜈ" // Filipino (Baybayin)
+	case "fil":
+		return "Filipino" // Filipino (Latin)
 	case "fj":
 		return "Vosa Vaka-Viti" // Fijian
 	case "fo":
 		return "føroyskt" // Faroese
 	case "fr":
 		return "Français" // French
+	case "frr":
+		return "Noorfriisk" // North Frisian
 	case "fro":
 		return "Franceis" // Old French
+	case "fur":
+		return "Furlan" // Friulian
 	case "fy":
 		return "Frysk" // Western Frisian
 	case "ga-Latn":
@@ -243,12 +331,20 @@ func GetLanguageName(____code string) string {
 		return "ᚌᚐᚓᚔᚂᚌᚓ" // Irish (Ogham)
 	case "ga":
 		return "Gaeilge" // Irish (Latin)
+	case "gaa":
+		return "Gã" // Ga
 	case "gd-Latn":
 		return "Gàidhlig" // Scottish Gaelic (Latin)
 	case "gd-Ogam":
 		return "ᚌᚐᚔᚇᚆᚂᚔᚌ" // Scottish Gaelic (Ogham)
 	case "gd":
 		return "Gàidhlig" // Scottish Gaelic (Latin)
+	case "gez-Ethi":
+		return "ግዕዝ" // Geʽez (Geʽez)
+	case "gez-Sarb":
+		return "𐩴𐩹𐩹" // Geʽez (Ancient South Arabian)
+	case "gez":
+		return "ግዕዝ" // Geʽez (Geʽez)
 	case "gl":
 		return "Galego" // Galician (Latin)
 	case "gmy":
@@ -259,6 +355,8 @@ func GetLanguageName(____code string) string {
 		return "Diutisk" // Old High German
 	case "grc":
 		return "Ἑλληνική" // Ancient Greek
+	case "gsw":
+		return "Schwiizerdütsch" // Swiss German, Alemannic, Alsatian
 	case "gu":
 		return "ગુજરાતી" // Gujarati
 	case "guz":
@@ -283,6 +381,16 @@ func GetLanguageName(____code string) string {
 		return "हिन्दी" // Hindi (Devanagari)
 	case "hit":
 		return "𒌷𒉌𒅆𒇷" // Hittite
+	case "hnj-Hmng":
+		return "𖬇𖬰𖬞𖬵 𖬄𖬶𖬟 𖬌𖬣𖬵" // Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
+	case "hnj-Hmnp":
+		return "𞄋𞄤𞄰𞄘𞄤𞄬𞄩𞄰" // Hmong Njua, Mong Leng, Mong Njua (Nyiakeng Puachue Hmong)
+	case "hnj-Latn":
+		return "Hmoob" // Hmong Njua, Mong Leng, Mong Njua (Latin)
+	case "hnj-Plrd":
+		return "𖼀𖽙𖾐𖼊𖽙𖾑" // Hmong Njua, Mong Leng, Mong Njua (Pollard)
+	case "hnj":
+		return "𖬇𖬰𖬞𖬵 𖬄𖬶𖬟 𖬌𖬣𖬵" // Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
 	case "ho":
 		return "Hiri Motu" // Hiri Motu
 	case "hr-Glag":
@@ -339,6 +447,10 @@ func GetLanguageName(____code string) string {
 		return "日本語" // Japanese
 	case "jbo":
 		return "La .lojban." // Lojban
+	case "jgo":
+		return "Nda’a" // Ngomba
+	case "jmc":
+		return "Kimachame" // West Kilimanjaro, Machame
 	case "jv-Arab":
 		return "باسا جاوا" // Javanese (Pegon)
 	case "jv-Java":
@@ -349,6 +461,26 @@ func GetLanguageName(____code string) string {
 		return "Basa Jawa" // Javanese (Latin)
 	case "ka":
 		return "ქართული ენა" // Georgian
+	case "kaa-Arab":
+		return "قاراقالپاق" // Karakalpak (Arabic)
+	case "kaa-Cyrl":
+		return "Қарақалпақ" // Karakalpak (Cyrillic)
+	case "kaa-Latn":
+		return "Qaraqalpaq" // Karakalpak (Latin)
+	case "kaa":
+		return "Қарақалпақ" // Karakalpak (Cyrillic)
+	case "kab-Arab":
+		return "ثاقبايليث" // Kabyle (Arabic)
+	case "kab-Latn":
+		return "Taqbaylit" // Kabyle (Latin)
+	case "kab-Tfng":
+		return "ⵜⴰⵇⴱⴰⵢⵍⵉⵜ" // Kabyle (Tifinagh)
+	case "kab":
+		return "Taqbaylit" // Kabyle (Latin)
+	case "kaj":
+		return "Jhyuo, Kaje" // Jju
+	case "kam":
+		return "Kikamba" // Kamba
 	case "kbd-Cyrl":
 		return "адыгэбзэ" // Kabardian (Cyrillic)
 	case "kbd-Latn":
@@ -357,20 +489,32 @@ func GetLanguageName(____code string) string {
 		return "آد‍ہگەبزە" // Kabardian (Perso Arabic)
 	case "kbd":
 		return "адыгэбзэ" // Kabardian (Cyrillic)
-	case "kam":
-		return "Kikamba" // Kamba
+	case "kcg":
+		return "Tyap" // Tyap
+	case "kde":
+		return "Chinimakonde" // Makonde
+	case "kea":
+		return "Kabuverdianu" // Kabuverdianu
 	case "kek":
 		return "Q'eqchi" // Q'eqchi'
-	case "kg-Latn":
-		return "Kikongo" // Kongo
+	case "ken":
+		return "Nyang" // Kenyang
 	case "kg":
 		return "Kikongo" // Kongo
+	case "kgp":
+		return "Kanhgág" // Kaingang
 	case "kha-Beng":
 		return "ক ক্তিয়েন খাসি" // Khasi (Bengali)
 	case "kha-Latn":
 		return "Ka Ktien Khasi" // Khasi (Latin)
 	case "kha":
 		return "Ka Ktien Khasi" // Khasi (Latin)
+	case "khq-Arab":
+		return "جٜنّٜ ٺِينِ" // Koyra Chiini Songhay (Arabic)
+	case "khq-Latn":
+		return "Koyra ciini" // Koyra Chiini Songhay (Latin)
+	case "khq":
+		return "Koyra ciini" // Koyra Chiini Songhay (Latin)
 	case "ki":
 		return "Gĩgĩkũyũ" // Kikuyu
 	case "kj":
@@ -383,6 +527,8 @@ func GetLanguageName(____code string) string {
 		return "qazaqşa" // Kazakh (Latin)
 	case "kk":
 		return "qazaqşa" // Kazakh (Latin)
+	case "kkj":
+		return "Kakó" // Kako
 	case "kl":
 		return "Kalaallisut" // Kalaallisut
 	case "kln":
@@ -411,6 +557,12 @@ func GetLanguageName(____code string) string {
 		return "Kànùrí" // Kanuri (Latin)
 	case "kr":
 		return "كَنُرِيِه" // Kanuri (Arabic)
+	case "kpe-Kpel":
+		return "Kpɛlɛwoo" // Kpelle (Kpelle)
+	case "kpe-Latn":
+		return "Kpɛlɛ" // Kpelle (Latin)
+	case "kpe":
+		return "Kpɛlɛ" // Kpelle (Latin)
 	case "ks-Arab":
 		return "کٲشُر" // Kashmiri (Perso-Arabic)
 	case "ks-Deva":
@@ -419,6 +571,12 @@ func GetLanguageName(____code string) string {
 		return "𑆑𑆳𑆮𑆶𑆫𑇀" // Kashmiri (Sharada)
 	case "ks":
 		return "کٲشُر" // Kashmiri (Perso-Arabic)
+	case "ksb":
+		return "Kisambaa" // Shambala
+	case "ksf":
+		return "Rikpa" // Bafia
+	case "ksh":
+		return "Kölsch" // Colognian, Kölsch
 	case "ku-Arab":
 		return "کوردی" // Kurdish (Arabic)
 	case "ku-Latn":
@@ -433,6 +591,16 @@ func GetLanguageName(____code string) string {
 		return "коми" // Komi (Cyrillic)
 	case "kw":
 		return "Kernewek" // Cornish
+	case "kxv-Deva":
+		return "कुवि" // Kuvi (Devanagari)
+	case "kxv-Latn":
+		return "Kuwi" // Kuvi (Latin)
+	case "kxv-Orya":
+		return "କୁୱି" // Kuvi (Odia)
+	case "kxv-Telu":
+		return "କୁୱି" // Kuvi (Telugu)
+	case "kxv":
+		return "କୁୱି" // Kuvi (Odia)
 	case "ky-Arab":
 		return "قىرعىز" // Kyrgyz (Arabic)
 	case "ky-Cyrl":
@@ -447,6 +615,8 @@ func GetLanguageName(____code string) string {
 		return "Latina" // Latin
 	case "lad":
 		return "Ladin" // Ladino
+	case "lag":
+		return "Kɨlaangi" // Rangi
 	case "lb":
 		return "Lëtzebuergesch" // Luxembourgish
 	case "ldn":
@@ -457,6 +627,12 @@ func GetLanguageName(____code string) string {
 		return "Oluganda" // Ganda | Luganda
 	case "li":
 		return "Limburgs" // Limburgish
+	case "lij":
+		return "Lìgure" // Ligurian
+	case "lkt":
+		return "Lakȟótiyapi" // Lakota
+	case "lld":
+		return "Ladin" // Ladin
 	case "lmo":
 		return "Lombard" // Lombard
 	case "ln":
@@ -467,8 +643,12 @@ func GetLanguageName(____code string) string {
 		return "ลาว" // Lao (Thai)
 	case "lo":
 		return "ລາວ" // Lao (Lao)
+	case "lrc":
+		return "لری" // Luri
 	case "lt":
-		return "lietuvių" // Lithuanian
+		return "Lietuvių" // Lithuanian
+	case "ltg":
+		return "Latgalīšu" // Latgalian
 	case "lu":
 		return "Kiluba" // Luba-Katanga
 	case "luo":
@@ -493,16 +673,32 @@ func GetLanguageName(____code string) string {
 		return "Qyool Mam" // Mam
 	case "mas":
 		return "Maa" // Maasai | Maa
+	case "mdf":
+		return "мокшень" // Moksha
 	case "mer":
 		return "Kĩmĩĩrũ" // Meru
+	case "mfe":
+		return "Kreol Morisien" // Mauritian Creole
 	case "mg-Arab":
 		return "مَلَغَسِ" // Malagasy (Sorabe)
 	case "mg-Latn":
 		return "Malagasy" // Malagasy (Latin)
+	case "mgh":
+		return "Emakuana" // Makhuwa, Makhuwa-Meetto
+	case "mgo":
+		return "Meta" // Meta'
+	case "mhn":
+		return "Bersntolerisch" // Mòcheno
 	case "mh":
 		return "Kajin Ṃajeḷ" // Marshallese
 	case "mi":
 		return "Māori" // Māori
+	case "mic-Zzzz":
+		return "𐒢𐒃𐒄𐒑𐒛𐒍𐒖𐒆" // Mi'kmaq, Micmac (Gomgwejui'gasit)
+	case "mic-Latn":
+		return "Miꞌkmawiꞌsimk" // Mi'kmaq, Micmac (Latin)
+	case "mic":
+		return "Miꞌkmawiꞌsimk" // Mi'kmaq, Micmac (Latin)
 	case "mix":
 		return "Ayuujk" // Mixe
 	case "mk":
@@ -535,6 +731,8 @@ func GetLanguageName(____code string) string {
 		return "ꯃꯩꯇꯩꯂꯣꯟ" // Meitei | Manipuri (Meitei Mayek)
 	case "mni":
 		return "ꯃꯩꯇꯩꯂꯣꯟ" // Meitei | Manipuri (Meitei Mayek)
+	case "moh":
+		return "Kanienʼkéha" // Mohawk
 	case "mr-Deva":
 		return "मराठी" // Marathi (Devanagari)
 	case "mr-Modi":
@@ -545,8 +743,16 @@ func GetLanguageName(____code string) string {
 		return "Bahasa Melayu" // Malay
 	case "mt":
 		return "Malti" // Maltese
+	case "mua":
+		return "Mundaŋ" // Mundang
+	case "mus":
+		return "Mvskoke" // Muscogee
 	case "my":
 		return "မြန်မာ" // Burmese (Myanmar)
+	case "myv":
+		return "эрзянь" // Erzya
+	case "mzn":
+		return "مازِرونی‎" // Mazanderani
 	case "na":
 		return "Naoero" // Nauru | Nauruan
 	case "nah":
@@ -571,22 +777,32 @@ func GetLanguageName(____code string) string {
 		return "Ndonga" // Ndonga
 	case "nl":
 		return "Nederlands" // Dutch
+	case "nmg":
+		return "Ngumba, Kola" // Kwasio
 	case "nn":
 		return "Norsk Nynorsk" // Norwegian Nynorsk
+	case "nnh":
+		return "Ngiembɔɔn" // Ngiemboon
 	case "no":
 		return "Norsk Riksmål/Høgnorsk" // Norwegian Riksmål or Høgnorsk
 	case "non":
 		return "Dǫnsk tunga" // Old Norse
 	case "nov":
 		return "Novial" // Novial
+	case "nqo":
+		return "ߒߞߏ" // N'Ko
 	case "nr":
 		return "isiNdebele" // Southern Ndebele
 	case "nso":
 		return "Sesotho sa Leboa" // Northern Sotho
+	case "nus":
+		return "Thok Naath" // Nuer
 	case "nv":
 		return "Diné Bizaad" // Navajo
 	case "ny":
 		return "Chichewa" // Chichewa
+	case "nyn":
+		return "Orunyankore" // Nyankole
 	case "oc":
 		return "Occitan" // Occitan
 	case "oj-Latn":
@@ -613,6 +829,12 @@ func GetLanguageName(____code string) string {
 		return "iron" // Ossetian (Latin)
 	case "os":
 		return "дигорон" // Ossetian (Cyrillic)
+	case "osa-Latn":
+		return "Wažáže ie" // Osage (Latin)
+	case "osa-Osge":
+		return "𐓏𐒰𐓓𐒰𐓓𐒷 𐒻𐒷‎" // Osage (Osage)
+	case "osa":
+		return "𐓏𐒰𐓓𐒰𐓓𐒷 𐒻𐒷‎" // Osage (Osage)
 	case "pa-Arab":
 		return "پنجابی" // Punjabi (Shahmukhi)
 	case "pa-Guru":
@@ -641,8 +863,12 @@ func GetLanguageName(____code string) string {
 		return "පාලි" // Pali (Sinhala)
 	case "pi-Thai":
 		return "ปาฬิ" // Pali (Thai)
+	case "pis":
+		return "Pijin" // Solomon Islands Pidgin
 	case "pl":
 		return "Polski" // Polish
+	case "prg":
+		return "Prūsiskai" // Old Prussian
 	case "ps":
 		return "پښتو" // Pashto
 	case "pt":
@@ -659,6 +885,38 @@ func GetLanguageName(____code string) string {
 		return "" // Quenya (Cirth)
 	case "qya":
 		return "Quenya" // Quenya (Latin)
+	case "raj-Arab":
+		return "راجستھانی" // Rajasthani (Arabic)
+	case "raj-Deva":
+		return "राजस्थानी" // Rajasthani (Devanagari)
+	case "raj-Guru":
+		return "ਰਾਜਸਥਾਨੀ" // Rajasthani (Gurmukhī)
+	case "raj-Khoj":
+		return "𑈉𑈖𑈭𑈲𑈝𑈞𑈪" // Rajasthani (Khojkī)
+	case "raj-Mahj":
+		return "𑅱𑅢𑅛𑅧𑅣" // Rajasthani (Mahajani)
+	case "raj-Sind":
+		return "𑋏𑋣𑋩𑋢𑋣𑋞𑋙" // Rajasthani (Khudabadi)
+	case "raj":
+		return "राजस्थानी" // Rajasthani (Devanagari)
+	case "rhg-Arab":
+		return " رُحَ࣪ڠۡگَ࣪ـݠـ" // Rohingya (Arabic)
+	case "rhg-Beng":
+		return "রোহিঙ্গা" // Rohingya (Bengali–Assamese)
+	case "rhg-Mymr":
+		return "ရိုဟင်ဂျာ" // Rohingya (Burmese)
+	case "rhg-Rohg":
+		return "𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝" // Rohingya (Hanifi Rohingya)
+	case "rhg":
+		return "𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝" // Rohingya (Hanifi Rohingya)
+	case "rif-Arab":
+		return "الريفية" // Tarifit (Arabic)
+	case "rif-Latn":
+		return "Riffian, Tarifiyt, Tmaziɣt" // Tarifit (Latin)
+	case "rif-Tfng":
+		return "ⵜⴰⵔⵉⴼⵉⵜ" // Tarifit (Tifinagh)
+	case "rif":
+		return "ⵜⴰⵔⵉⴼⵉⵜ" // Tarifit (Tifinagh)
 	case "rm":
 		return "Rumantsch" // Romansh
 	case "rmv":
@@ -671,16 +929,28 @@ func GetLanguageName(____code string) string {
 		return "Ромынэ" // Romanian (Cyrillic)
 	case "ro":
 		return "Română" // Romanian (Latin)
+	case "rof":
+		return "Kirombo" // Rombo
 	case "ru":
 		return "русский" // Russian
 	case "rw":
 		return "Ikinyarwanda" // Kinyarwanda
+	case "rwk":
+		return "West Chaga" // West Kilimanjaro, Rwa
 	case "sa-Deva":
 		return "संस्कृत" // Sanskrit (Devanagari)
 	case "sa-Brah":
 		return "𑀲𑀁𑀲𑁆𑀓𑀾𑀢" // Sanskrit (Brahmi)
 	case "sa":
 		return "संस्कृत" // Sanskrit (Devanagari)
+	case "sah-Cyrl":
+		return "саха тыла" // Yakut (Cyrillic)
+	case "sah-Latn":
+		return "saxa tıla" // Yakut (Latin)
+	case "sah":
+		return "саха тыла" // Yakut (Cyrillic)
+	case "saq":
+		return "Sampur, ɔl Maa" // Samburu
 	case "sat-Beng":
 		return "সান্তালী" // Santali (Bengali)
 	case "sat-Deva":
@@ -693,6 +963,8 @@ func GetLanguageName(____code string) string {
 		return "ସାନ୍ତାଳୀ" // Santali (Odia)
 	case "sat":
 		return "ᱥᱟᱱᱛᱟᱲᱤ" // Santali (Ol Chiki)
+	case "sbp":
+		return "Kisangu" // Sangu
 	case "sc":
 		return "Sardu" // Sardinian
 	case "scn":
@@ -709,16 +981,36 @@ func GetLanguageName(____code string) string {
 		return "ਸਿੰਧੀ" // Sindhi (Gurmukhi)
 	case "sd":
 		return "سِنڌِي" // Sindhi (Perso-Ararbic)
+	case "sdh":
+		return "کوردی خوارین" // Southern Kurdish
 	case "sdr":
 		return "Mey" // Sherdukpen
 	case "se":
 		return "Davvisámegiella" // Northern Sami
+	case "seh-Latn":
+		return "Sena" // Sena (Latin)
+	case "seh-Zzzz":
+		return "𑵻𑵶𑵼" // Sena (Mwangwego)
+	case "seh":
+		return "Sena" // Sena (Latin)
+	case "ses":
+		return "كࣷيْرَبࣷرࣷ سٜنِّ" // Koyraboro Senni, Koyraboro Senni Songhai
 	case "sg":
 		return "Sängö" // Sango
 	case "sga":
 		return "Goídelc" // Old Irish
+	case "shi-Arab":
+		return "تاشلحيت" // Tachelhit, Shilha (Arabic)
+	case "shi-Latn":
+		return "Taclḥiyt" // Tachelhit, Shilha (Latin)
+	case "shi-Tfng":
+		return "ⵜⴰⵛⵍⵃⵉⵢⵜ" // Tachelhit, Shilha (Tifinagh)
+	case "shn":
+		return "ၵႂၢမ်းတႆး" // Shan
 	case "si":
 		return "සිංහල" // Sinhala
+	case "sid":
+		return "Sidaamu Afoo" // Sidama
 	case "sjn":
 		return "Sindarin" // Sindarin (Latin)
 	case "sjn-Teng":
@@ -733,6 +1025,18 @@ func GetLanguageName(____code string) string {
 		return "Slovenčina" // Slovak (Latin)
 	case "sk":
 		return "Slovenčina" // Slovak (Latin)
+	case "skr-Arab":
+		return "سرائیکی" // Saraiki (Arabic)
+	case "skr-Deva":
+		return "सराइकी" // Saraiki (Devanāgarī)
+	case "skr-Guru":
+		return "ਸਰਾਇਕੀ" // Saraiki (Gurmukhī)
+	case "skr-Khoj":
+		return "𑈙𑈞𑈝𑈈𑈪" // Saraiki (Khojkī)
+	case "skr-Mult":
+		return "𑊩𑊡𑊖𑊚" // Saraiki (Multani)
+	case "skr":
+		return "𑊩𑊡𑊖𑊚" // Saraiki (Multani)
 	case "sl":
 		return "Slovenščina" // Slovenian
 	case "sm":
@@ -743,6 +1047,8 @@ func GetLanguageName(____code string) string {
 		return "Julevsámegiella" // Lule Sami
 	case "smn":
 		return "Anarâškielâ" // Inari Sami
+	case "sms":
+		return "Sääʹmǩiõll, Nuõrttsääʹmǩiõll" // Skolt Sámi
 	case "sn":
 		return "ChiShona" // Shona
 	case "so-Arab":
@@ -783,6 +1089,16 @@ func GetLanguageName(____code string) string {
 		return "كِسْوَحِيلِ" // Swahili (Arabic)
 	case "sw-Latn":
 		return "Kiswahili" // Swahili (Latin)
+	case "syr-Syrc":
+		return "ܣܘܪܝܝܐ" // Syriac (Syriac)
+	case "syr-Syre":
+		return "ܣܘܪܝܝܐ ܐܣܛܪܢܓܠܐ" // Syriac (ʾEsṭrangēlā)
+	case "syr-Syrj":
+		return "ܣܘܪܝܝܐ ܡܥܪܒܝܐ" // Syriac (Western)
+	case "syr-Syrn":
+		return "ܣܘܪܝܝܐ ܡܕܢܚܝܐ" // Syriac (Eastern)
+	case "syr":
+		return "ܣܘܪܝܝܐ" // Syriac (Syriac)
 	case "szl":
 		return "Ślōnskŏ Gŏdka" // Silesian
 	case "ta-Arab":
@@ -799,6 +1115,8 @@ func GetLanguageName(____code string) string {
 		return "தமிழ்" // Tamil (Tamil)
 	case "te":
 		return "తెలుగు" // Telugu
+	case "teo":
+		return "Ateso" // Teso
 	case "tg-Arab":
 		return "تاجيکى" // Tajik (Arabic)
 	case "tg-Cyrl":
@@ -813,6 +1131,12 @@ func GetLanguageName(____code string) string {
 		return "ไทย" // Thai
 	case "ti":
 		return "ትግርኛ" // Tigrinya
+	case "tig-Arab":
+		return "تيغرې" // Tigre (Arabic)
+	case "tig-Ethi":
+		return "ትግሬ, ትግራይት" // Tigre (Geʽez)
+	case "tig":
+		return "ትግሬ, ትግራይት" // Tigre (Geʽez)
 	case "tk-Arab":
 		return "تۆرکمنچه" // Turkmen (Arabic)
 	case "tk-Cyrl":
@@ -855,10 +1179,20 @@ func GetLanguageName(____code string) string {
 		return "Tatar" // Tatar (Latin)
 	case "tw":
 		return "Ákán" // Twi | Akan
+	case "twq":
+		return "Tásàwàq" // Tasawaq
 	case "ty":
 		return "Tahiti" // Tahitian
+	case "tyv":
+		return "Тыва дыл" // Tuvan
 	case "tzl":
 		return "Talossan" // Talossan
+	case "tzm-Arab":
+		return "أمازيغية أطلس الأوسط" // Central Atlas Tamazight (Arabic)
+	case "tzm-Tfng":
+		return "ⵜⴰⵎⴰⵣⵉⵖⵜ" // Central Atlas Tamazight (Tifinagh)
+	case "tzm":
+		return "ⵜⴰⵎⴰⵣⵉⵖⵜ" // Central Atlas Tamazight (Tifinagh)
 	case "ug-Arab":
 		return "ئۇيغۇرچە" // Uyghur (Arabic)
 	case "ug-Cyrl":
@@ -881,6 +1215,12 @@ func GetLanguageName(____code string) string {
 		return "Oʻzbekcha" // Uzbek (Latin)
 	case "uz":
 		return "Oʻzbekcha" // Uzbek (Latin)
+	case "vai-Latn":
+		return "Vai" // Vai (Latin)
+	case "vai-Vaii":
+		return "ꕙꔤ" // Vai (Vai)
+	case "vai":
+		return "ꕙꔤ" // Vai (Vai)
 	case "ve":
 		return "Tshivenḓa" // Venda
 	case "vec":
@@ -891,18 +1231,26 @@ func GetLanguageName(____code string) string {
 		return "Tiếng Việt" // Vietnamese
 	case "vi":
 		return "Tiếng Việt" // Vietnamese
+	case "vmw":
+		return "Emakuana" // Makhuwa
 	case "vo":
 		return "Volapük" // Volapük
+	case "vun":
+		return "Kivunjo" // Wunjo
 	case "vro":
 		return "Võro" // Võro
 	case "wa":
 		return "Walon" // Walloon
+	case "wae":
+		return "Walscher" // Walser German
 	case "wal-Ethi":
 		return "ወላይታቶ" // Wolaytta (Geʽez)
 	case "wal-Latn":
 		return "Wolayttatto" // Wolaytta (Latin)
 	case "wal":
 		return "ወላይታቶ" // Wolaytta (Geʽez)
+	case "wbp":
+		return "Warlpiri" // Warlpiri
 	case "wo-Arab":
 		return "وࣷلࣷفْ" // Wolof (Wolofal / Arabic)
 	case "wo-Gara":
@@ -911,12 +1259,22 @@ func GetLanguageName(____code string) string {
 		return "Wolof" // Wolof (Latin)
 	case "wo":
 		return "Wolof" // Wolof (Latin)
-	case "xct":
-		return "ཏོ་ས་ཆེན་པོ" // Classical Tibetan
-	case "xpu":
-		return "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤉𐤌" // Punic
 	case "xh":
 		return "IsiXhosa" // Xhosa
+	case "xnr-Deva":
+		return "कांगड़ी" // Kangri (Devanāgarī)
+	case "xnr-Takr":
+		return "𑚊𑚭𑚫𑚌𑚪𑚯" // Kangri (Takri)
+	case "xnr":
+		return "𑚊𑚭𑚫𑚌𑚪𑚯" // Kangri (Takri)
+	case "xct":
+		return "ཏོ་ས་ཆེན་པོ" // Classical Tibetan
+	case "xog":
+		return "Lusoga" // Soga
+	case "xpu":
+		return "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤉𐤌" // Punic
+	case "yav":
+		return "Yangben" // Yangben
 	case "yi-Hebr":
 		return "ייִדיש" // Yiddish (Hebrew)
 	case "yi-Latn":
@@ -929,11 +1287,19 @@ func GetLanguageName(____code string) string {
 		return "Yorùbá" // Yoruba (Latin)
 	case "yo":
 		return "Yorùbá" // Yoruba (Latin)
+	case "yrl":
+		return "Nhẽẽgatú" // Nhengatu
 	case "yua":
 		return "Màaya T'àan" // Yucatec Maya
-	case "za-hans":
+	case "yue-Hans":
+		return "粵語（简体）" // Yue Chinese (Simplified)
+	case "yue-Hant":
+		return "粤语（繁體）" // Yue Chinese (Traditional)
+	case "yue":
+		return "粵語（简体）" // Yue Chinese (Simplified)
+	case "za-Hans":
 		return "壮语（简体）" // Zhuang (Simplified)
-	case "za-hant":
+	case "za-Hant":
 		return "壯語（繁體）" // Zhuang (Traditional)
 	case "za":
 		return "壮语（简体）" // Zhuang (Simplified)
@@ -941,9 +1307,9 @@ func GetLanguageName(____code string) string {
 		return "باليبلن" // Balaibalan
 	case "zgh":
 		return "ⵜⴰⵎⴰⵣⵉⵖⵜ" // Standard Moroccan Tamazight
-	case "zh-hans":
+	case "zh-Hans":
 		return "华语（简体）" // Chinese (Simplified)
-	case "zh-hant":
+	case "zh-Hant":
 		return "華語（繁體）" // Chinese (Traditional)
 	case "zh":
 		return "华语（简体）" // Chinese (Simplified)

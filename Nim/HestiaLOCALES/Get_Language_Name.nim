@@ -32,6 +32,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Afrikaans" # Afrikaans
   elif Are_Same_CString(____code, "afh"):
     return "Ɛl-Afrihili" # Afrihili
+  elif Are_Same_CString(____code, "agq"):
+    return "Wum" # Aghem
   elif Are_Same_CString(____code, "ak"):
     return "Ákán" # Akan
   elif Are_Same_CString(____code, "akk"):
@@ -42,12 +44,22 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Aragonés" # Aragonese
   elif Are_Same_CString(____code, "ang"):
     return "Ænglisc" # Old English
+  elif Are_Same_CString(____code, "ann"):
+    return "Andoni" # Obolo
+  elif Are_Same_CString(____code, "apc"):
+    return "شامي" # Levantine Arabic
   elif Are_Same_CString(____code, "ar"):
     return "اَلْعَرَبِيَّةُ" # Arabic
   elif Are_Same_CString(____code, "arc"):
     return "ארמית, ܐܪܡܐܝܬ" # Aramaic
+  elif Are_Same_CString(____code, "arn"):
+    return "Mapudungun" # Mapudungun, Mapuche
   elif Are_Same_CString(____code, "as"):
     return "অসমীয়া" # Assamese
+  elif Are_Same_CString(____code, "asa"):
+    return "Kipare" # Pare, Asu Tanzania
+  elif Are_Same_CString(____code, "ast"):
+    return "Asturianu" # Asturian, Asturleonese, Bable, Leonese
   elif Are_Same_CString(____code, "av-Arab"):
     return "آوَار" # Avaric (Arabic)
   elif Are_Same_CString(____code, "av-Cyrl"):
@@ -76,18 +88,38 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "başqort" # Bashkir (Latin)
   elif Are_Same_CString(____code, "ba"):
     return "башҡорт" # Bashkir (Cyrillic)
+  elif Are_Same_CString(____code, "bal-Arab"):
+    return "بلۏچی" # Baluchi (Arabic)
+  elif Are_Same_CString(____code, "bal-Latn"):
+    return "Balòci" # Baluchi (Latin)
+  elif Are_Same_CString(____code, "bal"):
+    return "بلۏچی" # Baluchi (Arabic)
+  elif Are_Same_CString(____code, "bas"):
+    return "Ɓàsàa" # Basa Cameroon
   elif Are_Same_CString(____code, "be"):
     return "беларуская" # Belarusian
+  elif Are_Same_CString(____code, "bem"):
+    return "Chibemba" # Bemba Zambia
+  elif Are_Same_CString(____code, "bew"):
+    return "Betawi" # Betawi
+  elif Are_Same_CString(____code, "bez"):
+    return "Ekibena" # Bena Tanzania
   elif Are_Same_CString(____code, "bg"):
     return "български" # Bulgarian
   elif Are_Same_CString(____code, "bgc"):
     return "हरियाणवी" # Haryanvi
+  elif Are_Same_CString(____code, "bgn"):
+    return "بلۏچی" # Western Balochi
   elif Are_Same_CString(____code, "bho-Deva"):
     return "भोजपुरी" # Bhojpuri (Devanagari)
   elif Are_Same_CString(____code, "bho-Kthi"):
     return "𑂦𑂷𑂔𑂣𑂳𑂩𑂲" # Bhojpuri (Kaithi)
   elif Are_Same_CString(____code, "bho"):
     return "भोजपुरी" # Bhojpuri (Devanagari)
+  elif Are_Same_CString(____code, "blo"):
+    return "Basila" # Anii
+  elif Are_Same_CString(____code, "blt"):
+    return "ꪼꪕꪒꪾ" # Tai Dam
   elif Are_Same_CString(____code, "bi"):
     return "Bichelamar" # Bislama
   elif Are_Same_CString(____code, "bm-Arab"):
@@ -118,6 +150,14 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "bosanski" # Bosnian
   elif Are_Same_CString(____code, "bs"):
     return "bosanski" # Bosnian
+  elif Are_Same_CString(____code, "bss"):
+    return "Ɓàsò" # Akoose Manenguba
+  elif Are_Same_CString(____code, "byn-Latn"):
+    return "Blin" # Bilen, Bilin, Blin
+  elif Are_Same_CString(____code, "byn-Ethi"):
+    return "ብሊን" # Bilen, Bilin, Blin
+  elif Are_Same_CString(____code, "byn"):
+    return "Blin" # Bilen, Bilin, Blin
   elif Are_Same_CString(____code, "bzt"):
     return "Comroig" # Brithenig
   elif Are_Same_CString(____code, "ca"):
@@ -132,30 +172,52 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Noxçiyn" # Chechen (Latin)
   elif Are_Same_CString(____code, "ce"):
     return "Нохчийн" # Chechen (Cyrillic)
+  elif Are_Same_CString(____code, "cad"):
+    return "Hasí꞉nay" # Caddo
+  elif Are_Same_CString(____code, "cch"):
+    return "Cawai" # Atsam
+  elif Are_Same_CString(____code, "ccp-Cakm"):
+    return "𑄌𑄋𑄴𑄟𑄳𑄦" # Chakma (Chakma)
+  elif Are_Same_CString(____code, "ccp-Zzzz"):
+    return "𑄖𑄧𑄐𑄴𑄌𑄧𑄁𑄉𑄴𑄡" # Chakma (Tanchangya)
+  elif Are_Same_CString(____code, "ccp"):
+    return "𑄌𑄋𑄴𑄟𑄳𑄦" # Chakma (Chakma)
   elif Are_Same_CString(____code, "ceb"):
     return "Bisayâ" # Cebuano
+  elif Are_Same_CString(____code, "cgg"):
+    return "Orukiga" # Kiga
   elif Are_Same_CString(____code, "ch"):
     return "Chamoru" # Chamorro
   elif Are_Same_CString(____code, "cho"):
     return "Chahta anumpa" # Choctaw
   elif Are_Same_CString(____code, "chr-Cher"):
-    return "ᏣᎳᎩ" # Cherokee (Cherokee)
+    return "ᏣᎳᎩ" # Cherokee
   elif Are_Same_CString(____code, "chr-Latn"):
     return "Tsalagi" # Cherokee (Latin)
   elif Are_Same_CString(____code, "chr"):
-    return "ᏣᎳᎩ" # Cherokee (Cherokee)
+    return "ᏣᎳᎩ" # Cherokee
+  elif Are_Same_CString(____code, "cic"):
+    return "Chikashshanompaꞌ" # Chickasaw
+  elif Are_Same_CString(____code, "ckb-Arab"):
+    return "سۆرانی" # Central Kurdish
+  elif Are_Same_CString(____code, "ckb-Latn"):
+    return "Soranî" # Central Kurdish
+  elif Are_Same_CString(____code, "ckb"):
+    return "سۆرانی" # Central Kurdish
   elif Are_Same_CString(____code, "co"):
     return "corsu" # Corsican
   elif Are_Same_CString(____code, "cop"):
     return "ϯⲙⲉⲧⲣⲉⲙⲛ̀ⲭⲏⲙⲓ" # Coptic
   elif Are_Same_CString(____code, "cr-Cans"):
-    return "ᓀᐦᐃᔭᐍᐏᐣ" # Cree (Canadian Aboriginal)
+    return "ᓀᐦᐃᔭᐍᐏᐣ" # Canadian Aboriginal Cree
   elif Are_Same_CString(____code, "cr-Latn"):
     return "Nēhiyawēwin" # Cree (Latin)
   elif Are_Same_CString(____code, "cs"):
     return "Čeština" # Czech
   elif Are_Same_CString(____code, "csb"):
     return "Kaszëbsczi" # Kashubian
+  elif Are_Same_CString(____code, "csw"):
+    return "ᓀᐦᐃᓇᐍᐏᐣ" # Swampy Cree
   elif Are_Same_CString(____code, "cu-Cyrl"):
     return "словѣньскъ" # Old Church Slavonic (Cyrillic)
   elif Are_Same_CString(____code, "cu-Glag"):
@@ -166,8 +228,16 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Cymraeg" # Welsh
   elif Are_Same_CString(____code, "da"):
     return "Dansk" # Danish
+  elif Are_Same_CString(____code, "dav"):
+    return "Taita–Sagala" # Taita, Dawida
   elif Are_Same_CString(____code, "de"):
     return "Deutsch" # German
+  elif Are_Same_CString(____code, "dje-Arab"):
+    return "زَرْمَ" # Zarma (Arabic)
+  elif Are_Same_CString(____code, "dje-Latn"):
+    return "Zabarma" # Zarma (Latin)
+  elif Are_Same_CString(____code, "dje"):
+    return "زَرْمَ" # Zarma (Arabic)
   elif Are_Same_CString(____code, "dmf"):
     return "𖹝𖹰𖹯𖹼𖹫 𖹚𖹬𖹾𖹠𖹯‎ / Obɛri Ɔkaimɛ" # Medefaidrin
   elif Are_Same_CString(____code, "doi-Aran"):
@@ -182,6 +252,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "डोगरी" # Dogri (Devanagari)
   elif Are_Same_CString(____code, "dsb"):
     return "dolnoserbšćina" # Lower Sorbian
+  elif Are_Same_CString(____code, "dua"):
+    return "Duálá" # Duala
   elif Are_Same_CString(____code, "dv-Latn"):
     return "Dhivehi" # Maldivian | Dhivehi (Latin)
   elif Are_Same_CString(____code, "dv-Thaa"):
@@ -190,8 +262,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "ދިވެހި" # Maldivian | Dhivehi (Thaana)
   elif Are_Same_CString(____code, "dws"):
     return "Dutton Speedwords" # Dutton Speedwords (Latin)
+  elif Are_Same_CString(____code, "dyo"):
+    return "Kujóolay" # Jola-Fonyi
   elif Are_Same_CString(____code, "dz"):
     return "རྫོང་ཁ་" # Dzongkha
+  elif Are_Same_CString(____code, "ebu"):
+    return "Kiembu" # Embu
   elif Are_Same_CString(____code, "ee"):
     return "Eʋegbe" # Ewe
   elif Are_Same_CString(____code, "el"):
@@ -214,6 +290,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "𐌄𐌓𐌔𐌍𐌀𐌂" # Etruscan
   elif Are_Same_CString(____code, "eu"):
     return "Euskara" # Basque
+  elif Are_Same_CString(____code, "ewo"):
+    return "Beti" # Ewondo
   elif Are_Same_CString(____code, "fa"):
     return "فارسی" # Persian
   elif Are_Same_CString(____code, "ff-Adlm"):
@@ -226,14 +304,24 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫" # Fula | Fulani | Fulah (Adlam Pular)
   elif Are_Same_CString(____code, "fi"):
     return "Suomi" # Finnish
+  elif Are_Same_CString(____code, "fil-Latn"):
+    return "Filipino" # Filipino (Latin)
+  elif Are_Same_CString(____code, "fil-Tglg"):
+    return "ᜉᜒᜎᜒᜉᜒᜈ" # Filipino (Baybayin)
+  elif Are_Same_CString(____code, "fil"):
+    return "Filipino" # Filipino (Latin)
   elif Are_Same_CString(____code, "fj"):
     return "Vosa Vaka-Viti" # Fijian
   elif Are_Same_CString(____code, "fo"):
     return "føroyskt" # Faroese
   elif Are_Same_CString(____code, "fr"):
     return "Français" # French
+  elif Are_Same_CString(____code, "frr"):
+    return "Noorfriisk" # North Frisian
   elif Are_Same_CString(____code, "fro"):
     return "Franceis" # Old French
+  elif Are_Same_CString(____code, "fur"):
+    return "Furlan" # Friulian
   elif Are_Same_CString(____code, "fy"):
     return "Frysk" # Western Frisian
   elif Are_Same_CString(____code, "ga-Latn"):
@@ -242,12 +330,20 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "ᚌᚐᚓᚔᚂᚌᚓ" # Irish (Ogham)
   elif Are_Same_CString(____code, "ga"):
     return "Gaeilge" # Irish (Latin)
+  elif Are_Same_CString(____code, "gaa"):
+    return "Gã" # Ga
   elif Are_Same_CString(____code, "gd-Latn"):
     return "Gàidhlig" # Scottish Gaelic (Latin)
   elif Are_Same_CString(____code, "gd-Ogam"):
     return "ᚌᚐᚔᚇᚆᚂᚔᚌ" # Scottish Gaelic (Ogham)
   elif Are_Same_CString(____code, "gd"):
     return "Gàidhlig" # Scottish Gaelic (Latin)
+  elif Are_Same_CString(____code, "gez-Ethi"):
+    return "ግዕዝ" # Geʽez (Geʽez)
+  elif Are_Same_CString(____code, "gez-Sarb"):
+    return "𐩴𐩹𐩹" # Geʽez (Ancient South Arabian)
+  elif Are_Same_CString(____code, "gez"):
+    return "ግዕዝ" # Geʽez (Geʽez)
   elif Are_Same_CString(____code, "gl"):
     return "Galego" # Galician (Latin)
   elif Are_Same_CString(____code, "gmy"):
@@ -258,6 +354,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Diutisk" # Old High German
   elif Are_Same_CString(____code, "grc"):
     return "Ἑλληνική" # Ancient Greek
+  elif Are_Same_CString(____code, "gsw"):
+    return "Schwiizerdütsch" # Swiss German, Alemannic, Alsatian
   elif Are_Same_CString(____code, "gu"):
     return "ગુજરાતી" # Gujarati
   elif Are_Same_CString(____code, "guz"):
@@ -282,6 +380,16 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "हिन्दी" # Hindi (Devanagari)
   elif Are_Same_CString(____code, "hit"):
     return "𒌷𒉌𒅆𒇷" # Hittite
+  elif Are_Same_CString(____code, "hnj-Hmng"):
+    return "𖬇𖬰𖬞𖬵 𖬄𖬶𖬟 𖬌𖬣𖬵" # Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
+  elif Are_Same_CString(____code, "hnj-Hmnp"):
+    return "𞄋𞄤𞄰𞄘𞄤𞄬𞄩𞄰" # Hmong Njua, Mong Leng, Mong Njua (Nyiakeng Puachue Hmong)
+  elif Are_Same_CString(____code, "hnj-Latn"):
+    return "Hmoob" # Hmong Njua, Mong Leng, Mong Njua (Latin)
+  elif Are_Same_CString(____code, "hnj-Plrd"):
+    return "𖼀𖽙𖾐𖼊𖽙𖾑" # Hmong Njua, Mong Leng, Mong Njua (Pollard)
+  elif Are_Same_CString(____code, "hnj"):
+    return "𖬇𖬰𖬞𖬵 𖬄𖬶𖬟 𖬌𖬣𖬵" # Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
   elif Are_Same_CString(____code, "ho"):
     return "Hiri Motu" # Hiri Motu
   elif Are_Same_CString(____code, "hr-Glag"):
@@ -338,6 +446,10 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "日本語" # Japanese
   elif Are_Same_CString(____code, "jbo"):
     return "La .lojban." # Lojban
+  elif Are_Same_CString(____code, "jgo"):
+    return "Nda’a" # Ngomba
+  elif Are_Same_CString(____code, "jmc"):
+    return "Kimachame" # West Kilimanjaro, Machame
   elif Are_Same_CString(____code, "jv-Arab"):
     return "باسا جاوا" # Javanese (Pegon)
   elif Are_Same_CString(____code, "jv-Java"):
@@ -348,6 +460,26 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Basa Jawa" # Javanese (Latin)
   elif Are_Same_CString(____code, "ka"):
     return "ქართული ენა" # Georgian
+  elif Are_Same_CString(____code, "kaa-Arab"):
+    return "قاراقالپاق" # Karakalpak (Arabic)
+  elif Are_Same_CString(____code, "kaa-Cyrl"):
+    return "Қарақалпақ" # Karakalpak (Cyrillic)
+  elif Are_Same_CString(____code, "kaa-Latn"):
+    return "Qaraqalpaq" # Karakalpak (Latin)
+  elif Are_Same_CString(____code, "kaa"):
+    return "Қарақалпақ" # Karakalpak (Cyrillic)
+  elif Are_Same_CString(____code, "kab-Arab"):
+    return "ثاقبايليث" # Kabyle (Arabic)
+  elif Are_Same_CString(____code, "kab-Latn"):
+    return "Taqbaylit" # Kabyle (Latin)
+  elif Are_Same_CString(____code, "kab-Tfng"):
+    return "ⵜⴰⵇⴱⴰⵢⵍⵉⵜ" # Kabyle (Tifinagh)
+  elif Are_Same_CString(____code, "kab"):
+    return "Taqbaylit" # Kabyle (Latin)
+  elif Are_Same_CString(____code, "kaj"):
+    return "Jhyuo, Kaje" # Jju
+  elif Are_Same_CString(____code, "kam"):
+    return "Kikamba" # Kamba
   elif Are_Same_CString(____code, "kbd-Cyrl"):
     return "адыгэбзэ" # Kabardian (Cyrillic)
   elif Are_Same_CString(____code, "kbd-Latn"):
@@ -356,20 +488,32 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "آد‍ہگەبزە" # Kabardian (Perso Arabic)
   elif Are_Same_CString(____code, "kbd"):
     return "адыгэбзэ" # Kabardian (Cyrillic)
-  elif Are_Same_CString(____code, "kam"):
-    return "Kikamba" # Kamba
+  elif Are_Same_CString(____code, "kcg"):
+    return "Tyap" # Tyap
+  elif Are_Same_CString(____code, "kde"):
+    return "Chinimakonde" # Makonde
+  elif Are_Same_CString(____code, "kea"):
+    return "Kabuverdianu" # Kabuverdianu
   elif Are_Same_CString(____code, "kek"):
     return "Q'eqchi" # Q'eqchi'
-  elif Are_Same_CString(____code, "kg-Latn"):
-    return "Kikongo" # Kongo
+  elif Are_Same_CString(____code, "ken"):
+    return "Nyang" # Kenyang
   elif Are_Same_CString(____code, "kg"):
     return "Kikongo" # Kongo
+  elif Are_Same_CString(____code, "kgp"):
+    return "Kanhgág" # Kaingang
   elif Are_Same_CString(____code, "kha-Beng"):
     return "ক ক্তিয়েন খাসি" # Khasi (Bengali)
   elif Are_Same_CString(____code, "kha-Latn"):
     return "Ka Ktien Khasi" # Khasi (Latin)
   elif Are_Same_CString(____code, "kha"):
     return "Ka Ktien Khasi" # Khasi (Latin)
+  elif Are_Same_CString(____code, "khq-Arab"):
+    return "جٜنّٜ ٺِينِ" # Koyra Chiini Songhay (Arabic)
+  elif Are_Same_CString(____code, "khq-Latn"):
+    return "Koyra ciini" # Koyra Chiini Songhay (Latin)
+  elif Are_Same_CString(____code, "khq"):
+    return "Koyra ciini" # Koyra Chiini Songhay (Latin)
   elif Are_Same_CString(____code, "ki"):
     return "Gĩgĩkũyũ" # Kikuyu
   elif Are_Same_CString(____code, "kj"):
@@ -382,6 +526,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "qazaqşa" # Kazakh (Latin)
   elif Are_Same_CString(____code, "kk"):
     return "qazaqşa" # Kazakh (Latin)
+  elif Are_Same_CString(____code, "kkj"):
+    return "Kakó" # Kako
   elif Are_Same_CString(____code, "kl"):
     return "Kalaallisut" # Kalaallisut
   elif Are_Same_CString(____code, "kln"):
@@ -410,6 +556,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Kànùrí" # Kanuri (Latin)
   elif Are_Same_CString(____code, "kr"):
     return "كَنُرِيِه" # Kanuri (Arabic)
+  elif Are_Same_CString(____code, "kpe-Kpel"):
+    return "Kpɛlɛwoo" # Kpelle (Kpelle)
+  elif Are_Same_CString(____code, "kpe-Latn"):
+    return "Kpɛlɛ" # Kpelle (Latin)
+  elif Are_Same_CString(____code, "kpe"):
+    return "Kpɛlɛ" # Kpelle (Latin)
   elif Are_Same_CString(____code, "ks-Arab"):
     return "کٲشُر" # Kashmiri (Perso-Arabic)
   elif Are_Same_CString(____code, "ks-Deva"):
@@ -418,6 +570,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "𑆑𑆳𑆮𑆶𑆫𑇀" # Kashmiri (Sharada)
   elif Are_Same_CString(____code, "ks"):
     return "کٲشُر" # Kashmiri (Perso-Arabic)
+  elif Are_Same_CString(____code, "ksb"):
+    return "Kisambaa" # Shambala
+  elif Are_Same_CString(____code, "ksf"):
+    return "Rikpa" # Bafia
+  elif Are_Same_CString(____code, "ksh"):
+    return "Kölsch" # Colognian, Kölsch
   elif Are_Same_CString(____code, "ku-Arab"):
     return "کوردی" # Kurdish (Arabic)
   elif Are_Same_CString(____code, "ku-Latn"):
@@ -432,6 +590,16 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "коми" # Komi (Cyrillic)
   elif Are_Same_CString(____code, "kw"):
     return "Kernewek" # Cornish
+  elif Are_Same_CString(____code, "kxv-Deva"):
+    return "कुवि" # Kuvi (Devanagari)
+  elif Are_Same_CString(____code, "kxv-Latn"):
+    return "Kuwi" # Kuvi (Latin)
+  elif Are_Same_CString(____code, "kxv-Orya"):
+    return "କୁୱି" # Kuvi (Odia)
+  elif Are_Same_CString(____code, "kxv-Telu"):
+    return "କୁୱି" # Kuvi (Telugu)
+  elif Are_Same_CString(____code, "kxv"):
+    return "କୁୱି" # Kuvi (Odia)
   elif Are_Same_CString(____code, "ky-Arab"):
     return "قىرعىز" # Kyrgyz (Arabic)
   elif Are_Same_CString(____code, "ky-Cyrl"):
@@ -446,6 +614,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Latina" # Latin
   elif Are_Same_CString(____code, "lad"):
     return "Ladin" # Ladino
+  elif Are_Same_CString(____code, "lag"):
+    return "Kɨlaangi" # Rangi
   elif Are_Same_CString(____code, "lb"):
     return "Lëtzebuergesch" # Luxembourgish
   elif Are_Same_CString(____code, "ldn"):
@@ -456,6 +626,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Oluganda" # Ganda | Luganda
   elif Are_Same_CString(____code, "li"):
     return "Limburgs" # Limburgish
+  elif Are_Same_CString(____code, "lij"):
+    return "Lìgure" # Ligurian
+  elif Are_Same_CString(____code, "lkt"):
+    return "Lakȟótiyapi" # Lakota
+  elif Are_Same_CString(____code, "lld"):
+    return "Ladin" # Ladin
   elif Are_Same_CString(____code, "lmo"):
     return "Lombard" # Lombard
   elif Are_Same_CString(____code, "ln"):
@@ -466,8 +642,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "ลาว" # Lao (Thai)
   elif Are_Same_CString(____code, "lo"):
     return "ລາວ" # Lao (Lao)
+  elif Are_Same_CString(____code, "lrc"):
+    return "لری" # Luri
   elif Are_Same_CString(____code, "lt"):
-    return "lietuvių" # Lithuanian
+    return "Lietuvių" # Lithuanian
+  elif Are_Same_CString(____code, "ltg"):
+    return "Latgalīšu" # Latgalian
   elif Are_Same_CString(____code, "lu"):
     return "Kiluba" # Luba-Katanga
   elif Are_Same_CString(____code, "luo"):
@@ -492,16 +672,32 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Qyool Mam" # Mam
   elif Are_Same_CString(____code, "mas"):
     return "Maa" # Maasai | Maa
+  elif Are_Same_CString(____code, "mdf"):
+    return "мокшень" # Moksha
   elif Are_Same_CString(____code, "mer"):
     return "Kĩmĩĩrũ" # Meru
+  elif Are_Same_CString(____code, "mfe"):
+    return "Kreol Morisien" # Mauritian Creole
   elif Are_Same_CString(____code, "mg-Arab"):
     return "مَلَغَسِ" # Malagasy (Sorabe)
   elif Are_Same_CString(____code, "mg-Latn"):
     return "Malagasy" # Malagasy (Latin)
+  elif Are_Same_CString(____code, "mgh"):
+    return "Emakuana" # Makhuwa, Makhuwa-Meetto
+  elif Are_Same_CString(____code, "mgo"):
+    return "Meta" # Meta'
+  elif Are_Same_CString(____code, "mhn"):
+    return "Bersntolerisch" # Mòcheno
   elif Are_Same_CString(____code, "mh"):
     return "Kajin Ṃajeḷ" # Marshallese
   elif Are_Same_CString(____code, "mi"):
     return "Māori" # Māori
+  elif Are_Same_CString(____code, "mic-Zzzz"):
+    return "𐒢𐒃𐒄𐒑𐒛𐒍𐒖𐒆" # Mi'kmaq, Micmac (Gomgwejui'gasit)
+  elif Are_Same_CString(____code, "mic-Latn"):
+    return "Miꞌkmawiꞌsimk" # Mi'kmaq, Micmac (Latin)
+  elif Are_Same_CString(____code, "mic"):
+    return "Miꞌkmawiꞌsimk" # Mi'kmaq, Micmac (Latin)
   elif Are_Same_CString(____code, "mix"):
     return "Ayuujk" # Mixe
   elif Are_Same_CString(____code, "mk"):
@@ -534,6 +730,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "ꯃꯩꯇꯩꯂꯣꯟ" # Meitei | Manipuri (Meitei Mayek)
   elif Are_Same_CString(____code, "mni"):
     return "ꯃꯩꯇꯩꯂꯣꯟ" # Meitei | Manipuri (Meitei Mayek)
+  elif Are_Same_CString(____code, "moh"):
+    return "Kanienʼkéha" # Mohawk
   elif Are_Same_CString(____code, "mr-Deva"):
     return "मराठी" # Marathi (Devanagari)
   elif Are_Same_CString(____code, "mr-Modi"):
@@ -544,8 +742,16 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Bahasa Melayu" # Malay
   elif Are_Same_CString(____code, "mt"):
     return "Malti" # Maltese
+  elif Are_Same_CString(____code, "mua"):
+    return "Mundaŋ" # Mundang
+  elif Are_Same_CString(____code, "mus"):
+    return "Mvskoke" # Muscogee
   elif Are_Same_CString(____code, "my"):
     return "မြန်မာ" # Burmese (Myanmar)
+  elif Are_Same_CString(____code, "myv"):
+    return "эрзянь" # Erzya
+  elif Are_Same_CString(____code, "mzn"):
+    return "مازِرونی‎" # Mazanderani
   elif Are_Same_CString(____code, "na"):
     return "Naoero" # Nauru | Nauruan
   elif Are_Same_CString(____code, "nah"):
@@ -570,22 +776,32 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Ndonga" # Ndonga
   elif Are_Same_CString(____code, "nl"):
     return "Nederlands" # Dutch
+  elif Are_Same_CString(____code, "nmg"):
+    return "Ngumba, Kola" # Kwasio
   elif Are_Same_CString(____code, "nn"):
     return "Norsk Nynorsk" # Norwegian Nynorsk
+  elif Are_Same_CString(____code, "nnh"):
+    return "Ngiembɔɔn" # Ngiemboon
   elif Are_Same_CString(____code, "no"):
     return "Norsk Riksmål/Høgnorsk" # Norwegian Riksmål or Høgnorsk
   elif Are_Same_CString(____code, "non"):
     return "Dǫnsk tunga" # Old Norse
   elif Are_Same_CString(____code, "nov"):
     return "Novial" # Novial
+  elif Are_Same_CString(____code, "nqo"):
+    return "ߒߞߏ" # N'Ko
   elif Are_Same_CString(____code, "nr"):
     return "isiNdebele" # Southern Ndebele
   elif Are_Same_CString(____code, "nso"):
     return "Sesotho sa Leboa" # Northern Sotho
+  elif Are_Same_CString(____code, "nus"):
+    return "Thok Naath" # Nuer
   elif Are_Same_CString(____code, "nv"):
     return "Diné Bizaad" # Navajo
   elif Are_Same_CString(____code, "ny"):
     return "Chichewa" # Chichewa
+  elif Are_Same_CString(____code, "nyn"):
+    return "Orunyankore" # Nyankole
   elif Are_Same_CString(____code, "oc"):
     return "Occitan" # Occitan
   elif Are_Same_CString(____code, "oj-Latn"):
@@ -612,6 +828,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "iron" # Ossetian (Latin)
   elif Are_Same_CString(____code, "os"):
     return "дигорон" # Ossetian (Cyrillic)
+  elif Are_Same_CString(____code, "osa-Latn"):
+    return "Wažáže ie" # Osage (Latin)
+  elif Are_Same_CString(____code, "osa-Osge"):
+    return "𐓏𐒰𐓓𐒰𐓓𐒷 𐒻𐒷‎" # Osage (Osage)
+  elif Are_Same_CString(____code, "osa"):
+    return "𐓏𐒰𐓓𐒰𐓓𐒷 𐒻𐒷‎" # Osage (Osage)
   elif Are_Same_CString(____code, "pa-Arab"):
     return "پنجابی" # Punjabi (Shahmukhi)
   elif Are_Same_CString(____code, "pa-Guru"):
@@ -640,8 +862,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "පාලි" # Pali (Sinhala)
   elif Are_Same_CString(____code, "pi-Thai"):
     return "ปาฬิ" # Pali (Thai)
+  elif Are_Same_CString(____code, "pis"):
+    return "Pijin" # Solomon Islands Pidgin
   elif Are_Same_CString(____code, "pl"):
     return "Polski" # Polish
+  elif Are_Same_CString(____code, "prg"):
+    return "Prūsiskai" # Old Prussian
   elif Are_Same_CString(____code, "ps"):
     return "پښتو" # Pashto
   elif Are_Same_CString(____code, "pt"):
@@ -658,6 +884,38 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "" # Quenya (Cirth)
   elif Are_Same_CString(____code, "qya"):
     return "Quenya" # Quenya (Latin)
+  elif Are_Same_CString(____code, "raj-Arab"):
+    return "راجستھانی" # Rajasthani (Arabic)
+  elif Are_Same_CString(____code, "raj-Deva"):
+    return "राजस्थानी" # Rajasthani (Devanagari)
+  elif Are_Same_CString(____code, "raj-Guru"):
+    return "ਰਾਜਸਥਾਨੀ" # Rajasthani (Gurmukhī)
+  elif Are_Same_CString(____code, "raj-Khoj"):
+    return "𑈉𑈖𑈭𑈲𑈝𑈞𑈪" # Rajasthani (Khojkī)
+  elif Are_Same_CString(____code, "raj-Mahj"):
+    return "𑅱𑅢𑅛𑅧𑅣" # Rajasthani (Mahajani)
+  elif Are_Same_CString(____code, "raj-Sind"):
+    return "𑋏𑋣𑋩𑋢𑋣𑋞𑋙" # Rajasthani (Khudabadi)
+  elif Are_Same_CString(____code, "raj"):
+    return "राजस्थानी" # Rajasthani (Devanagari)
+  elif Are_Same_CString(____code, "rhg-Arab"):
+    return " رُحَ࣪ڠۡگَ࣪ـݠـ" # Rohingya (Arabic)
+  elif Are_Same_CString(____code, "rhg-Beng"):
+    return "রোহিঙ্গা" # Rohingya (Bengali–Assamese)
+  elif Are_Same_CString(____code, "rhg-Mymr"):
+    return "ရိုဟင်ဂျာ" # Rohingya (Burmese)
+  elif Are_Same_CString(____code, "rhg-Rohg"):
+    return "𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝" # Rohingya (Hanifi Rohingya)
+  elif Are_Same_CString(____code, "rhg"):
+    return "𐴌𐴗𐴥𐴝𐴙𐴚𐴒𐴙𐴝" # Rohingya (Hanifi Rohingya)
+  elif Are_Same_CString(____code, "rif-Arab"):
+    return "الريفية" # Tarifit (Arabic)
+  elif Are_Same_CString(____code, "rif-Latn"):
+    return "Riffian, Tarifiyt, Tmaziɣt" # Tarifit (Latin)
+  elif Are_Same_CString(____code, "rif-Tfng"):
+    return "ⵜⴰⵔⵉⴼⵉⵜ" # Tarifit (Tifinagh)
+  elif Are_Same_CString(____code, "rif"):
+    return "ⵜⴰⵔⵉⴼⵉⵜ" # Tarifit (Tifinagh)
   elif Are_Same_CString(____code, "rm"):
     return "Rumantsch" # Romansh
   elif Are_Same_CString(____code, "rmv"):
@@ -670,16 +928,28 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Ромынэ" # Romanian (Cyrillic)
   elif Are_Same_CString(____code, "ro"):
     return "Română" # Romanian (Latin)
+  elif Are_Same_CString(____code, "rof"):
+    return "Kirombo" # Rombo
   elif Are_Same_CString(____code, "ru"):
     return "русский" # Russian
   elif Are_Same_CString(____code, "rw"):
     return "Ikinyarwanda" # Kinyarwanda
+  elif Are_Same_CString(____code, "rwk"):
+    return "West Chaga" # West Kilimanjaro, Rwa
   elif Are_Same_CString(____code, "sa-Deva"):
     return "संस्कृत" # Sanskrit (Devanagari)
   elif Are_Same_CString(____code, "sa-Brah"):
     return "𑀲𑀁𑀲𑁆𑀓𑀾𑀢" # Sanskrit (Brahmi)
   elif Are_Same_CString(____code, "sa"):
     return "संस्कृत" # Sanskrit (Devanagari)
+  elif Are_Same_CString(____code, "sah-Cyrl"):
+    return "саха тыла" # Yakut (Cyrillic)
+  elif Are_Same_CString(____code, "sah-Latn"):
+    return "saxa tıla" # Yakut (Latin)
+  elif Are_Same_CString(____code, "sah"):
+    return "саха тыла" # Yakut (Cyrillic)
+  elif Are_Same_CString(____code, "saq"):
+    return "Sampur, ɔl Maa" # Samburu
   elif Are_Same_CString(____code, "sat-Beng"):
     return "সান্তালী" # Santali (Bengali)
   elif Are_Same_CString(____code, "sat-Deva"):
@@ -692,6 +962,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "ସାନ୍ତାଳୀ" # Santali (Odia)
   elif Are_Same_CString(____code, "sat"):
     return "ᱥᱟᱱᱛᱟᱲᱤ" # Santali (Ol Chiki)
+  elif Are_Same_CString(____code, "sbp"):
+    return "Kisangu" # Sangu
   elif Are_Same_CString(____code, "sc"):
     return "Sardu" # Sardinian
   elif Are_Same_CString(____code, "scn"):
@@ -708,16 +980,36 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "ਸਿੰਧੀ" # Sindhi (Gurmukhi)
   elif Are_Same_CString(____code, "sd"):
     return "سِنڌِي" # Sindhi (Perso-Ararbic)
+  elif Are_Same_CString(____code, "sdh"):
+    return "کوردی خوارین" # Southern Kurdish
   elif Are_Same_CString(____code, "sdr"):
     return "Mey" # Sherdukpen
   elif Are_Same_CString(____code, "se"):
     return "Davvisámegiella" # Northern Sami
+  elif Are_Same_CString(____code, "seh-Latn"):
+    return "Sena" # Sena (Latin)
+  elif Are_Same_CString(____code, "seh-Zzzz"):
+    return "𑵻𑵶𑵼" # Sena (Mwangwego)
+  elif Are_Same_CString(____code, "seh"):
+    return "Sena" # Sena (Latin)
+  elif Are_Same_CString(____code, "ses"):
+    return "كࣷيْرَبࣷرࣷ سٜنِّ" # Koyraboro Senni, Koyraboro Senni Songhai
   elif Are_Same_CString(____code, "sg"):
     return "Sängö" # Sango
   elif Are_Same_CString(____code, "sga"):
     return "Goídelc" # Old Irish
+  elif Are_Same_CString(____code, "shi-Arab"):
+    return "تاشلحيت" # Tachelhit, Shilha (Arabic)
+  elif Are_Same_CString(____code, "shi-Latn"):
+    return "Taclḥiyt" # Tachelhit, Shilha (Latin)
+  elif Are_Same_CString(____code, "shi-Tfng"):
+    return "ⵜⴰⵛⵍⵃⵉⵢⵜ" # Tachelhit, Shilha (Tifinagh)
+  elif Are_Same_CString(____code, "shn"):
+    return "ၵႂၢမ်းတႆး" # Shan
   elif Are_Same_CString(____code, "si"):
     return "සිංහල" # Sinhala
+  elif Are_Same_CString(____code, "sid"):
+    return "Sidaamu Afoo" # Sidama
   elif Are_Same_CString(____code, "sjn"):
     return "Sindarin" # Sindarin (Latin)
   elif Are_Same_CString(____code, "sjn-Teng"):
@@ -732,6 +1024,18 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Slovenčina" # Slovak (Latin)
   elif Are_Same_CString(____code, "sk"):
     return "Slovenčina" # Slovak (Latin)
+  elif Are_Same_CString(____code, "skr-Arab"):
+    return "سرائیکی" # Saraiki (Arabic)
+  elif Are_Same_CString(____code, "skr-Deva"):
+    return "सराइकी" # Saraiki (Devanāgarī)
+  elif Are_Same_CString(____code, "skr-Guru"):
+    return "ਸਰਾਇਕੀ" # Saraiki (Gurmukhī)
+  elif Are_Same_CString(____code, "skr-Khoj"):
+    return "𑈙𑈞𑈝𑈈𑈪" # Saraiki (Khojkī)
+  elif Are_Same_CString(____code, "skr-Mult"):
+    return "𑊩𑊡𑊖𑊚" # Saraiki (Multani)
+  elif Are_Same_CString(____code, "skr"):
+    return "𑊩𑊡𑊖𑊚" # Saraiki (Multani)
   elif Are_Same_CString(____code, "sl"):
     return "Slovenščina" # Slovenian
   elif Are_Same_CString(____code, "sm"):
@@ -742,6 +1046,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Julevsámegiella" # Lule Sami
   elif Are_Same_CString(____code, "smn"):
     return "Anarâškielâ" # Inari Sami
+  elif Are_Same_CString(____code, "sms"):
+    return "Sääʹmǩiõll, Nuõrttsääʹmǩiõll" # Skolt Sámi
   elif Are_Same_CString(____code, "sn"):
     return "ChiShona" # Shona
   elif Are_Same_CString(____code, "so-Arab"):
@@ -782,6 +1088,16 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "كِسْوَحِيلِ" # Swahili (Arabic)
   elif Are_Same_CString(____code, "sw-Latn"):
     return "Kiswahili" # Swahili (Latin)
+  elif Are_Same_CString(____code, "syr-Syrc"):
+    return "ܣܘܪܝܝܐ" # Syriac (Syriac)
+  elif Are_Same_CString(____code, "syr-Syre"):
+    return "ܣܘܪܝܝܐ ܐܣܛܪܢܓܠܐ" # Syriac (ʾEsṭrangēlā)
+  elif Are_Same_CString(____code, "syr-Syrj"):
+    return "ܣܘܪܝܝܐ ܡܥܪܒܝܐ" # Syriac (Western)
+  elif Are_Same_CString(____code, "syr-Syrn"):
+    return "ܣܘܪܝܝܐ ܡܕܢܚܝܐ" # Syriac (Eastern)
+  elif Are_Same_CString(____code, "syr"):
+    return "ܣܘܪܝܝܐ" # Syriac (Syriac)
   elif Are_Same_CString(____code, "szl"):
     return "Ślōnskŏ Gŏdka" # Silesian
   elif Are_Same_CString(____code, "ta-Arab"):
@@ -798,6 +1114,8 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "தமிழ்" # Tamil (Tamil)
   elif Are_Same_CString(____code, "te"):
     return "తెలుగు" # Telugu
+  elif Are_Same_CString(____code, "teo"):
+    return "Ateso" # Teso
   elif Are_Same_CString(____code, "tg-Arab"):
     return "تاجيکى" # Tajik (Arabic)
   elif Are_Same_CString(____code, "tg-Cyrl"):
@@ -812,6 +1130,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "ไทย" # Thai
   elif Are_Same_CString(____code, "ti"):
     return "ትግርኛ" # Tigrinya
+  elif Are_Same_CString(____code, "tig-Arab"):
+    return "تيغرې" # Tigre (Arabic)
+  elif Are_Same_CString(____code, "tig-Ethi"):
+    return "ትግሬ, ትግራይት" # Tigre (Geʽez)
+  elif Are_Same_CString(____code, "tig"):
+    return "ትግሬ, ትግራይት" # Tigre (Geʽez)
   elif Are_Same_CString(____code, "tk-Arab"):
     return "تۆرکمنچه" # Turkmen (Arabic)
   elif Are_Same_CString(____code, "tk-Cyrl"):
@@ -854,10 +1178,20 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Tatar" # Tatar (Latin)
   elif Are_Same_CString(____code, "tw"):
     return "Ákán" # Twi | Akan
+  elif Are_Same_CString(____code, "twq"):
+    return "Tásàwàq" # Tasawaq
   elif Are_Same_CString(____code, "ty"):
     return "Tahiti" # Tahitian
+  elif Are_Same_CString(____code, "tyv"):
+    return "Тыва дыл" # Tuvan
   elif Are_Same_CString(____code, "tzl"):
     return "Talossan" # Talossan
+  elif Are_Same_CString(____code, "tzm-Arab"):
+    return "أمازيغية أطلس الأوسط" # Central Atlas Tamazight (Arabic)
+  elif Are_Same_CString(____code, "tzm-Tfng"):
+    return "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Central Atlas Tamazight (Tifinagh)
+  elif Are_Same_CString(____code, "tzm"):
+    return "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Central Atlas Tamazight (Tifinagh)
   elif Are_Same_CString(____code, "ug-Arab"):
     return "ئۇيغۇرچە" # Uyghur (Arabic)
   elif Are_Same_CString(____code, "ug-Cyrl"):
@@ -880,6 +1214,12 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Oʻzbekcha" # Uzbek (Latin)
   elif Are_Same_CString(____code, "uz"):
     return "Oʻzbekcha" # Uzbek (Latin)
+  elif Are_Same_CString(____code, "vai-Latn"):
+    return "Vai" # Vai (Latin)
+  elif Are_Same_CString(____code, "vai-Vaii"):
+    return "ꕙꔤ" # Vai (Vai)
+  elif Are_Same_CString(____code, "vai"):
+    return "ꕙꔤ" # Vai (Vai)
   elif Are_Same_CString(____code, "ve"):
     return "Tshivenḓa" # Venda
   elif Are_Same_CString(____code, "vec"):
@@ -890,18 +1230,26 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Tiếng Việt" # Vietnamese
   elif Are_Same_CString(____code, "vi"):
     return "Tiếng Việt" # Vietnamese
+  elif Are_Same_CString(____code, "vmw"):
+    return "Emakuana" # Makhuwa
   elif Are_Same_CString(____code, "vo"):
     return "Volapük" # Volapük
+  elif Are_Same_CString(____code, "vun"):
+    return "Kivunjo" # Wunjo
   elif Are_Same_CString(____code, "vro"):
     return "Võro" # Võro
   elif Are_Same_CString(____code, "wa"):
     return "Walon" # Walloon
+  elif Are_Same_CString(____code, "wae"):
+    return "Walscher" # Walser German
   elif Are_Same_CString(____code, "wal-Ethi"):
     return "ወላይታቶ" # Wolaytta (Geʽez)
   elif Are_Same_CString(____code, "wal-Latn"):
     return "Wolayttatto" # Wolaytta (Latin)
   elif Are_Same_CString(____code, "wal"):
     return "ወላይታቶ" # Wolaytta (Geʽez)
+  elif Are_Same_CString(____code, "wbp"):
+    return "Warlpiri" # Warlpiri
   elif Are_Same_CString(____code, "wo-Arab"):
     return "وࣷلࣷفْ" # Wolof (Wolofal / Arabic)
   elif Are_Same_CString(____code, "wo-Gara"):
@@ -910,12 +1258,22 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Wolof" # Wolof (Latin)
   elif Are_Same_CString(____code, "wo"):
     return "Wolof" # Wolof (Latin)
-  elif Are_Same_CString(____code, "xct"):
-    return "ཏོ་ས་ཆེན་པོ" # Classical Tibetan
-  elif Are_Same_CString(____code, "xpu"):
-    return "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤉𐤌" # Punic
   elif Are_Same_CString(____code, "xh"):
     return "IsiXhosa" # Xhosa
+  elif Are_Same_CString(____code, "xnr-Deva"):
+    return "कांगड़ी" # Kangri (Devanāgarī)
+  elif Are_Same_CString(____code, "xnr-Takr"):
+    return "𑚊𑚭𑚫𑚌𑚪𑚯" # Kangri (Takri)
+  elif Are_Same_CString(____code, "xnr"):
+    return "𑚊𑚭𑚫𑚌𑚪𑚯" # Kangri (Takri)
+  elif Are_Same_CString(____code, "xct"):
+    return "ཏོ་ས་ཆེན་པོ" # Classical Tibetan
+  elif Are_Same_CString(____code, "xog"):
+    return "Lusoga" # Soga
+  elif Are_Same_CString(____code, "xpu"):
+    return "𐤃𐤁𐤓𐤉𐤌 𐤐𐤍𐤉𐤌" # Punic
+  elif Are_Same_CString(____code, "yav"):
+    return "Yangben" # Yangben
   elif Are_Same_CString(____code, "yi-Hebr"):
     return "ייִדיש" # Yiddish (Hebrew)
   elif Are_Same_CString(____code, "yi-Latn"):
@@ -928,11 +1286,19 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "Yorùbá" # Yoruba (Latin)
   elif Are_Same_CString(____code, "yo"):
     return "Yorùbá" # Yoruba (Latin)
+  elif Are_Same_CString(____code, "yrl"):
+    return "Nhẽẽgatú" # Nhengatu
   elif Are_Same_CString(____code, "yua"):
     return "Màaya T'àan" # Yucatec Maya
-  elif Are_Same_CString(____code, "za-hans"):
+  elif Are_Same_CString(____code, "yue-Hans"):
+    return "粵語（简体）" # Yue Chinese (Simplified)
+  elif Are_Same_CString(____code, "yue-Hant"):
+    return "粤语（繁體）" # Yue Chinese (Traditional)
+  elif Are_Same_CString(____code, "yue"):
+    return "粵語（简体）" # Yue Chinese (Simplified)
+  elif Are_Same_CString(____code, "za-Hans"):
     return "壮语（简体）" # Zhuang (Simplified)
-  elif Are_Same_CString(____code, "za-hant"):
+  elif Are_Same_CString(____code, "za-Hant"):
     return "壯語（繁體）" # Zhuang (Traditional)
   elif Are_Same_CString(____code, "za"):
     return "壮语（简体）" # Zhuang (Simplified)
@@ -940,9 +1306,9 @@ proc Get_Language_Name*(____code: cstring): cstring {.exportc, cdecl.} =
     return "باليبلن" # Balaibalan
   elif Are_Same_CString(____code, "zgh"):
     return "ⵜⴰⵎⴰⵣⵉⵖⵜ" # Standard Moroccan Tamazight
-  elif Are_Same_CString(____code, "zh-hans"):
+  elif Are_Same_CString(____code, "zh-Hans"):
     return "华语（简体）" # Chinese (Simplified)
-  elif Are_Same_CString(____code, "zh-hant"):
+  elif Are_Same_CString(____code, "zh-Hant"):
     return "華語（繁體）" # Chinese (Traditional)
   elif Are_Same_CString(____code, "zh"):
     return "华语（简体）" # Chinese (Simplified)

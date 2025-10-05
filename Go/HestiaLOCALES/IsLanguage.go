@@ -33,6 +33,8 @@ func IsLanguage(____code string) bool {
 		return true // Afrikaans
 	case "afh":
 		return true // Afrihili
+	case "agq":
+		return true // Aghem
 	case "ak":
 		return true // Akan
 	case "akk":
@@ -43,12 +45,22 @@ func IsLanguage(____code string) bool {
 		return true // Aragonese
 	case "ang":
 		return true // Old English
+	case "ann":
+		return true // Obolo
+	case "apc":
+		return true // Levantine Arabic
 	case "ar":
 		return true // Arabic
 	case "arc":
 		return true // Aramaic
+	case "arn":
+		return true // Mapudungun, Mapuche
 	case "as":
 		return true // Assamese
+	case "asa":
+		return true // Pare, Asu Tanzania
+	case "ast":
+		return true // Asturian, Asturleonese, Bable, Leonese
 	case "av-Arab":
 		return true // Avaric (Arabic)
 	case "av-Cyrl":
@@ -77,18 +89,38 @@ func IsLanguage(____code string) bool {
 		return true // Bashkir (Latin)
 	case "ba":
 		return true // Bashkir (Cyrillic)
+	case "bal-Arab":
+		return true // Baluchi (Arabic)
+	case "bal-Latn":
+		return true // Baluchi (Latin)
+	case "bal":
+		return true // Baluchi (Arabic)
+	case "bas":
+		return true // Basa Cameroon
 	case "be":
 		return true // Belarusian
+	case "bem":
+		return true // Bemba Zambia
+	case "bew":
+		return true // Betawi
+	case "bez":
+		return true // Bena Tanzania
 	case "bg":
 		return true // Bulgarian
 	case "bgc":
 		return true // Haryanvi
+	case "bgn":
+		return true // Western Balochi
 	case "bho-Deva":
 		return true // Bhojpuri (Devanagari)
 	case "bho-Kthi":
 		return true // Bhojpuri (Kaithi)
 	case "bho":
 		return true // Bhojpuri (Devanagari)
+	case "blo":
+		return true // Anii
+	case "blt":
+		return true // Tai Dam
 	case "bi":
 		return true // Bislama
 	case "bm-Arab":
@@ -119,6 +151,14 @@ func IsLanguage(____code string) bool {
 		return true // Bosnian
 	case "bs":
 		return true // Bosnian
+	case "bss":
+		return true // Akoose Manenguba
+	case "byn-Latn":
+		return true // Bilen, Bilin, Blin
+	case "byn-Ethi":
+		return true // Bilen, Bilin, Blin
+	case "byn":
+		return true // Bilen, Bilin, Blin
 	case "bzt":
 		return true // Brithenig
 	case "ca":
@@ -133,30 +173,52 @@ func IsLanguage(____code string) bool {
 		return true // Chechen (Latin)
 	case "ce":
 		return true // Chechen (Cyrillic)
+	case "cad":
+		return true // Caddo
+	case "cch":
+		return true // Atsam
+	case "ccp-Cakm":
+		return true // Chakma (Chakma)
+	case "ccp-Zzzz":
+		return true // Chakma (Tanchangya)
+	case "ccp":
+		return true // Chakma (Chakma)
 	case "ceb":
 		return true // Cebuano
+	case "cgg":
+		return true // Kiga
 	case "ch":
 		return true // Chamorro
 	case "cho":
 		return true // Choctaw
 	case "chr-Cher":
-		return true // Cherokee (Cherokee)
+		return true // Cherokee
 	case "chr-Latn":
 		return true // Cherokee (Latin)
 	case "chr":
-		return true // Cherokee (Cherokee)
+		return true // Cherokee
+	case "cic":
+		return true // Chickasaw
+	case "ckb-Arab":
+		return true // Central Kurdish
+	case "ckb-Latn":
+		return true // Central Kurdish
+	case "ckb":
+		return true // Central Kurdish
 	case "co":
 		return true // Corsican
 	case "cop":
 		return true // Coptic
 	case "cr-Cans":
-		return true // Cree (Canadian Aboriginal)
+		return true // Canadian Aboriginal Cree
 	case "cr-Latn":
 		return true // Cree (Latin)
 	case "cs":
 		return true // Czech
 	case "csb":
 		return true // Kashubian
+	case "csw":
+		return true // Swampy Cree
 	case "cu-Cyrl":
 		return true // Old Church Slavonic (Cyrillic)
 	case "cu-Glag":
@@ -167,8 +229,16 @@ func IsLanguage(____code string) bool {
 		return true // Welsh
 	case "da":
 		return true // Danish
+	case "dav":
+		return true // Taita, Dawida
 	case "de":
 		return true // German
+	case "dje-Arab":
+		return true // Zarma (Arabic)
+	case "dje-Latn":
+		return true // Zarma (Latin)
+	case "dje":
+		return true // Zarma (Arabic)
 	case "dmf":
 		return true // Medefaidrin
 	case "doi-Aran":
@@ -183,6 +253,8 @@ func IsLanguage(____code string) bool {
 		return true // Dogri (Devanagari)
 	case "dsb":
 		return true // Lower Sorbian
+	case "dua":
+		return true // Duala
 	case "dv-Latn":
 		return true // Maldivian | Dhivehi (Latin)
 	case "dv-Thaa":
@@ -191,8 +263,12 @@ func IsLanguage(____code string) bool {
 		return true // Maldivian | Dhivehi (Thaana)
 	case "dws":
 		return true // Dutton Speedwords (Latin)
+	case "dyo":
+		return true // Jola-Fonyi
 	case "dz":
 		return true // Dzongkha
+	case "ebu":
+		return true // Embu
 	case "ee":
 		return true // Ewe
 	case "el":
@@ -215,6 +291,8 @@ func IsLanguage(____code string) bool {
 		return true // Etruscan
 	case "eu":
 		return true // Basque
+	case "ewo":
+		return true // Ewondo
 	case "fa":
 		return true // Persian
 	case "ff-Adlm":
@@ -227,14 +305,24 @@ func IsLanguage(____code string) bool {
 		return true // Fula | Fulani | Fulah (Adlam Pular)
 	case "fi":
 		return true // Finnish
+	case "fil-Latn":
+		return true // Filipino (Latin)
+	case "fil-Tglg":
+		return true // Filipino (Baybayin)
+	case "fil":
+		return true // Filipino (Latin)
 	case "fj":
 		return true // Fijian
 	case "fo":
 		return true // Faroese
 	case "fr":
 		return true // French
+	case "frr":
+		return true // North Frisian
 	case "fro":
 		return true // Old French
+	case "fur":
+		return true // Friulian
 	case "fy":
 		return true // Western Frisian
 	case "ga-Latn":
@@ -243,12 +331,20 @@ func IsLanguage(____code string) bool {
 		return true // Irish (Ogham)
 	case "ga":
 		return true // Irish (Latin)
+	case "gaa":
+		return true // Ga
 	case "gd-Latn":
 		return true // Scottish Gaelic (Latin)
 	case "gd-Ogam":
 		return true // Scottish Gaelic (Ogham)
 	case "gd":
 		return true // Scottish Gaelic (Latin)
+	case "gez-Ethi":
+		return true // Geʽez (Geʽez)
+	case "gez-Sarb":
+		return true // Geʽez (Ancient South Arabian)
+	case "gez":
+		return true // Geʽez (Geʽez)
 	case "gl":
 		return true // Galician (Latin)
 	case "gmy":
@@ -259,6 +355,8 @@ func IsLanguage(____code string) bool {
 		return true // Old High German
 	case "grc":
 		return true // Ancient Greek
+	case "gsw":
+		return true // Swiss German, Alemannic, Alsatian
 	case "gu":
 		return true // Gujarati
 	case "guz":
@@ -283,6 +381,16 @@ func IsLanguage(____code string) bool {
 		return true // Hindi (Devanagari)
 	case "hit":
 		return true // Hittite
+	case "hnj-Hmng":
+		return true // Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
+	case "hnj-Hmnp":
+		return true // Hmong Njua, Mong Leng, Mong Njua (Nyiakeng Puachue Hmong)
+	case "hnj-Latn":
+		return true // Hmong Njua, Mong Leng, Mong Njua (Latin)
+	case "hnj-Plrd":
+		return true // Hmong Njua, Mong Leng, Mong Njua (Pollard)
+	case "hnj":
+		return true // Hmong Njua, Mong Leng, Mong Njua (Pahawh Hmong)
 	case "ho":
 		return true // Hiri Motu
 	case "hr-Glag":
@@ -339,6 +447,10 @@ func IsLanguage(____code string) bool {
 		return true // Japanese
 	case "jbo":
 		return true // Lojban
+	case "jgo":
+		return true // Ngomba
+	case "jmc":
+		return true // West Kilimanjaro, Machame
 	case "jv-Arab":
 		return true // Javanese (Pegon)
 	case "jv-Java":
@@ -349,6 +461,26 @@ func IsLanguage(____code string) bool {
 		return true // Javanese (Latin)
 	case "ka":
 		return true // Georgian
+	case "kaa-Arab":
+		return true // Karakalpak (Arabic)
+	case "kaa-Cyrl":
+		return true // Karakalpak (Cyrillic)
+	case "kaa-Latn":
+		return true // Karakalpak (Latin)
+	case "kaa":
+		return true // Karakalpak (Cyrillic)
+	case "kab-Arab":
+		return true // Kabyle (Arabic)
+	case "kab-Latn":
+		return true // Kabyle (Latin)
+	case "kab-Tfng":
+		return true // Kabyle (Tifinagh)
+	case "kab":
+		return true // Kabyle (Latin)
+	case "kaj":
+		return true // Jju
+	case "kam":
+		return true // Kamba
 	case "kbd-Cyrl":
 		return true // Kabardian (Cyrillic)
 	case "kbd-Latn":
@@ -357,20 +489,32 @@ func IsLanguage(____code string) bool {
 		return true // Kabardian (Perso Arabic)
 	case "kbd":
 		return true // Kabardian (Cyrillic)
-	case "kam":
-		return true // Kamba
+	case "kcg":
+		return true // Tyap
+	case "kde":
+		return true // Makonde
+	case "kea":
+		return true // Kabuverdianu
 	case "kek":
 		return true // Q'eqchi'
-	case "kg-Latn":
-		return true // Kongo
+	case "ken":
+		return true // Kenyang
 	case "kg":
 		return true // Kongo
+	case "kgp":
+		return true // Kaingang
 	case "kha-Beng":
 		return true // Khasi (Bengali)
 	case "kha-Latn":
 		return true // Khasi (Latin)
 	case "kha":
 		return true // Khasi (Latin)
+	case "khq-Arab":
+		return true // Koyra Chiini Songhay (Arabic)
+	case "khq-Latn":
+		return true // Koyra Chiini Songhay (Latin)
+	case "khq":
+		return true // Koyra Chiini Songhay (Latin)
 	case "ki":
 		return true // Kikuyu
 	case "kj":
@@ -383,6 +527,8 @@ func IsLanguage(____code string) bool {
 		return true // Kazakh (Latin)
 	case "kk":
 		return true // Kazakh (Latin)
+	case "kkj":
+		return true // Kako
 	case "kl":
 		return true // Kalaallisut
 	case "kln":
@@ -411,6 +557,12 @@ func IsLanguage(____code string) bool {
 		return true // Kanuri (Latin)
 	case "kr":
 		return true // Kanuri (Arabic)
+	case "kpe-Kpel":
+		return true // Kpelle (Kpelle)
+	case "kpe-Latn":
+		return true // Kpelle (Latin)
+	case "kpe":
+		return true // Kpelle (Latin)
 	case "ks-Arab":
 		return true // Kashmiri (Perso-Arabic)
 	case "ks-Deva":
@@ -419,6 +571,12 @@ func IsLanguage(____code string) bool {
 		return true // Kashmiri (Sharada)
 	case "ks":
 		return true // Kashmiri (Perso-Arabic)
+	case "ksb":
+		return true // Shambala
+	case "ksf":
+		return true // Bafia
+	case "ksh":
+		return true // Colognian, Kölsch
 	case "ku-Arab":
 		return true // Kurdish (Arabic)
 	case "ku-Latn":
@@ -433,6 +591,16 @@ func IsLanguage(____code string) bool {
 		return true // Komi (Cyrillic)
 	case "kw":
 		return true // Cornish
+	case "kxv-Deva":
+		return true // Kuvi (Devanagari)
+	case "kxv-Latn":
+		return true // Kuvi (Latin)
+	case "kxv-Orya":
+		return true // Kuvi (Odia)
+	case "kxv-Telu":
+		return true // Kuvi (Telugu)
+	case "kxv":
+		return true // Kuvi (Odia)
 	case "ky-Arab":
 		return true // Kyrgyz (Arabic)
 	case "ky-Cyrl":
@@ -447,6 +615,8 @@ func IsLanguage(____code string) bool {
 		return true // Latin
 	case "lad":
 		return true // Ladino
+	case "lag":
+		return true // Rangi
 	case "lb":
 		return true // Luxembourgish
 	case "ldn":
@@ -457,6 +627,12 @@ func IsLanguage(____code string) bool {
 		return true // Ganda | Luganda
 	case "li":
 		return true // Limburgish
+	case "lij":
+		return true // Ligurian
+	case "lkt":
+		return true // Lakota
+	case "lld":
+		return true // Ladin
 	case "lmo":
 		return true // Lombard
 	case "ln":
@@ -467,8 +643,12 @@ func IsLanguage(____code string) bool {
 		return true // Lao (Thai)
 	case "lo":
 		return true // Lao (Lao)
+	case "lrc":
+		return true // Luri
 	case "lt":
 		return true // Lithuanian
+	case "ltg":
+		return true // Latgalian
 	case "lu":
 		return true // Luba-Katanga
 	case "luo":
@@ -493,16 +673,32 @@ func IsLanguage(____code string) bool {
 		return true // Mam
 	case "mas":
 		return true // Maasai | Maa
+	case "mdf":
+		return true // Moksha
 	case "mer":
 		return true // Meru
+	case "mfe":
+		return true // Mauritian Creole
 	case "mg-Arab":
 		return true // Malagasy (Sorabe)
 	case "mg-Latn":
 		return true // Malagasy (Latin)
+	case "mgh":
+		return true // Makhuwa, Makhuwa-Meetto
+	case "mgo":
+		return true // Meta'
+	case "mhn":
+		return true // Mòcheno
 	case "mh":
 		return true // Marshallese
 	case "mi":
 		return true // Māori
+	case "mic-Zzzz":
+		return true // Mi'kmaq, Micmac (Gomgwejui'gasit)
+	case "mic-Latn":
+		return true // Mi'kmaq, Micmac (Latin)
+	case "mic":
+		return true // Mi'kmaq, Micmac (Latin)
 	case "mix":
 		return true // Mixe
 	case "mk":
@@ -535,6 +731,8 @@ func IsLanguage(____code string) bool {
 		return true // Meitei | Manipuri (Meitei Mayek)
 	case "mni":
 		return true // Meitei | Manipuri (Meitei Mayek)
+	case "moh":
+		return true // Mohawk
 	case "mr-Deva":
 		return true // Marathi (Devanagari)
 	case "mr-Modi":
@@ -545,8 +743,16 @@ func IsLanguage(____code string) bool {
 		return true // Malay
 	case "mt":
 		return true // Maltese
+	case "mua":
+		return true // Mundang
+	case "mus":
+		return true // Muscogee
 	case "my":
 		return true // Burmese (Myanmar)
+	case "myv":
+		return true // Erzya
+	case "mzn":
+		return true // Mazanderani
 	case "na":
 		return true // Nauru | Nauruan
 	case "nah":
@@ -571,22 +777,32 @@ func IsLanguage(____code string) bool {
 		return true // Ndonga
 	case "nl":
 		return true // Dutch
+	case "nmg":
+		return true // Kwasio
 	case "nn":
 		return true // Norwegian Nynorsk
+	case "nnh":
+		return true // Ngiemboon
 	case "no":
 		return true // Norwegian Riksmål or Høgnorsk
 	case "non":
 		return true // Old Norse
 	case "nov":
 		return true // Novial
+	case "nqo":
+		return true // N'Ko
 	case "nr":
 		return true // Southern Ndebele
 	case "nso":
 		return true // Northern Sotho
+	case "nus":
+		return true // Nuer
 	case "nv":
 		return true // Navajo
 	case "ny":
 		return true // Chichewa
+	case "nyn":
+		return true // Nyankole
 	case "oc":
 		return true // Occitan
 	case "oj-Latn":
@@ -613,6 +829,12 @@ func IsLanguage(____code string) bool {
 		return true // Ossetian (Latin)
 	case "os":
 		return true // Ossetian (Cyrillic)
+	case "osa-Latn":
+		return true // Osage (Latin)
+	case "osa-Osge":
+		return true // Osage (Osage)
+	case "osa":
+		return true // Osage (Osage)
 	case "pa-Arab":
 		return true // Punjabi (Shahmukhi)
 	case "pa-Guru":
@@ -641,8 +863,12 @@ func IsLanguage(____code string) bool {
 		return true // Pali (Sinhala)
 	case "pi-Thai":
 		return true // Pali (Thai)
+	case "pis":
+		return true // Solomon Islands Pidgin
 	case "pl":
 		return true // Polish
+	case "prg":
+		return true // Old Prussian
 	case "ps":
 		return true // Pashto
 	case "pt":
@@ -659,6 +885,38 @@ func IsLanguage(____code string) bool {
 		return true // Quenya (Cirth)
 	case "qya":
 		return true // Quenya (Latin)
+	case "raj-Arab":
+		return true // Rajasthani (Arabic)
+	case "raj-Deva":
+		return true // Rajasthani (Devanagari)
+	case "raj-Guru":
+		return true // Rajasthani (Gurmukhī)
+	case "raj-Khoj":
+		return true // Rajasthani (Khojkī)
+	case "raj-Mahj":
+		return true // Rajasthani (Mahajani)
+	case "raj-Sind":
+		return true // Rajasthani (Khudabadi)
+	case "raj":
+		return true // Rajasthani (Devanagari)
+	case "rhg-Arab":
+		return true // Rohingya (Arabic)
+	case "rhg-Beng":
+		return true // Rohingya (Bengali–Assamese)
+	case "rhg-Mymr":
+		return true // Rohingya (Burmese)
+	case "rhg-Rohg":
+		return true // Rohingya (Hanifi Rohingya)
+	case "rhg":
+		return true // Rohingya (Hanifi Rohingya)
+	case "rif-Arab":
+		return true // Tarifit (Arabic)
+	case "rif-Latn":
+		return true // Tarifit (Latin)
+	case "rif-Tfng":
+		return true // Tarifit (Tifinagh)
+	case "rif":
+		return true // Tarifit (Tifinagh)
 	case "rm":
 		return true // Romansh
 	case "rmv":
@@ -671,16 +929,28 @@ func IsLanguage(____code string) bool {
 		return true // Romanian (Cyrillic)
 	case "ro":
 		return true // Romanian (Latin)
+	case "rof":
+		return true // Rombo
 	case "ru":
 		return true // Russian
 	case "rw":
 		return true // Kinyarwanda
+	case "rwk":
+		return true // West Kilimanjaro, Rwa
 	case "sa-Deva":
 		return true // Sanskrit (Devanagari)
 	case "sa-Brah":
 		return true // Sanskrit (Brahmi)
 	case "sa":
 		return true // Sanskrit (Devanagari)
+	case "sah-Cyrl":
+		return true // Yakut (Cyrillic)
+	case "sah-Latn":
+		return true // Yakut (Latin)
+	case "sah":
+		return true // Yakut (Cyrillic)
+	case "saq":
+		return true // Samburu
 	case "sat-Beng":
 		return true // Santali (Bengali)
 	case "sat-Deva":
@@ -693,6 +963,8 @@ func IsLanguage(____code string) bool {
 		return true // Santali (Odia)
 	case "sat":
 		return true // Santali (Ol Chiki)
+	case "sbp":
+		return true // Sangu
 	case "sc":
 		return true // Sardinian
 	case "scn":
@@ -709,16 +981,36 @@ func IsLanguage(____code string) bool {
 		return true // Sindhi (Gurmukhi)
 	case "sd":
 		return true // Sindhi (Perso-Ararbic)
+	case "sdh":
+		return true // Southern Kurdish
 	case "sdr":
 		return true // Sherdukpen
 	case "se":
 		return true // Northern Sami
+	case "seh-Latn":
+		return true // Sena (Latin)
+	case "seh-Zzzz":
+		return true // Sena (Mwangwego)
+	case "seh":
+		return true // Sena (Latin)
+	case "ses":
+		return true // Koyraboro Senni, Koyraboro Senni Songhai
 	case "sg":
 		return true // Sango
 	case "sga":
 		return true // Old Irish
+	case "shi-Arab":
+		return true // Tachelhit, Shilha (Arabic)
+	case "shi-Latn":
+		return true // Tachelhit, Shilha (Latin)
+	case "shi-Tfng":
+		return true // Tachelhit, Shilha (Tifinagh)
+	case "shn":
+		return true // Shan
 	case "si":
 		return true // Sinhala
+	case "sid":
+		return true // Sidama
 	case "sjn":
 		return true // Sindarin (Latin)
 	case "sjn-Teng":
@@ -733,6 +1025,18 @@ func IsLanguage(____code string) bool {
 		return true // Slovak (Latin)
 	case "sk":
 		return true // Slovak (Latin)
+	case "skr-Arab":
+		return true // Saraiki (Arabic)
+	case "skr-Deva":
+		return true // Saraiki (Devanāgarī)
+	case "skr-Guru":
+		return true // Saraiki (Gurmukhī)
+	case "skr-Khoj":
+		return true // Saraiki (Khojkī)
+	case "skr-Mult":
+		return true // Saraiki (Multani)
+	case "skr":
+		return true // Saraiki (Multani)
 	case "sl":
 		return true // Slovenian
 	case "sm":
@@ -743,6 +1047,8 @@ func IsLanguage(____code string) bool {
 		return true // Lule Sami
 	case "smn":
 		return true // Inari Sami
+	case "sms":
+		return true // Skolt Sámi
 	case "sn":
 		return true // Shona
 	case "so-Arab":
@@ -783,6 +1089,16 @@ func IsLanguage(____code string) bool {
 		return true // Swahili (Arabic)
 	case "sw-Latn":
 		return true // Swahili (Latin)
+	case "syr-Syrc":
+		return true // Syriac (Syriac)
+	case "syr-Syre":
+		return true // Syriac (ʾEsṭrangēlā)
+	case "syr-Syrj":
+		return true // Syriac (Western)
+	case "syr-Syrn":
+		return true // Syriac (Eastern)
+	case "syr":
+		return true // Syriac (Syriac)
 	case "szl":
 		return true // Silesian
 	case "ta-Arab":
@@ -799,6 +1115,8 @@ func IsLanguage(____code string) bool {
 		return true // Tamil (Tamil)
 	case "te":
 		return true // Telugu
+	case "teo":
+		return true // Teso
 	case "tg-Arab":
 		return true // Tajik (Arabic)
 	case "tg-Cyrl":
@@ -813,6 +1131,12 @@ func IsLanguage(____code string) bool {
 		return true // Thai
 	case "ti":
 		return true // Tigrinya
+	case "tig-Arab":
+		return true // Tigre (Arabic)
+	case "tig-Ethi":
+		return true // Tigre (Geʽez)
+	case "tig":
+		return true // Tigre (Geʽez)
 	case "tk-Arab":
 		return true // Turkmen (Arabic)
 	case "tk-Cyrl":
@@ -855,10 +1179,20 @@ func IsLanguage(____code string) bool {
 		return true // Tatar (Latin)
 	case "tw":
 		return true // Twi | Akan
+	case "twq":
+		return true // Tasawaq
 	case "ty":
 		return true // Tahitian
+	case "tyv":
+		return true // Tuvan
 	case "tzl":
 		return true // Talossan
+	case "tzm-Arab":
+		return true // Central Atlas Tamazight (Arabic)
+	case "tzm-Tfng":
+		return true // Central Atlas Tamazight (Tifinagh)
+	case "tzm":
+		return true // Central Atlas Tamazight (Tifinagh)
 	case "ug-Arab":
 		return true // Uyghur (Arabic)
 	case "ug-Cyrl":
@@ -881,6 +1215,12 @@ func IsLanguage(____code string) bool {
 		return true // Uzbek (Latin)
 	case "uz":
 		return true // Uzbek (Latin)
+	case "vai-Latn":
+		return true // Vai (Latin)
+	case "vai-Vaii":
+		return true // Vai (Vai)
+	case "vai":
+		return true // Vai (Vai)
 	case "ve":
 		return true // Venda
 	case "vec":
@@ -891,18 +1231,26 @@ func IsLanguage(____code string) bool {
 		return true // Vietnamese
 	case "vi":
 		return true // Vietnamese
+	case "vmw":
+		return true // Makhuwa
 	case "vo":
 		return true // Volapük
+	case "vun":
+		return true // Wunjo
 	case "vro":
 		return true // Võro
 	case "wa":
 		return true // Walloon
+	case "wae":
+		return true // Walser German
 	case "wal-Ethi":
 		return true // Wolaytta (Geʽez)
 	case "wal-Latn":
 		return true // Wolaytta (Latin)
 	case "wal":
 		return true // Wolaytta (Geʽez)
+	case "wbp":
+		return true // Warlpiri
 	case "wo-Arab":
 		return true // Wolof (Wolofal / Arabic)
 	case "wo-Gara":
@@ -911,12 +1259,22 @@ func IsLanguage(____code string) bool {
 		return true // Wolof (Latin)
 	case "wo":
 		return true // Wolof (Latin)
-	case "xct":
-		return true // Classical Tibetan
-	case "xpu":
-		return true // Punic
 	case "xh":
 		return true // Xhosa
+	case "xnr-Deva":
+		return true // Kangri (Devanāgarī)
+	case "xnr-Takr":
+		return true // Kangri (Takri)
+	case "xnr":
+		return true // Kangri (Takri)
+	case "xct":
+		return true // Classical Tibetan
+	case "xog":
+		return true // Soga
+	case "xpu":
+		return true // Punic
+	case "yav":
+		return true // Yangben
 	case "yi-Hebr":
 		return true // Yiddish (Hebrew)
 	case "yi-Latn":
@@ -929,11 +1287,19 @@ func IsLanguage(____code string) bool {
 		return true // Yoruba (Latin)
 	case "yo":
 		return true // Yoruba (Latin)
+	case "yrl":
+		return true // Nhengatu
 	case "yua":
 		return true // Yucatec Maya
-	case "za-hans":
+	case "yue-Hans":
+		return true // Yue Chinese (Simplified)
+	case "yue-Hant":
+		return true // Yue Chinese (Traditional)
+	case "yue":
+		return true // Yue Chinese (Simplified)
+	case "za-Hans":
 		return true // Zhuang (Simplified)
-	case "za-hant":
+	case "za-Hant":
 		return true // Zhuang (Traditional)
 	case "za":
 		return true // Zhuang (Simplified)
@@ -941,9 +1307,9 @@ func IsLanguage(____code string) bool {
 		return true // Balaibalan
 	case "zgh":
 		return true // Standard Moroccan Tamazight
-	case "zh-hans":
+	case "zh-Hans":
 		return true // Chinese (Simplified)
-	case "zh-hant":
+	case "zh-Hant":
 		return true // Chinese (Traditional)
 	case "zh":
 		return true // Chinese (Simplified)
